@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --blue: #3b82f6;
+  --violet: #8b5cf6;
+
+  --blue-light: #93c5fd;
+  --violet-light: #c4b5fd;
+
+  --blue-dark: #0f2e83;
+  --violet-dark: #5b21b6;
+
+  --light: #f9fafb;
+  --dark: #111827;
+}
+
+
+
+@theme {
+  --font-ibm: "IBM Plex Mono", monospace;
+  --font-poppins: "poppins", arial;
+  --font-gortesk: "Space Grotesk", sans-serif;
+
+  --shadow-action: 0 0 300px var(--accent) ;
+
+  --color-light: var(--light);
+  --color-dark: var(--dark);
+
+  --color-blue: var(--blue);
+  --color-violet: var(--violet);
+
+  --color-blue-light: var(--blue-light);
+  --color-blue-dark: var(--blue-dark);
+
+  --color-violet-light: var(--violet-light);
+  --color-violet-dark: var(--violet-dark);
+
+  --animate-pulse-grow: pulseGlow 4s ease infinite;
+  --animate-fadein: fade-in 1s ease forwards;
+  --animate-float: float 2s ease alternate infinite ;
+  --animate-slideup: SlidUp 1s ease forwards;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0); 
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+@keyframes float {
+
+  0% {
+    transform: translate(0, -6px);
+  }
+
+  100% {
+    transform: translate(0, 6px);
+  }
+
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(1.2) drop-shadow(0 0 20px rgba(59, 131, 246, 0.678));
+  }
+}
