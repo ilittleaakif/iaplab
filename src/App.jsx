@@ -5,7 +5,8 @@ import Header from "./Header/Header";
 import HeroSection from "./Hero/Hero";
 import LibararySection from "./library/Library";
 import ProvideSection from "./provide/provide";
-import SupportStudent from "./SupportStudent/Support";
+
+import Support from "./Support/Support";
 
 
 
@@ -26,7 +27,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/provide" element={<ProvideSection />} />
-      <Route path="/support" element={<SupportStudent />} />
+      <Route path="/support" element={<Support />} />
     </Routes>
   );
 }
