@@ -25,10 +25,11 @@ export const sectionsData = [
       { title: "Architecture des ordinateurs", icon: Monitor, Url: 'https://drive.google.com/drive/folders/12MMcZ4FBuYc-s3zbAuYlWa0VpO7Rvfm0' },
     ],
     extras: [
-      { title: 'programmation en C1', icon: Youtube },
-      { title: 'Électronique Numérique', icon: Youtube },
-      { title: 'Analyse', icon: Youtube },
-      { title: 'Algebre', icon: Youtube },
+      { title: 'programmation en C1', icon: Youtube, Url:'https://www.youtube.com/watch?v=I4U0sQDw5Nw&list=PLZpzLuUp9qXxKSkKT43ppqzb8c2ahO4VS' },
+      { title: 'Algorithmique', icon: Youtube, Url:'https://www.youtube.com/watch?v=m_yj2p6SCEM&list=PLZpzLuUp9qXwrApSukhtvpi4U6l-INcTI' },
+      { title: 'Électronique Numérique', icon: Youtube, Url:'https://www.youtube.com/watch?v=h5IEj1U4iVw&list=PLU7IbxWzSiXTGMOjd30HFjMwssoVNbAA9' },
+      { title: 'Analyse', icon: Youtube, Url:'https://www.youtube.com/watch?v=AwuqG0agXCI&list=PLh8CSljgwDFR166V-x0tMKUX_m_OKdTrG' },
+      { title: 'Algebre', icon: Youtube, Url:'https://www.youtube.com/watch?v=f2HrMWmke4o&list=PLh8CSljgwDFTEsLrTYE4J0S8WPKPAd1w5' },
     ]
   },
   {

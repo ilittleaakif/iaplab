@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 const OpenLink = (link) => window.open(link, "_blank");
 
-
 const ModuleCard = ({ title, icon: Icon, Link }) => {
   return (
     <div onClick={() => OpenLink(Link)} className="text-bg active:*:text-text active:bg-bg border-2 border-border hover:*:text-text rounded-lg p-6 flex flex-col items-center justify-center cursor-pointer hover:bg-bg transition">
@@ -15,9 +14,9 @@ const ModuleCard = ({ title, icon: Icon, Link }) => {
   );
 };
 
-const ExtraCard = ({ title, icon: Icon }) => {
+const ExtraCard = ({ title, icon: Icon, Link }) => {
   return (
-    <div className="active:*:text-text active:bg-youtube/80 flex flex-col items-center justify-between gap-1 px-6 py-4 text-white transition rounded-lg cursor-pointer bg-youtube md:flex-row hover:bg-red-400">
+    <div onClick={() => OpenLink(Link)} className="active:*:text-text active:bg-youtube/80 flex flex-col items-center justify-between gap-1 px-6 py-4 text-white transition rounded-lg cursor-pointer bg-youtube md:flex-row hover:bg-red-400">
       <Icon />
       <div className="text-lg font-bold text-center">{title}</div>
     </div>
@@ -57,7 +56,7 @@ const SectionBlock = ({ extras, semester, modules, sectionRef }) => {
           {showExtras &&
             <div className="grid items-center w-full grid-cols-1 gap-4 transition-all md:grid-cols-2">
               {extras.map((extra, i) => (
-                <ExtraCard key={i} title={extra.title} icon={extra.icon} />
+                <ExtraCard key={i} Link={extra.Url} title={extra.title} icon={extra.icon} />
               ))}
             </div>
           }
@@ -67,9 +66,9 @@ const SectionBlock = ({ extras, semester, modules, sectionRef }) => {
   );
 };
 
-const UnivCard = ({ icon: Icon, title, des, btn, accent }) => {
+const UnivCard = ({ icon: Icon, title, des, btn, accent, Link }) => {
   return (
-    <div className="flex flex-col justify-between p-8 transition-shadow shadow-lg bg-text rounded-2xl hover:shadow-xl ">
+    <div onClick={() => OpenLink(Link)} className="flex flex-col justify-between p-8 transition-shadow shadow-lg bg-text rounded-2xl hover:shadow-xl ">
       <div className="flex items-center mb-4">
         <Icon className={`md:w-8 md:h-8 w-6 h-6 mr-3`} style={{ color: `var(--${accent})` }} />
         <h2 className="text-lg md:text-xl font-semibold text-bg">{title}</h2>
@@ -121,10 +120,10 @@ const LibrarySection = forwardRef((props, ref) => {
 
       {/* Extras Cards */}
       <div className="grid max-w-6xl gap-8 px-4 py-12 mx-auto md:grid-cols-2">
-        <UnivCard accent={'second'} icon={GraduationCap} title={"Cycle d'ingénieur"} des={"Vous souhaitez vous préparer au Cycle d'ingénieur ?"} btn={"Cliquez ici"} />
-        <UnivCard accent={'second'} icon={BookOpen} title={"Orientation"} des={"Tu as un DUEG ou une licence en informatique ? Tu veux connaître tous les masters et cycles d'ingénieur en informatique au Maroc ?"} btn={"Cliquez ici"} />
-        <UnivCard accent={'whatsapp'} icon={MessageCircleMore} title={"Groupe de Whatssap"} des={"Joindre groupe de whatssap pour S1-S2"} btn={"Cliquez ici"} />
-        <UnivCard accent={'whatsapp'} icon={MessageCircleMore} title={"Groupe de Whatssap"} des={"Joindre groupe de whatssap pour S3-S4"} btn={"Cliquez ici"} />
+        <UnivCard Link={'https://drive.google.com/drive/folders/16Hykdvbrpv7yPeTWSG493T6JkP8fdgeS'} accent={'second'} icon={GraduationCap} title={"Cycle d'ingénieur"} des={"Vous souhaitez vous préparer au Cycle d'ingénieur ?"} btn={"Cliquez ici"} />
+        <UnivCard Link={'https://guideinfo.netlify.app/'} accent={'second'} icon={BookOpen} title={"Orientation"} des={"Tu as un DUEG ou une licence en informatique ? Tu veux connaître tous les masters et cycles d'ingénieur en informatique au Maroc ?"} btn={"Cliquez ici"} />
+        <UnivCard Link={'https://chat.whatsapp.com/DwTyDHiMfbdGSarPEMBeW5'} accent={'whatsapp'} icon={MessageCircleMore} title={"Groupe WhatsApp"} des={"Rejoignez le groupe WhatsApp pour les semestres S3-S4"} btn={"Rejoignez"}
+        />
       </div>
 
       <div className="p-10 mt-16 text-center text-white bg-slate-800 rounded-xl">

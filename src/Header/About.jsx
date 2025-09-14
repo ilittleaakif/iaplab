@@ -2,9 +2,13 @@ import { X, BookOpen, Code } from "lucide-react";
 import pfp from '../assets/pfp.png'
 import pfpb from '../assets/pfp2.jpeg'
 
-const DevCard = ({ Name, Logo, icon: Icon, Role }) => {
+const OpenLink = (link) => window.open(link, "_blank");
+
+
+const DevCard = ({ Name, Logo, icon: Icon, Role, Link }) => {
+
   return (
-    <div className="flex items-center w-full max-w-md gap-4 p-3 pr-6 transition shadow-sm cursor-pointer group bg-bg-soft hover:shadow-md rounded-xl">
+    <div onClick={() => OpenLink(Link)} className="flex items-center w-full max-w-md gap-4 p-3 pr-6 transition shadow-sm cursor-pointer group bg-bg-soft hover:shadow-md rounded-xl">
       <img src={Logo} className="object-cover w-12 h-12  rounded-full "
       />
       <div className="flex flex-col justify-center">
@@ -46,8 +50,8 @@ const AboutDialog = ({ isOpen, onClose }) => {
             <div className="inline-flex p-3 mb-3 bg-blue-100 rounded-full animate-float">
               <BookOpen size={28} className="text-accent " />
             </div>
-            <h3 className="mb-2 text-xl font-semibold text-gray-800 font-gortesk">Salut à toi ! 👋</h3>
-            <p className="text-bg-soft font-poppins md:text-lg text-sm">Voici notre petit coin d’internet où nous partageons des livres, des ressources et des découvertes intéressantes. Rien de compliqué, juste des amis qui s’entraident pour apprendre !</p>
+            <h3 className="mb-2 md:text-xl text-base  font-semibold text-gray-800 font-gortesk">Salut à toi ! 👋</h3>
+            <p className="text-bg-soft font-poppins  md:text-base text-sm">Voici notre petit coin d’internet où nous partageons des livres, des ressources et des découvertes intéressantes. Rien de compliqué, juste des amis qui s’entraident pour apprendre !</p>
           </div>
 
 
@@ -57,8 +61,8 @@ const AboutDialog = ({ isOpen, onClose }) => {
           {/* Développeur */}
 
           <div className="grid w-full grid-cols-1 gap-2 md:grid-cols-2">
-            <DevCard Logo={pfp} Name="ZakariaX" Role="développeur" icon={Code} />
-            <DevCard Logo={pfpb} Name="Adam" Role="développeur" icon={Code} />
+            <DevCard Link={'https://wa.me/212673999182'} Logo={pfp} Name="ZakariaX" Role="développeur" icon={Code} />
+            <DevCard Link={'https://wa.me/212656105609'} Logo={pfpb} Name="Adam" Role="développeur" icon={Code} />
           </div>
 
 
