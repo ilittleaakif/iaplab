@@ -4,6 +4,7 @@ import { tempInboxData } from './InboxData';
 
 
 
+import LikeWidget from './Likes';
 import AboutDialog from './About';
 import InboxDialog from './Inbox';
 
@@ -91,6 +92,7 @@ function Header() {
           <NavbarItem lab="Youtube" icon={Youtube} clickEvent={() => window.open('https://www.youtube.com/@WrittenArt-u4r', '_blank', 'noopener,noreferrer')} />
           <NavbarItem lab="Contact" icon={MessageCircleQuestionMark} clickEvent={() => console.log('Contact clicked')} />
           <NavbarItem lab="About" icon={Info} clickEvent={openDialog} />
+          <LikeWidget />
         </div>
 
         {/* Mobile Navbar */}

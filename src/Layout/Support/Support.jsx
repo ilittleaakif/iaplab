@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import SplitText from "../assets/SplitText";
+import SplitText from "../../assets/SplitText";
 
 function Support() {
   const navigate = useNavigate();

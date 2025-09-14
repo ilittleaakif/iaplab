@@ -1,14 +1,14 @@
 import { useRef } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import Header from "./Header/Header";
-import HeroSection from "./Hero/Hero";
-import LibararySection from "./library/Library";
-import ProvideSection from "./provide/provide";
+import Header from "./Layout/Header/Header";
+import HeroSection from "./Layout/Hero/Hero";
+import LibararySection from "./Layout/library/Library";
+import ProvideSection from "./Layout/provide/provide";
 
-import Support from "./Support/Support";
-import Suggest from "./Suggest/Suggest";
-import Footer from "./Footer/Footer";
+import Support from "./Layout/Support/Support";
+import Suggest from "./Layout/Suggest/Suggest";
+import Footer from "./Layout/Footer/Footer";
 
 function App() {
   const libRef = useRef(null);

@@ -2,7 +2,7 @@ import { FilePlus, GraduationCap, MessageCircle } from "lucide-react";
 import { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Typed from "typed.js";
-import SplitText from "../assets/SplitText";
+import SplitText from "../../assets/SplitText";
 
 function HeroSection({ libRef }) {
   const typedRef = useRef(null);

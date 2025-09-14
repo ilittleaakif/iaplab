@@ -1,6 +1,6 @@
 import { X, BookOpen, Code } from "lucide-react";
-import pfp from '../assets/pfp.png'
-import pfpb from '../assets/pfp2.jpeg'
+import pfp from '../../assets/pfp.png'
+import pfpb from '../../assets/pfp2.jpeg'
 
 const OpenLink = (link) => window.open(link, "_blank");
 

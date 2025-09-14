@@ -2,7 +2,7 @@ import { ArrowLeftIcon, Heart } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import SplitText from "../assets/SplitText";
+import SplitText from "../../assets/SplitText";
 
 function ProvideSection() {
   const [file, setFile] = useState(null);
@@ -22,7 +22,7 @@ function ProvideSection() {
     <div className=" relative flex bg-bg *:animate-fadein  flex-col items-center justify-center min-h-screen p-8 font-gortesk text-text ">
       <SplitText
         text="Not available yet :)"
-        className="md:text-3xl text-xl font-semibold text-center text-text mb-5"
+        className="md:text-3xl text-xl font-semibold text-center text-sub mb-5"
         delay={70}
         duration={0.6}
         ease="power3.out"
@@ -41,7 +41,7 @@ function ProvideSection() {
         Share useful documents, pictures, or even drive links that could help other students!
       </h4>
 
-      <form className="flex flex-col w-full max-w-md gap-4 mt-8 animate-slideUp" onSubmit={handleSubmit} >
+      <form className="pointer-events-none flex flex-col w-full max-w-md gap-4 mt-8 animate-slideUp" onSubmit={handleSubmit} >
         <label className="p-4 font-semibold text-center transition-all duration-300  border-2 border-violet border-dashed rounded-lg cursor-pointer hover:border-violet-light">
           <input
             required
