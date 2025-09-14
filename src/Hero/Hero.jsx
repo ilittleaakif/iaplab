@@ -28,7 +28,7 @@ function HeroSection({ libRef }) {
       style={{ animationDelay: delay, '--accent': accent }}
       className={`px-6 py-3 hover:shadow-action rounded-xl flex items-center justify-center gap-2 font-semibold font-ibm text-white cursor-pointer transition-all transform hover:-translate-y-1  ${gradient} animate-fadein opacity-0`}
     >
-      <span>{label}</span>
+      <span className="text-sm md:text-base">{label}</span>
       <Icon className={'h-5 w-5'} />
     </div>
   );
@@ -39,16 +39,16 @@ function HeroSection({ libRef }) {
 
       {/* Hero Content */}
       <div className="relative z-10 text-center" >
-        <h1 className="text-4xl md:text-7xl font-bold my-4 text-text to-text  animate-[fade-in_1s_ease-out_forwards]">
+        <h1 className="text-3xl md:text-7xl font-bold my-4 text-text to-text  animate-[fade-in_1s_ease-out_forwards]">
           <span>Ici pour {" "}</span>
           <span className="inline-block text-transparent bg-gradient-to-r from-accent/80 via-accent to-second bg-clip-text animate-pulse-grow" ref={typedRef}></span>
         </h1>
 
-        <div className="md:max-w-3xl  max-w-3/4 mx-auto md:text-lg font-light leading-relaxed opacity-0 text-light/85 animate-fadein">
-          <p className="text-lg font-semibold text-text">Salut cher étudiant ! 👋</p>
+        <div className="md:max-w-3xl max-w-3/4 mx-auto  font-light leading-relaxed opacity-0 text-light/85 animate-fadein">
+          <p className="md:text-lg text-base font-semibold text-text">Salut cher étudiant ! 👋</p>
           <SplitText
             text="Bienvenue dans la bibliothèque IAP la plus complète. Lance-toi dans ton aventure d’apprentissage avec des ressources innovantes et des expériences interactives."
-            className="md:text-lg text-sm font-semibold text-center text-text-soft"
+            className="md:text-lg text-xs font-semibold text-center text-text-soft"
             delay={100}
             duration={0.6}
             ease="power3.out"
@@ -63,7 +63,7 @@ function HeroSection({ libRef }) {
 
 
         {/* Action Buttons */}
-        <div className="flex flex-col justify-center gap-6 px-10 mx-auto mt-6 md:px-0 md:w-full md:flex-row">
+        <div className="flex flex-col justify-center gap-4 md:gap-6 px-10 mx-auto mt-6 md:px-0 md:w-full md:flex-row">
           <ActionBtn
             gradient="bg-gradient-to-br from-blue-500 via-blue-700 to-blue-900"
             accent={'#1D4ED8'}
