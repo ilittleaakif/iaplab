@@ -16,9 +16,9 @@ const ModuleCard = ({ title, icon: Icon, Link }) => {
 
 const ExtraCard = ({ title, icon: Icon, Link }) => {
   return (
-    <div onClick={() => OpenLink(Link)} className="active:*:text-text active:bg-youtube/80 flex flex-col items-center justify-between gap-1 px-6 py-4 text-white transition rounded-lg cursor-pointer bg-youtube md:flex-row hover:bg-red-400">
+    <div onClick={() => OpenLink(Link)} className="flex items-center justify-between px-6 py-4 transition rounded-xl cursor-pointer text-text bg-youtube active:*:text-text active:bg-youtube/90">
+      <p className="font-semibold text-center md:text-lg">{title}</p>
       <Icon />
-      <div className="text-lg font-bold text-center">{title}</div>
     </div>
   );
 };
@@ -30,13 +30,13 @@ const SectionBlock = ({ extras, semester, modules, sectionRef }) => {
     <section ref={sectionRef} className="p-6 space-y-8 bg-white shadow rounded-xl">
 
       {/* Header */}
-      <div className="flex items-center gap-3 pb-3 border-b">
-        <CalendarRange className="text-dark" />
-        <h2 className="text-xl font-bold text-dark">{semester}</h2>
+      <div className="flex items-center gap-3 pb-3 border-b text-bg">
+        <CalendarRange/>
+        <h2 className="text-xl font-bold ">{semester}</h2>
       </div>
 
       {/* Modules */}
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {modules.map((mod, i) => (
           <ModuleCard key={i} title={mod.title} icon={mod.icon} Link={mod.Url} />
         ))}
@@ -71,7 +71,7 @@ const UnivCard = ({ icon: Icon, title, des, btn, accent, Link }) => {
     <div onClick={() => OpenLink(Link)} className="flex flex-col justify-between p-8 transition-shadow shadow-lg bg-text rounded-2xl hover:shadow-xl ">
       <div className="flex items-center mb-4">
         <Icon className={`md:w-8 md:h-8 w-6 h-6 mr-3`} style={{ color: `var(--${accent})` }} />
-        <h2 className="text-lg md:text-xl font-semibold text-bg">{title}</h2>
+        <h2 className="text-lg font-semibold md:text-xl text-bg">{title}</h2>
       </div>
       <p className="mb-6 text-bg-soft">{des}</p>
       <button

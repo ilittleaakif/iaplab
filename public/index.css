@@ -58,17 +58,7 @@
 }
 
 
-@keyframes float {
 
-  0% {
-    transform: translate(0, -6px);
-  }
-
-  100% {
-    transform: translate(0, 6px);
-  }
-
-}
 
 
 @keyframes fade-in {
@@ -105,7 +95,7 @@
   }
 
   50% {
-    filter: brightness(1.2) drop-shadow(0 0 20px rgba(59, 131, 246, 0.678));
+    filter: brightness(1.4) drop-shadow(0 0 20px var(--accent));
   }
 }
 

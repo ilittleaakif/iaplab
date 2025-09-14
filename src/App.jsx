@@ -8,8 +8,7 @@ import ProvideSection from "./provide/provide";
 
 import Support from "./Support/Support";
 import Suggest from "./Suggest/Suggest";
-
-
+import Footer from "./Footer/Footer";
 
 function App() {
   const libRef = useRef(null);
@@ -20,6 +19,7 @@ function App() {
         <Header />
         <HeroSection libRef={libRef} />
         <LibararySection ref={libRef} />
+        <Footer/>
       </>
     )
   };

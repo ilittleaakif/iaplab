@@ -15,7 +15,6 @@ function HeroSection({ libRef }) {
       backSpeed: 30,
       backDelay: 2000,
       loop: true,
-      cursorChar: '_',
     });
     return () => typed.destroy();
   }, []);
@@ -40,7 +39,7 @@ function HeroSection({ libRef }) {
       {/* Hero Content */}
       <div className="relative z-10 text-center" >
         <h1 className="text-3xl md:text-7xl font-bold my-4 text-text to-text  animate-[fade-in_1s_ease-out_forwards]">
-          <span>Ici pour {" "}</span>
+          <span>Pour {" "}</span>
           <span className="inline-block text-transparent bg-gradient-to-r from-accent/80 via-accent to-second bg-clip-text animate-pulse-grow" ref={typedRef}></span>
         </h1>
 
