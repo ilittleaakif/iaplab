@@ -40,7 +40,7 @@ const AboutDialog = ({ isOpen, onClose }) => {
 
         {/* Header */}
         <div className="w-full flex items-center justify-between md:p-6 p-4 border-b border-bg/90 *:text-bg mb-4">
-          <h2 className="text-sm font-bold md:text-xl">À propos de notre bibliothèque</h2>
+          <h2 className="text-sm font-bold md:text-xl">À propos</h2>
           <X className="p-1 rounded-lg cursor-pointer hover:bg-bg/20" onClick={onClose} size={30} />
         </div>
 
