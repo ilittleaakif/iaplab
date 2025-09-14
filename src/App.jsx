@@ -7,6 +7,7 @@ import LibararySection from "./library/Library";
 import ProvideSection from "./provide/provide";
 
 import Support from "./Support/Support";
+import Suggest from "./Suggest/Suggest";
 
 
 
@@ -28,6 +29,7 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/provide" element={<ProvideSection />} />
       <Route path="/support" element={<Support />} />
+      <Route path="/suggest" element={<Suggest />} />
     </Routes>
   );
 }

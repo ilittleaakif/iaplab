@@ -1,9 +1,10 @@
 import { forwardRef, useRef, useState } from "react";
 import { semesters, sectionsData } from "./Datas";
 import { CalendarRange, ChevronDown, ArrowRight, BookOpen, GraduationCap, DiamondPlus, MessageCircleMore } from "lucide-react";
-import { LucideYoutube } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const OpenLink = (link) => window.open(link, "_blank");
+
 
 const ModuleCard = ({ title, icon: Icon, Link }) => {
   return (
@@ -87,6 +88,9 @@ const UnivCard = ({ icon: Icon, title, des, btn, accent }) => {
 const LibrarySection = forwardRef((props, ref) => {
   const semesterRef = useRef({});
   const scrollToSemester = (semester) => semesterRef.current[semester]?.scrollIntoView({ behavior: "smooth", block: "start", });
+  const navigate = useNavigate();
+
+
 
   return (
     <div className="min-h-screen px-4 py-10 bg-slate-50 font-gortesk" ref={ref}>
@@ -126,7 +130,7 @@ const LibrarySection = forwardRef((props, ref) => {
       <div className="p-10 mt-16 text-center text-white bg-slate-800 rounded-xl">
         <h3 className="mb-2 text-2xl font-bold">Des idées pour de nouvelles fonctionnalités ?</h3>
         <p className="mb-6 text-slate-300">Partagez vos suggestions afin d’améliorer votre expérience</p>
-        <button className="px-6 py-3 font-semibold transition bg-indigo-600 rounded-lg cursor-pointer hover:bg-indigo-500">
+        <button onClick={() => navigate('/suggest')} className="px-6 py-3 font-semibold transition bg-indigo-600 rounded-lg cursor-pointer hover:bg-indigo-500">
           Envoyer une suggestion
         </button>
       </div>
