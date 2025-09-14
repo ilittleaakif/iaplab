@@ -1,11 +1,13 @@
-import { useRef, useState } from "react";
+import { forwardRef, useRef, useState } from "react";
 import { semesters, sectionsData } from "./Datas";
 import { CalendarRange, ChevronDown, ArrowRight, BookOpen, GraduationCap, DiamondPlus, MessageCircleMore } from "lucide-react";
 import { LucideYoutube } from "lucide-react";
 
-const ModuleCard = ({ title, icon: Icon }) => {
+const OpenLink = (link) => window.open(link, "_blank");
+
+const ModuleCard = ({ title, icon: Icon, Link }) => {
   return (
-    <div className="text-bg border-2 border-border hover:*:text-text rounded-lg p-6 flex flex-col items-center justify-center cursor-pointer hover:bg-bg transition">
+    <div onClick={() => OpenLink(Link)} className="text-bg active:*:text-text active:bg-bg border-2 border-border hover:*:text-text rounded-lg p-6 flex flex-col items-center justify-center cursor-pointer hover:bg-bg transition">
       <Icon className="w-8 h-8 mb-2" />
       <div className="font-bold text-center text-md">{title}</div>
     </div>
@@ -14,7 +16,7 @@ const ModuleCard = ({ title, icon: Icon }) => {
 
 const ExtraCard = ({ title, icon: Icon }) => {
   return (
-    <div className="flex flex-col items-center justify-between gap-1 px-6 py-4 text-white transition rounded-lg cursor-pointer bg-youtube md:flex-row hover:bg-red-400">
+    <div className="active:*:text-text active:bg-youtube/80 flex flex-col items-center justify-between gap-1 px-6 py-4 text-white transition rounded-lg cursor-pointer bg-youtube md:flex-row hover:bg-red-400">
       <Icon />
       <div className="text-lg font-bold text-center">{title}</div>
     </div>
@@ -36,7 +38,7 @@ const SectionBlock = ({ extras, semester, modules, sectionRef }) => {
       {/* Modules */}
       <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
         {modules.map((mod, i) => (
-          <ModuleCard key={i} title={mod.title} icon={mod.icon} />
+          <ModuleCard key={i} title={mod.title} icon={mod.icon} Link={mod.Url} />
         ))}
       </div>
 
@@ -68,11 +70,13 @@ const UnivCard = ({ icon: Icon, title, des, btn, accent }) => {
   return (
     <div className="flex flex-col justify-between p-8 transition-shadow shadow-lg bg-text rounded-2xl hover:shadow-xl ">
       <div className="flex items-center mb-4">
-        <Icon className={`w-8 h-8 mr-3 text-${accent}`} />
-        <h2 className="text-xl font-semibold text-bg">{title}</h2>
+        <Icon className={`md:w-8 md:h-8 w-6 h-6 mr-3`} style={{ color: `var(--${accent})` }} />
+        <h2 className="text-lg md:text-xl font-semibold text-bg">{title}</h2>
       </div>
       <p className="mb-6 text-bg-soft">{des}</p>
-      <button className={`cursor-pointer inline-flex items-center text-${accent} font-medium hover:underline`}>
+      <button
+        style={{ color: `var(--${accent})` }}
+        className={`cursor-pointer inline-flex items-center  font-medium hover:underline`}>
         <span>{btn}</span>
         <ArrowRight className="w-5 h-5 ml-2" />
       </button>
@@ -80,13 +84,12 @@ const UnivCard = ({ icon: Icon, title, des, btn, accent }) => {
   )
 }
 
-function LibrarySection() {
+const LibrarySection = forwardRef((props, ref) => {
   const semesterRef = useRef({});
-
   const scrollToSemester = (semester) => semesterRef.current[semester]?.scrollIntoView({ behavior: "smooth", block: "start", });
 
   return (
-    <div className="min-h-screen px-4 py-10 bg-slate-50 font-gortesk">
+    <div className="min-h-screen px-4 py-10 bg-slate-50 font-gortesk" ref={ref}>
 
       {/* Navbar */}
       <div className="flex flex-wrap justify-center gap-4 mb-10">
@@ -135,6 +138,6 @@ function LibrarySection() {
 
 
   );
-}
+})
 
 export default LibrarySection;
