@@ -2,9 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { Youtube, Inbox, Info, MenuIcon, MessageCircleQuestionMark } from 'lucide-react';
 import { tempInboxData } from './InboxData';
 
-
-
-import LikeWidget from './Likes';
 import AboutDialog from './About';
 import InboxDialog from './Inbox';
 
@@ -40,34 +37,31 @@ function Header() {
   }, []);
 
   // {Header Navbar Item}
-  const NavbarItem = ({ lab, icon: Icon, clickEvent }) => {
+  const NavbarItem = ({ lab, icon, clickEvent }) => {
     return (
-      <div onClick={() => clickEvent && clickEvent()} className={`rounded-lg px-2 flex text-text items-center gap-0.5 cursor-pointer transition hover:bg-second`}>
-        <Icon className='h-4' />
-        <span className='font-semibold uppercase font-poppins'>{lab}</span>
-
+      <div onClick={() => clickEvent && clickEvent()} className={`text-xs  bg-second px-3 py-1 flex text-text items-center gap-1 cursor-pointer transition shadow-[3px_3px_0_var(--text-soft)] hover:shadow-none hover:translate-[3px]`}>
+        <i className={icon}></i>
+        <span className='font-poppins uppercase font-bold'>{lab}</span>
       </div>
     );
   };
 
+  // {Drop Down Item}
+  const DropDownItem = ({ icon, lab, clickEvent }) => {
+    return (
+      <li onClick={() => clickEvent && clickEvent()} className="flex items-center justify-between w-full p-4 text-sm text-text cursor-pointer font-poppins ">
+        <span className='font-semibold'>{lab}</span>
+        <i className={icon}></i>
+      </li>
+    );
+  };
   // {DropDown}
   const DropDown = ({ visible = false }) => {
-
-    // {Drop Down Item}
-    const DropDownItem = ({ icon: Icon, lab, clickEvent }) => {
-      return (
-        <li onClick={() => clickEvent && clickEvent()} className="flex items-center justify-between w-full p-4 text-sm text-text cursor-pointer font-poppins ">
-          <span className='font-semibold'>{lab}</span>
-          <Icon className="w-5 h-5" />
-        </li>
-      );
-    };
     return visible && (
-      <ul className={`absolute right-0 mt-2 min-w-48 rounded-md flex flex-col items-center bg-bg overflow-hidden transition`}>
-        <DropDownItem lab="Inbox" icon={Inbox} clickEvent={openInbox} />
-        <DropDownItem lab="Youtube" icon={Youtube} clickEvent={() => window.open('https://www.youtube.com/@WrittenArt-u4r', '_blank', 'noopener,noreferrer')} />
-        <DropDownItem lab="Contact" icon={MessageCircleQuestionMark} clickEvent={() => console.log('Contact clicked')} />
-        <DropDownItem lab="About" icon={Info} clickEvent={openDialog} />
+      <ul className={`absolute right-0 mt-2 min-w-48 flex flex-col items-center bg-bg overflow-hidden transition`}>
+        <DropDownItem lab="Inbox" icon={'fa-solid fa-inbox'} clickEvent={openInbox} />
+        <DropDownItem lab="Youtube" icon={'fa-brands fa-youtube'} clickEvent={() => window.open('https://www.youtube.com/@WrittenArt-u4r', '_blank', 'noopener,noreferrer')} />
+        <DropDownItem lab="About" icon={'fa-solid fa-circle-info'} clickEvent={openDialog} />
       </ul>
     );
   };
@@ -82,17 +76,15 @@ function Header() {
         <div
           className={`md:text-4xl leading-none text-3xl font-logo font-extrabold transition flex items-end`}>
           <span className="text-accent drop-shadow-[0_0_12px_var(--accent)]">IAP</span>
-          <span className="text-sub drop-shadow-[0_0_12px_var(--sub)]">lab</span>
+          <span className="text-sub drop-shadow-[0_0_12px_var(--sub)]">LAB</span>
           <span className="text-text-soft text-sm font-gortesk ml-1">Beta</span>
         </div>
 
         {/* Navbar */}
         <div className={`md:flex hidden items-center gap-4 list-none`}>
-          <NavbarItem lab="Inbox" icon={Inbox} clickEvent={openInbox} />
-          <NavbarItem lab="Youtube" icon={Youtube} clickEvent={() => window.open('https://www.youtube.com/@WrittenArt-u4r', '_blank', 'noopener,noreferrer')} />
-          <NavbarItem lab="Contact" icon={MessageCircleQuestionMark} clickEvent={() => console.log('Contact clicked')} />
-          <NavbarItem lab="About" icon={Info} clickEvent={openDialog} />
-          <LikeWidget />
+          <NavbarItem lab="Inbox" icon={"fa-solid fa-inbox"} clickEvent={openInbox} />
+          <NavbarItem lab="Youtube" icon={'fa-brands fa-youtube'} clickEvent={() => window.open('https://www.youtube.com/@WrittenArt-u4r', '_blank', 'noopener,noreferrer')} />
+          <NavbarItem lab="About" icon={'fa-solid fa-circle-info'} clickEvent={openDialog} />
         </div>
 
         {/* Mobile Navbar */}

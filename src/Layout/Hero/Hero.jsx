@@ -21,14 +21,14 @@ function HeroSection({ libRef }) {
 
   const scrollEvent = (target) => target?.current?.scrollIntoView({ behavior: "smooth" });
 
-  const ActionBtn = ({ icon: Icon, label, gradient, clickEvent, delay, accent }) => (
+  const ActionBtn = ({ icon, label, gradient, clickEvent, delay, accent }) => (
     <div
       onClick={() => clickEvent && clickEvent()}
       style={{ animationDelay: delay, '--accent': accent }}
-      className={`px-6 py-3 hover:shadow-action rounded-xl flex items-center justify-center gap-2 font-semibold font-ibm text-white cursor-pointer transition-all transform hover:-translate-y-1  ${gradient} animate-fadein opacity-0`}
+      className={`text-sm md:text-base px-6 py-3 hover:shadow-action flex items-center justify-center gap-2 font-bold font-poppins text-text cursor-pointer transition hover:-translate-y-[2px] active:hover:translate-y-[2px] rounded-sm  ${gradient} animate-fadein opacity-0`}
     >
-      <span className="text-sm md:text-base">{label}</span>
-      <Icon className={'h-5 w-5'} />
+      <span >{label}</span>
+      <i className={icon}></i>
     </div>
   );
 
@@ -67,15 +67,15 @@ function HeroSection({ libRef }) {
             gradient="bg-gradient-to-br from-blue-500 via-blue-700 to-blue-900"
             accent={'#1D4ED8'}
             label="Discover Lessons"
-            icon={GraduationCap}
+            icon="fa-solid fa-graduation-cap"
             clickEvent={() => scrollEvent(libRef)}
             delay={'.5s'}
           />
           <ActionBtn
             gradient="bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700"
-            accent={'#FFD700'}
+            accent={'var(--sub)'}
             label="Share documents"
-            icon={FilePlus}
+            icon="fa-solid fa-file-circle-plus"
             clickEvent={() => navigate('/provide')}
             delay={'.9s'}
           />
@@ -83,10 +83,11 @@ function HeroSection({ libRef }) {
             gradient="bg-gradient-to-br from-green-500 via-green-600 to-green-700"
             accent={'#15803D'}
             label="Get Support"
-            icon={MessageCircle}
+            icon="fa-solid fa-message"
             clickEvent={() => navigate('/support')}
             delay={'1.3s'}
           />
+
         </div>
       </div >
     </div >

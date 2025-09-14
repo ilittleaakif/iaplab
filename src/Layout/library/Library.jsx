@@ -7,7 +7,9 @@ const OpenLink = (link) => window.open(link, "_blank");
 
 const ModuleCard = ({ title, icon: Icon, Link }) => {
   return (
-    <div onClick={() => OpenLink(Link)} className="text-bg active:*:text-text active:bg-bg border-2 border-border hover:*:text-text rounded-lg p-6 flex flex-col items-center justify-center cursor-pointer hover:bg-bg transition">
+    <div
+      onClick={() => OpenLink(Link)}
+      className="text-bg p-6 border-2 border-border flex flex-col items-center justify-center hover:-translate-y-[3px] hover:text-text hover:bg-bg active:bg-bg active:text-text cursor-pointer transition">
       <Icon className="w-8 h-8 mb-2" />
       <div className="font-bold text-center text-md">{title}</div>
     </div>
@@ -27,12 +29,12 @@ const SectionBlock = ({ extras, semester, modules, sectionRef }) => {
   const [showExtras, setShowExtras] = useState(false);
 
   return (
-    <section ref={sectionRef} className="p-6 space-y-8 bg-white shadow rounded-xl">
+    <section ref={sectionRef} className="p-6 space-y-8 bg-text shadow-md">
 
       {/* Header */}
-      <div className="flex items-center gap-3 pb-3 border-b text-bg">
-        <CalendarRange/>
-        <h2 className="text-xl font-bold ">{semester}</h2>
+      <div className="flex items-center gap-3 pb-3 border-b text-bg uppercase">
+        <CalendarRange />
+        <h2 className="text-lg font-bold">{semester}</h2>
       </div>
 
       {/* Modules */}
@@ -46,9 +48,9 @@ const SectionBlock = ({ extras, semester, modules, sectionRef }) => {
       {extras?.length > 0 &&
         <>
           <div className="flex items-center justify-between pb-3 border-b">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 uppercase">
               <DiamondPlus />
-              <h2 className="text-xl font-bold text-dark">Extras</h2>
+              <h2 className="text-lg font-bold">Extras</h2>
             </div>
             <ChevronDown className={`w-6 h-6 cursor-pointer transition-transform ${showExtras ? "rotate-180" : "rotate-0"}`} onClick={() => setShowExtras(!showExtras)} />
           </div>
@@ -92,12 +94,12 @@ const LibrarySection = forwardRef((props, ref) => {
 
 
   return (
-    <div className="min-h-screen px-4 py-10 bg-slate-50 font-gortesk" ref={ref}>
+    <div className="min-h-screen px-4 py-10 bg-text font-gortesk" ref={ref}>
 
       {/* Navbar */}
-      <div className="flex flex-wrap justify-center gap-4 mb-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 w-fit mx-auto gap-4 my-10">
         {semesters.map((semester, idx) => (
-          <button className="font-poppins cursor-pointer px-5 py-2.5 rounded-full border border-slate-300 bg-white text-slate-700 font-medium shadow-sm hover:bg-slate-100 hover:border-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition" onClick={() => scrollToSemester(semester)} key={idx}>
+          <button className="font-bold cursor-pointer px-5 py-2.5 border-2 border-bg text-bg shadow-[3px_3px_0_var(--bg)] active:shadow-none active:translate-[3px] transition" onClick={() => scrollToSemester(semester)} key={idx}>
             {semester}
           </button>
         ))}

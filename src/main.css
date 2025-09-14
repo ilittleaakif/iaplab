@@ -24,7 +24,7 @@
   --font-gortesk: "Space Grotesk", sans-serif;
   --font-logo: "Righteous", sans-serif;
 
-  --shadow-action: 0 0 200px var(--accent);
+  --shadow-action: 0 0 100px var(--accent);
 
   --color-bg: var(--bg);
   --color-bg-soft: var(--bg-soft);
