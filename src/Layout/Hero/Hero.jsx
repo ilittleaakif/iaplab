@@ -39,7 +39,7 @@ function HeroSection({ libRef }) {
       {/* Hero Content */}
       <div className="relative z-10 text-center" >
         <h1 className="text-3xl md:text-7xl font-bold my-4 text-text to-text  animate-[fade-in_1s_ease-out_forwards]">
-          <span>Pour {" "}</span>
+          <span>pour {" "}</span>
           <span className="inline-block text-transparent bg-gradient-to-r from-accent/80 via-accent to-second bg-clip-text animate-pulse-grow" ref={typedRef}></span>
         </h1>
 
@@ -69,23 +69,23 @@ function HeroSection({ libRef }) {
             label="Discover Lessons"
             icon="fa-solid fa-graduation-cap"
             clickEvent={() => scrollEvent(libRef)}
-            delay={'.5s'}
+            delay={'.6s'}
           />
           <ActionBtn
-            gradient="bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700"
-            accent={'var(--sub)'}
+            gradient="bg-gradient-to-br from-violet-500 via-violet-600 to-violet-700"
+            accent={'var(--second)'}
             label="Share documents"
             icon="fa-solid fa-file-circle-plus"
             clickEvent={() => navigate('/provide')}
-            delay={'.9s'}
+            delay={'1s'}
           />
           <ActionBtn
             gradient="bg-gradient-to-br from-green-500 via-green-600 to-green-700"
             accent={'#15803D'}
-            label="Get Support"
-            icon="fa-solid fa-message"
+            label="Envoyer une suggestion"
+            icon="fa-solid fa-lightbulb"
             clickEvent={() => navigate('/support')}
-            delay={'1.3s'}
+            delay={'1.4s'}
           />
 
         </div>

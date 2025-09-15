@@ -18,7 +18,7 @@ const ModuleCard = ({ title, icon: Icon, Link }) => {
 
 const ExtraCard = ({ title, icon: Icon, Link }) => {
   return (
-    <div onClick={() => OpenLink(Link)} className="flex items-center justify-between px-6 py-4 transition rounded-xl cursor-pointer text-text bg-youtube active:*:text-text active:bg-youtube/90">
+    <div onClick={() => OpenLink(Link)} className="flex items-center justify-between px-6 py-4 transition cursor-pointer text-text bg-youtube active:*:text-text active:bg-youtube/90">
       <p className="font-semibold text-center md:text-lg">{title}</p>
       <Icon />
     </div>
@@ -128,10 +128,10 @@ const LibrarySection = forwardRef((props, ref) => {
         />
       </div>
 
-      <div className="p-10 mt-16 text-center text-white bg-slate-800 rounded-xl">
+      <div className="p-10 mt-16 text-center text-white bg-bg-soft">
         <h3 className="mb-2 text-2xl font-bold">Des idées pour de nouvelles fonctionnalités ?</h3>
         <p className="mb-6 text-slate-300">Partagez vos suggestions afin d’améliorer votre expérience</p>
-        <button onClick={() => navigate('/suggest')} className="px-6 py-3 font-semibold transition bg-indigo-600 rounded-lg cursor-pointer hover:bg-indigo-500">
+        <button onClick={() => navigate('/suggest')} className="px-6 py-3 font-semibold transition bg-second cursor-pointer hover:translate-[4px] shadow-[4px_4px_0_var(--text)] hover:shadow-none">
           Envoyer une suggestion
         </button>
       </div>

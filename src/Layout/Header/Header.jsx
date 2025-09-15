@@ -74,10 +74,10 @@ function Header() {
 
         {/* Logo */}
         <div
-          className={`md:text-4xl leading-none text-3xl font-logo font-extrabold transition flex items-end`}>
+          className={`md:text-4xl leading-none text-3xl font-logo font-extrabold transition flex items-end `} translate='no'>
           <span className="text-accent drop-shadow-[0_0_12px_var(--accent)]">IAP</span>
           <span className="text-sub drop-shadow-[0_0_12px_var(--sub)]">LAB</span>
-          <span className="text-text-soft text-sm font-gortesk ml-1">Beta</span>
+          <span className="text-text-soft text-sm font-gortesk ml-1">Stable</span>
         </div>
 
         {/* Navbar */}

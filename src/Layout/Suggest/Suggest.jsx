@@ -53,7 +53,7 @@ const Suggest = () => {
           placeholder="Votre nom"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full rounded-xl border border-border bg-bg-soft px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent transition"
+          className="w-full  border border-border bg-bg-soft px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent transition"
         />
 
         <textarea
@@ -62,10 +62,10 @@ const Suggest = () => {
           rows={4}
           value={suggestion}
           onChange={(e) => setSuggestion(e.target.value)}
-          className="w-full rounded-xl border border-border bg-bg-soft px-4 py-3 text-base resize-none focus:outline-none focus:ring-2 focus:ring-accent transition"
+          className="w-full  border border-border bg-bg-soft px-4 py-3 text-base resize-none focus:outline-none focus:ring-2 focus:ring-accent transition"
         />
         <button
-          className="px-4 md:px-8 cursor-pointer flex items-center justify-center gap-2 bg-accent text-bg font-medium py-3 rounded-xl shadow-md hover:-translate-y-1 hover:text-text active:scale-95 transition-transform"
+          className="px-4 md:px-8 cursor-pointer flex items-center justify-center gap-2 bg-accent text-bg font-medium py-3  shadow-md hover:-translate-y-1 hover:text-text active:scale-95 transition-transform"
           type="submit"
           disabled={loading}
         >
