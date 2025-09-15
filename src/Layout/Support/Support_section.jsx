@@ -4,7 +4,7 @@ import SplitText from "../../assets/SplitText";
 function Support() {
   const navigate = useNavigate();
   return (
-    <div className="flex font-gortesk h-full w-full items-center justify-center gap-2 flex-col bg-bg text-text min-h-screen ">
+    <div className="flex font-main h-full w-full items-center justify-center gap-2 flex-col bg-bg text-text min-h-screen ">
       <SplitText
         text="Not available yet :)"
         className="md:text-3xl text-xl font-semibold text-center text-text"

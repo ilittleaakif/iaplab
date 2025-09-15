@@ -15,6 +15,7 @@ function HeroSection({ libRef }) {
       backSpeed: 30,
       backDelay: 2000,
       loop: true,
+      cursorChar: '_'
     });
     return () => typed.destroy();
   }, []);
@@ -25,7 +26,7 @@ function HeroSection({ libRef }) {
     <div
       onClick={() => clickEvent && clickEvent()}
       style={{ animationDelay: delay, '--accent': accent }}
-      className={`text-sm md:text-base px-6 py-3 hover:shadow-action flex items-center justify-center gap-2 font-bold font-poppins text-text cursor-pointer transition hover:-translate-y-[2px] active:hover:translate-y-[2px] rounded-sm  ${gradient} animate-fadein opacity-0`}
+      className={`text-sm md:text-base px-6 py-3 hover:shadow-action flex items-center justify-center gap-2 font-bold font-poppins text-text cursor-pointer transition active:hover:translate-y-[2px]  ${gradient} animate-fadein opacity-0`}
     >
       <span >{label}</span>
       <i className={icon}></i>
@@ -34,21 +35,21 @@ function HeroSection({ libRef }) {
 
 
   return (
-    <div className="select-none relative flex items-center justify-center min-h-screen overflow-hidden font-gortesk bg-[radial-gradient(circle_at_center,rgba(138,43,226,0.2)_0%,rgba(75,0,130,0.1)_25%,rgba(72,61,139,0.05)_50%,transparent_70%),linear-gradient(135deg,#0b0b1f_0%,#1c0f3a_50%,#1a0f3d_100%)]">
+    <div className="select-none relative flex items-center justify-center min-h-screen overflow-hidden font-main bg-[radial-gradient(circle_at_center,rgba(138,43,226,0.2)_0%,rgba(75,0,130,0.1)_25%,rgba(72,61,139,0.05)_50%,transparent_70%),linear-gradient(135deg,#0b0b1f_0%,#1c0f3a_50%,#1a0f3d_100%)]">
 
       {/* Hero Content */}
       <div className="relative z-10 text-center" >
-        <h1 className="text-3xl md:text-7xl font-bold my-4 text-text to-text  animate-[fade-in_1s_ease-out_forwards]">
+        <h1 className="text-[34px] md:text-7xl font-bold md:my-4 my-3 text-text animate-[fade-in_1s_ease-out_forwards]">
           <span>pour {" "}</span>
-          <span className="inline-block text-transparent bg-gradient-to-r from-accent/80 via-accent to-second bg-clip-text animate-pulse-grow" ref={typedRef}></span>
+          <span className=" inline-block text-transparent bg-gradient-to-r from-accent to-second bg-clip-text animate-pulse-grow" ref={typedRef}></span>
         </h1>
 
         <div className="md:max-w-3xl max-w-3/4 mx-auto  font-light leading-relaxed opacity-0 text-light/85 animate-fadein">
           <p className="md:text-lg text-base font-semibold text-text">Salut cher étudiant ! 👋</p>
           <SplitText
             text="Bienvenue dans la bibliothèque IAP la plus complète. Lance-toi dans ton aventure d’apprentissage avec des ressources innovantes et des expériences interactives."
-            className="md:text-lg text-xs font-semibold text-center text-text-soft"
-            delay={100}
+            className="md:text-lg text-xs text-center text-text-soft"
+            delay={300}
             duration={0.6}
             ease="power3.out"
             splitType="words"
@@ -66,7 +67,7 @@ function HeroSection({ libRef }) {
           <ActionBtn
             gradient="bg-gradient-to-br from-blue-500 via-blue-700 to-blue-900"
             accent={'#1D4ED8'}
-            label="Discover Lessons"
+            label="Découvrir les leçons"
             icon="fa-solid fa-graduation-cap"
             clickEvent={() => scrollEvent(libRef)}
             delay={'.6s'}
@@ -74,7 +75,7 @@ function HeroSection({ libRef }) {
           <ActionBtn
             gradient="bg-gradient-to-br from-violet-500 via-violet-600 to-violet-700"
             accent={'var(--second)'}
-            label="Share documents"
+            label="Partager des documents"
             icon="fa-solid fa-file-circle-plus"
             clickEvent={() => navigate('/provide')}
             delay={'1s'}

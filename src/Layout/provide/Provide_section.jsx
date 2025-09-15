@@ -19,7 +19,7 @@ function ProvideSection() {
   };
 
   return (
-    <div className=" relative flex bg-bg *:animate-fadein  flex-col items-center justify-center min-h-screen p-8 font-gortesk text-text ">
+    <div className=" relative flex bg-bg *:animate-fadein flex-col items-center justify-center min-h-screen p-8 font-main text-text ">
       <SplitText
         text="Not available yet :)"
         className="md:text-3xl text-xl font-semibold text-center text-sub mb-5"

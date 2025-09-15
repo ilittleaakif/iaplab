@@ -35,10 +35,10 @@ const AboutDialog = ({ isOpen, onClose }) => {
     <div onClick={handleBackdropClick} className="fixed inset-0 z-50 flex items-center justify-center select-none bg-black/10 backdrop-blur-sm">
 
       {/* Container */}
-      <div className="flex font-poppins flex-col items-center md:w-full md:max-w-lg max-w-11/12 shadow-xl bg-text animate-slideup" onClick={(e) => e.stopPropagation()}>
+      <div className="flex font-main flex-col items-center md:w-full md:max-w-lg max-w-11/12 shadow-xl bg-text animate-slideup" onClick={(e) => e.stopPropagation()}>
 
         {/* Header */}
-        <div className="w-full flex items-center justify-between md:p-6 p-2 border-b border-bg/90 text-bg md:mb-4">
+        <div className="w-full flex items-center justify-between md:p-6 py-2 px-4 border-b border-bg/90 text-bg md:mb-4">
           <h2 className="text-sm font-poppins font-bold md:text-xl">À propos</h2>
           <X className="p-1 border cursor-pointer shadow-[3px_3px_0_var(--bg)] active:shadow-none active:translate-[3px] transition" onClick={onClose} size={30} />
         </div>

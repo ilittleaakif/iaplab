@@ -70,7 +70,7 @@ function Header() {
 
   return (
     <>
-      <header ref={headerRef} className={`fixed w-full z-50 flex top-0 items-center justify-between p-4 md:p-8 transition-all select-none  ${scrolled ? 'bg-bg/90 backdrop-blur-md py-4 md:py-5' : 'bg-transparent'}`} >
+      <header ref={headerRef} className={`fixed font-main w-full z-50 flex top-0 items-center justify-between p-4 md:p-8 transition-all select-none  ${scrolled ? 'bg-bg/90 backdrop-blur-md py-4 md:py-5' : 'bg-transparent'}`} >
 
         {/* Logo */}
         <div
