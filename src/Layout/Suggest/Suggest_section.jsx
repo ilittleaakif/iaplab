@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowLeftIcon, Send } from "lucide-react";
-import { db } from "../../Firebase";
+import { db } from "../../firebase_config"
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import SplitText from "../../assets/SplitText";
 import { useNavigate } from "react-router-dom";

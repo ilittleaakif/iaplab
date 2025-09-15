@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { Youtube, Inbox, Info, MenuIcon, MessageCircleQuestionMark } from 'lucide-react';
-import { tempInboxData } from './InboxData';
+import { tempInboxData } from './inbox_datas';
 
-import AboutDialog from './About';
-import InboxDialog from './Inbox';
+import AboutDialog from './about_dialog';
+import InboxDialog from './inbox_dialog';
 
 function Header() {
   const headerRef = useRef(null);

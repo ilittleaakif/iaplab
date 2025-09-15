@@ -1,14 +1,13 @@
 import { useRef } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import Header from "./Layout/Header/Header";
-import HeroSection from "./Layout/Hero/Hero";
-import LibararySection from "./Layout/library/Library";
-import ProvideSection from "./Layout/provide/provide";
-
-import Support from "./Layout/Support/Support";
-import Suggest from "./Layout/Suggest/Suggest";
-import Footer from "./Layout/Footer/Footer";
+import Header from "./Layout/Header/Header_section"
+import HeroSection from "./Layout/Hero/Hero_section";
+import LibararySection from "./Layout/library/Library_Section";
+import ProvideSection from "./Layout/provide/Provide_section";
+import Support from "./Layout/Support/Support_section";
+import Suggest from "./Layout/Suggest/Suggest_section";
+import Footer from "./Layout/Footer/footer_section";
 
 function App() {
   const libRef = useRef(null);
@@ -19,7 +18,7 @@ function App() {
         <Header />
         <HeroSection libRef={libRef} />
         <LibararySection ref={libRef} />
-        <Footer/>
+        <Footer />
       </>
     )
   };

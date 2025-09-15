@@ -1,1 +1,1 @@
-Praise be to God<3
+Alhamdullilah for everything <3

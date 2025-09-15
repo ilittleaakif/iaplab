@@ -55,6 +55,7 @@ const AboutDialog = ({ isOpen, onClose }) => {
 
 
           {/* Développeur */}
+          <span className="font-bold font-gortesk my-3">Built by</span>
           <div className="grid w-full grid-cols-1 gap-2 md:grid-cols-2">
             <DevCard Link={'https://wa.me/212673999182'} Logo={pfp} Name="ZakariaX" Role="développeur" icon={Code} />
             <DevCard Link={'https://wa.me/212656105609'} Logo={pfpb} Name="Adam" Role="développeur" icon={Code} />

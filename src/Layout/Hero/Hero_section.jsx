@@ -84,7 +84,7 @@ function HeroSection({ libRef }) {
             accent={'#15803D'}
             label="Envoyer une suggestion"
             icon="fa-solid fa-lightbulb"
-            clickEvent={() => navigate('/support')}
+            clickEvent={() => navigate('/suggest')}
             delay={'1.4s'}
           />
 
