@@ -70,7 +70,7 @@ export const SectionBlock = ({ extras, semester, modules, sectionRef }) => {
 
 export const UnivCard = ({ icon: Icon, title, des, btn, accent, Link }) => {
   return (
-    <div onClick={() => OpenLink(Link)} className="flex flex-col justify-between p-8 transition-shadow shadow-lg bg-text rounded-2xl hover:shadow-xl ">
+    <div onClick={() => OpenLink(Link)} style={{borderColor: `var(--${accent})`}} className={`flex flex-col h-f justify-between p-8 transition-shadow shadow-lg bg-text border-2 hover:shadow-xl`}>
       <div className="flex items-center mb-4">
         <Icon className={`md:w-8 md:h-8 w-6 h-6 mr-3`} style={{ color: `var(--${accent})` }} />
         <h2 className="text-lg font-semibold md:text-xl text-bg">{title}</h2>
