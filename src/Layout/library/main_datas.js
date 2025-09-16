@@ -2,18 +2,15 @@ import {
   Sigma, Calculator, Cpu, GitBranch, Code, Monitor,
   Activity, Globe, Database, Shield, Network, Route,
   BarChart3, Layers, Terminal, Boxes,
-  Youtube,
-  Link
+  Youtube, Images
 } from "lucide-react";
 
-export const semesters = [
-  "Semestre 1",
-  "Semestre 2",
-  "Semestre 3",
-  "Semestre 4"
-];
+export const SEMESTRES = {
+  "Année 1": ["Semestre 1", "Semestre 2"],
+  "Année 2": ["Semestre 3", "Semestre 4"]
+};
 
-export const sectionsData = [
+export const SECTION_DATA = [
   {
     semester: "Semestre 1",
     modules: [
@@ -24,12 +21,15 @@ export const sectionsData = [
       { title: "Programmation en Python 1", icon: Code, Url: 'https://drive.google.com/drive/folders/11beEc_I2tjV_ftomzbdMULooqeMur9Nj' },
       { title: "Architecture des ordinateurs", icon: Monitor, Url: 'https://drive.google.com/drive/folders/12MMcZ4FBuYc-s3zbAuYlWa0VpO7Rvfm0' },
     ],
+    youtube: [
+      { title: 'programmation en C1', icon: Youtube, Url: 'https://www.youtube.com/watch?v=I4U0sQDw5Nw&list=PLZpzLuUp9qXxKSkKT43ppqzb8c2ahO4VS' },
+      { title: 'Algorithmique', icon: Youtube, Url: 'https://www.youtube.com/watch?v=m_yj2p6SCEM&list=PLZpzLuUp9qXwrApSukhtvpi4U6l-INcTI' },
+      { title: 'Électronique Numérique', icon: Youtube, Url: 'https://www.youtube.com/watch?v=h5IEj1U4iVw&list=PLU7IbxWzSiXTGMOjd30HFjMwssoVNbAA9' },
+      { title: 'Analyse', icon: Youtube, Url: 'https://www.youtube.com/watch?v=AwuqG0agXCI&list=PLh8CSljgwDFR166V-x0tMKUX_m_OKdTrG' },
+      { title: 'Algebre', icon: Youtube, Url: 'https://www.youtube.com/watch?v=f2HrMWmke4o&list=PLh8CSljgwDFTEsLrTYE4J0S8WPKPAd1w5' },
+    ],
     extras: [
-      { title: 'programmation en C1', icon: Youtube, Url:'https://www.youtube.com/watch?v=I4U0sQDw5Nw&list=PLZpzLuUp9qXxKSkKT43ppqzb8c2ahO4VS' },
-      { title: 'Algorithmique', icon: Youtube, Url:'https://www.youtube.com/watch?v=m_yj2p6SCEM&list=PLZpzLuUp9qXwrApSukhtvpi4U6l-INcTI' },
-      { title: 'Électronique Numérique', icon: Youtube, Url:'https://www.youtube.com/watch?v=h5IEj1U4iVw&list=PLU7IbxWzSiXTGMOjd30HFjMwssoVNbAA9' },
-      { title: 'Analyse', icon: Youtube, Url:'https://www.youtube.com/watch?v=AwuqG0agXCI&list=PLh8CSljgwDFR166V-x0tMKUX_m_OKdTrG' },
-      { title: 'Algebre', icon: Youtube, Url:'https://www.youtube.com/watch?v=f2HrMWmke4o&list=PLh8CSljgwDFTEsLrTYE4J0S8WPKPAd1w5' },
+      { title: 'PROBA STATS SEANCE 1 TABLEAU', link: '', icon: Images }
     ]
   },
   {
@@ -42,7 +42,7 @@ export const sectionsData = [
       { title: "Programmation en Python 2", icon: Code, Url: 'https://drive.google.com/drive/folders/12Yn8-ryX4p6Edhh8gL-KSAwIX6Uh6FGq' },
       { title: "Programmation Web 1", icon: Globe, Url: 'https://drive.google.com/drive/folders/1OXbQyBTAsaXeJF3INN6YdpaVzJD1qyAU' },
     ],
-    extras: []
+    youtube: []
   },
   {
     semester: "Semestre 3",
@@ -54,7 +54,7 @@ export const sectionsData = [
       { title: "Système d'exploitation 1", icon: Terminal, Url: 'https://drive.google.com/drive/folders/1voDDFL-hkyyMJK3tcdItsl48CChlxm2g' },
       { title: "Recherche opérationnelle et optimisation", icon: BarChart3, Url: 'https://drive.google.com/drive/folders/13mTR2-C1TK5JzEX9qv9JRe_IEVmtcJrg' },
     ],
-    extras: []
+    youtube: []
   },
   {
     semester: "Semestre 4",
@@ -66,6 +66,6 @@ export const sectionsData = [
       { title: "Programmation objet avec C++", icon: Boxes, Url: 'https://drive.google.com/drive/folders/1qiN5AEtMY2kB2UyK4kzITLprTq5ocQZm' },
       { title: "Sécurité Informatique", icon: Shield, Url: 'https://drive.google.com/drive/folders/15vgfR4Mp7Y21lfG48AsD6HwkyBGUosTF' },
     ],
-    extras: []
+    youtube: []
   },
 ];

@@ -5,44 +5,68 @@ const OpenLink = (link) => window.open(link, "_blank");
 
 const ExtraCard = ({ title, icon: Icon, Link }) => {
   return (
-    <div onClick={() => OpenLink(Link)} className="flex items-center justify-between px-6 py-4 transition cursor-pointer text-text bg-youtube active:*:text-text active:bg-youtube/90">
-      <p className="font-semibold text-center md:text-lg">{title}</p>
+    <div onClick={() => OpenLink(Link)} className="flex items-center gap-3 px-6 py-4 transition cursor-pointer text-text bg-bg-soft active:*:text-text active:bg-bg-soft/90">
       <Icon />
+      <p className="font-semibold text-center md:text-lg">{title}</p>
     </div>
   );
 };
 
+const YoutubeCard = ({ title, icon: Icon, Link }) => {
+  return (
+    <div onClick={() => OpenLink(Link)} className="flex items-center justify-between px-6 py-4 transition cursor-pointer text-text bg-youtube active:*:text-text active:bg-youtube/90">
+      <p className="font-semibold text-center md:text-lg">{title}</p>
+      <i class="fa-brands fa-youtube"></i>
+    </div>
+  );
+};
 
-export const SectionBlock = ({ extras, semester, modules, sectionRef }) => {
-  const [showExtras, setShowExtras] = useState(false);
+const ModuleCard = ({ title, icon: Icon, Link }) => {
+  return (
+    <div
+      onClick={() => OpenLink(Link)}
+      className="text-bg p-6 border-2 border-border flex flex-col items-center justify-center hover:text-text hover:bg-gradient-to-br hover:from-bg hover:to-bg/80 active:bg-bg active:text-text cursor-pointer transition-all">
+      <Icon className="w-8 h-8 mb-2" />
+      <div className="font-bold text-center text-md">{title}</div>
+    </div>
+  );
+};
 
-  const ModuleCard = ({ title, icon: Icon, Link }) => {
-    return (
-      <div
-        onClick={() => OpenLink(Link)}
-        className="text-bg p-6 border-2 border-border flex flex-col items-center justify-center hover:text-text hover:bg-gradient-to-br hover:from-bg hover:to-bg/80 active:bg-bg active:text-text cursor-pointer transition-all">
-        <Icon className="w-8 h-8 mb-2" />
-        <div className="font-bold text-center text-md">{title}</div>
-      </div>
-    );
-  };
-
-
+export const SemesterContainer = ({ extras, youtube, semester, modules, sectionRef }) => {
   return (
     <section ref={sectionRef} className="md:p-6 p-4 space-y-6 shadow-md">
 
-      {/* Header */}
-      <div className="flex items-center gap-3 pb-3 border-b text-bg uppercase">
-        <CalendarRange />
-        <h2 className="text-lg font-bold">{semester}</h2>
-      </div>
-
       {/* Modules */}
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-        {modules.map((mod, i) => (
-          <ModuleCard key={i} title={mod.title} icon={mod.icon} Link={mod.Url} />
-        ))}
-      </div>
+      <>
+        <div className="flex items-center gap-3 pb-3 border-b text-bg uppercase">
+          <CalendarRange />
+          <h2 className="text-lg font-bold">MODULES</h2>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          {modules.map((mod, i) => (
+            <ModuleCard key={i} title={mod.title} icon={mod.icon} Link={mod.Url} />
+          ))}
+        </div>
+      </>
+
+      {/* Youtubes */}
+      {youtube?.length > 0 &&
+        <>
+          <div className="flex items-center justify-between pb-3 border-b">
+            <div className="flex items-center gap-3 uppercase">
+              <Layers />
+              <h2 className="text-lg font-bold">YOUTUBE</h2>
+            </div>
+          </div>
+
+          <div className="grid items-center w-full grid-cols-1 gap-4 transition-all md:grid-cols-3">
+            {youtube.map((yt, i) => (
+              <YoutubeCard key={i} Link={yt.Url} title={yt.title} icon={yt.icon} />
+            ))}
+          </div>
+        </>
+      }
 
       {/* Extras */}
       {extras?.length > 0 &&
@@ -50,18 +74,15 @@ export const SectionBlock = ({ extras, semester, modules, sectionRef }) => {
           <div className="flex items-center justify-between pb-3 border-b">
             <div className="flex items-center gap-3 uppercase">
               <Layers />
-              <h2 className="text-lg font-bold">Extras</h2>
+              <h2 className="text-lg font-bold">RESSOURCES</h2>
             </div>
-            <ChevronDown className={`w-6 h-6 cursor-pointer transition-transform ${showExtras ? "rotate-180" : "rotate-0"}`} onClick={() => setShowExtras(!showExtras)} />
           </div>
 
-          {showExtras &&
-            <div className="grid items-center w-full grid-cols-1 gap-4 transition-all md:grid-cols-2">
-              {extras.map((extra, i) => (
-                <ExtraCard key={i} Link={extra.Url} title={extra.title} icon={extra.icon} />
-              ))}
-            </div>
-          }
+          <div className="">
+            {extras.map((extra, i) => (
+              <ExtraCard key={i} Link={extra.Url} title={extra.title} icon={extra.icon} />
+            ))}
+          </div>
         </>
       }
     </section>
