@@ -1,12 +1,13 @@
-import { FilePlus, GraduationCap, MessageCircle } from "lucide-react";
 import { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Typed from "typed.js";
 import SplitText from "../../assets/SPLITTEXT";
+import { ActionBtn } from "./Action_Button";
 
 function HeroSection({ libRef }) {
   const typedRef = useRef(null);
   const navigate = useNavigate();
+  const scrollEvent = (target) => target?.current?.scrollIntoView({ behavior: "smooth" });
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
@@ -20,20 +21,6 @@ function HeroSection({ libRef }) {
     return () => typed.destroy();
   }, []);
 
-  const scrollEvent = (target) => target?.current?.scrollIntoView({ behavior: "smooth" });
-
-  const ActionBtn = ({ icon, label, gradient, clickEvent, delay, accent }) => (
-    <div
-      onClick={() => clickEvent && clickEvent()}
-      style={{ animationDelay: delay, '--accent': accent }}
-      className={`text-sm md:text-base px-6 py-3 hover:shadow-action flex items-center justify-center gap-2 font-bold font-poppins text-text cursor-pointer transition active:hover:translate-y-[2px]  ${gradient} animate-fadein opacity-0`}
-    >
-      <span >{label}</span>
-      <i className={icon}></i>
-    </div>
-  );
-
-
   return (
     <div className="select-none relative flex items-center justify-center min-h-screen overflow-hidden font-main bg-[radial-gradient(circle_at_center,rgba(138,43,226,0.2)_0%,rgba(75,0,130,0.1)_25%,rgba(72,61,139,0.05)_50%,transparent_70%),linear-gradient(135deg,#0b0b1f_0%,#1c0f3a_50%,#1a0f3d_100%)]">
 
@@ -45,7 +32,8 @@ function HeroSection({ libRef }) {
         </h1>
 
         <div className="md:max-w-3xl max-w-3/4 mx-auto  font-light leading-relaxed opacity-0 text-light/85 animate-fadein">
-          <p className="md:text-xl text-md font-semibold text-text">HELLO my freind! 👋</p>
+          {/* Greeting */}
+          <p className="md:text-xl  text-md font-semibold text-text">Hello my freind! 👋</p>
           <SplitText
             text="Welcome to the most comprehensive IAP library. Embark on your learning adventure with innovative resources and interactive experiences."
             className="md:text-lg text-xs text-center text-text-soft"
