@@ -10,7 +10,7 @@ function HeroSection({ libRef }) {
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
-      strings: ["Apprendre.", "Créer.", "Découvrir.", "Étudier."],
+      strings: ["Learn.", "Create.", "Discover.", "Study.", "Explore.", "Build.", "Grow."],
       typeSpeed: 170,
       backSpeed: 30,
       backDelay: 2000,
@@ -39,15 +39,15 @@ function HeroSection({ libRef }) {
 
       {/* Hero Content */}
       <div className="relative z-10 text-center" >
-        <h1 className="text-[34px] font-mono md:text-7xl font-bold md:my-4 my-3 text-text animate-[fade-in_1s_ease-out_forwards]">
-          <span>pour {" "}</span>
-          <span className="tracking-tighter inline-block text-transparent bg-gradient-to-r from-accent to-second bg-clip-text animate-pulse-grow" ref={typedRef}></span>
+        <h1 className="text-[34px] md:text-7xl font-bold md:my-4 my-3 text-text animate-[fade-in_1s_ease-out_forwards]">
+          <span>to {" "}</span>
+          <span className="inline-block text-transparent bg-gradient-to-r from-accent to-second bg-clip-text animate-pulse-grow" ref={typedRef}></span>
         </h1>
 
         <div className="md:max-w-3xl max-w-3/4 mx-auto  font-light leading-relaxed opacity-0 text-light/85 animate-fadein">
           <p className="md:text-xl text-md font-semibold text-text">HELLO my freind! 👋</p>
           <SplitText
-            text="Bienvenue dans la bibliothèque IAP la plus complète. Lance-toi dans ton aventure d’apprentissage avec des ressources innovantes et des expériences interactives."
+            text="Welcome to the most comprehensive IAP library. Embark on your learning adventure with innovative resources and interactive experiences."
             className="md:text-lg text-xs text-center text-text-soft"
             delay={300}
             duration={0.6}
@@ -67,7 +67,7 @@ function HeroSection({ libRef }) {
           <ActionBtn
             gradient="bg-gradient-to-br from-blue-500 via-blue-700 to-blue-900"
             accent={'#1D4ED8'}
-            label="Découvrir les leçons"
+            label="Discover the lessons"
             icon="fa-solid fa-graduation-cap"
             clickEvent={() => scrollEvent(libRef)}
             delay={'.6s'}
@@ -75,7 +75,7 @@ function HeroSection({ libRef }) {
           <ActionBtn
             gradient="bg-gradient-to-br from-violet-500 via-violet-600 to-violet-700"
             accent={'var(--second)'}
-            label="Partager des documents"
+            label="Share documents"
             icon="fa-solid fa-file-circle-plus"
             clickEvent={() => navigate('/provide')}
             delay={'1s'}
@@ -83,7 +83,7 @@ function HeroSection({ libRef }) {
           <ActionBtn
             gradient="bg-gradient-to-br from-green-500 via-green-600 to-green-700"
             accent={'#15803D'}
-            label="Envoyer une suggestion"
+            label="Provide a suggestion"
             icon="fa-solid fa-lightbulb"
             clickEvent={() => navigate('/suggest')}
             delay={'1.4s'}

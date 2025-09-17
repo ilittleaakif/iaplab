@@ -1,14 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import { MenuIcon } from 'lucide-react';
-import { tempInboxData } from './inbox_datas';
 
 import AboutDialog from './about_dialog';
-import InboxDialog from './inbox_dialog';
 
 function Header() {
   const headerRef = useRef(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [isInboxOpen, setIsInboxOpen] = useState(false);
   const [isDropDown, setIsDropDown] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const DropRef = useRef(null);
@@ -24,8 +21,6 @@ function Header() {
   const openDialog = () => setIsDialogOpen(true);
   const closeDialog = () => setIsDialogOpen(false);
 
-  const openInbox = () => setIsInboxOpen(true);
-  const closeInbox = () => setIsInboxOpen(false);
 
   useEffect(() => {
     window.addEventListener("mousedown", handleClickOutside);
@@ -59,7 +54,6 @@ function Header() {
   const DropDown = ({ visible = false }) => {
     return visible && (
       <ul className={`absolute right-0 mt-2 min-w-48 flex flex-col items-center bg-bg overflow-hidden transition`}>
-        <DropDownItem lab="Inbox" icon={'fa-solid fa-inbox'} clickEvent={openInbox} />
         <DropDownItem lab="Youtube" icon={'fa-brands fa-youtube'} clickEvent={() => window.open('https://www.youtube.com/@WrittenArt-u4r', '_blank', 'noopener,noreferrer')} />
         <DropDownItem lab="About" icon={'fa-solid fa-circle-info'} clickEvent={openDialog} />
       </ul>
@@ -74,17 +68,15 @@ function Header() {
 
         {/* Logo */}
         <div
-          className={`md:text-4xl leading-none text-3xl font-logo font-extrabold transition flex items-end `} translate='no'>
+          className={`md:text-4xl text-3xl font-logo font-extrabold transition flex items-center`}>
           <span className="text-accent drop-shadow-[0_0_12px_var(--accent)]">IAP</span>
           <span className="text-sub drop-shadow-[0_0_12px_var(--sub)]">LAB</span>
-          <span className="text-text-soft text-sm font-main ml-1">Beta</span>
         </div>
 
         {/* Navbar */}
         <div className={`md:flex hidden items-center gap-4 list-none`}>
-          <NavbarItem lab="Inbox" icon={"fa-solid fa-inbox"} clickEvent={openInbox} />
           <NavbarItem lab="Youtube" icon={'fa-brands fa-youtube'} clickEvent={() => window.open('https://www.youtube.com/@WrittenArt-u4r', '_blank', 'noopener,noreferrer')} />
-          <NavbarItem lab="About" icon={'fa-solid fa-circle-info'} clickEvent={openDialog} />
+          <NavbarItem lab="à propos" icon={'fa-solid fa-circle-info'} clickEvent={openDialog} />
         </div>
 
         {/* Mobile Navbar */}
@@ -96,7 +88,6 @@ function Header() {
       </header >
 
       <AboutDialog isOpen={isDialogOpen} onClose={closeDialog} />
-      <InboxDialog isOpen={isInboxOpen} onClose={closeInbox} items={tempInboxData} />
 
     </>
   );

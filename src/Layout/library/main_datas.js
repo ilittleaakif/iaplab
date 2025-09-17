@@ -7,7 +7,7 @@ import {
 
 export const SEMESTRES = {
   "Année 1": ["Semestre 1", "Semestre 2"],
-  "Année 2": ["Semestre 3", "Semestre 4"]
+  "Année 2": ["Semestre 3", "Semestre 4"],
 };
 
 export const SECTION_DATA = [
@@ -29,7 +29,6 @@ export const SECTION_DATA = [
       { title: 'Algebre', icon: Youtube, Url: 'https://www.youtube.com/watch?v=f2HrMWmke4o&list=PLh8CSljgwDFTEsLrTYE4J0S8WPKPAd1w5' },
     ],
     extras: [
-      { title: 'PROBA STATS SEANCE 1 TABLEAU', link: '', icon: Images }
     ]
   },
   {
@@ -54,7 +53,11 @@ export const SECTION_DATA = [
       { title: "Système d'exploitation 1", icon: Terminal, Url: 'https://drive.google.com/drive/folders/1voDDFL-hkyyMJK3tcdItsl48CChlxm2g' },
       { title: "Recherche opérationnelle et optimisation", icon: BarChart3, Url: 'https://drive.google.com/drive/folders/13mTR2-C1TK5JzEX9qv9JRe_IEVmtcJrg' },
     ],
-    youtube: []
+    youtube: [
+    ],
+    extras: [
+      { title: 'PROBA STATS SEANCE 1 TABLEAU', link: 'https://drive.google.com/drive/folders/1oEjVfQIAWXk9tDkESbG20_mzwMXj1Ypx?usp=drive_link', icon: Images }
+    ]
   },
   {
     semester: "Semestre 4",
