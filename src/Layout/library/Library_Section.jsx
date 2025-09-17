@@ -12,16 +12,7 @@ const LibrarySection = forwardRef((props, ref) => {
   return (
     <div className="py-10 font-main" ref={ref}>
 
-      <div className="md:space-y-12 space-y-8 my-10 mx-auto px-4 md:px-12 max-w-7xl">
-        <div className="flex items-center gap-3 pb-3 border-b border-border text-bg uppercase">
-          <Calendar className="w-6 h-6" />
-          <h2 className="text-xl font-bold uppercase">announces</h2>
-        </div>
-        <div>
-
-          <span className="">S3? had playlist t9der dbt beha les bases dyal programmation web li mn mfrod nkono 9rinah!</span>
-        </div>
-      </div>
+      
 
 
       <div className="md:space-y-12 space-y-8 my-10 mx-auto px-4 md:px-12 max-w-7xl">
