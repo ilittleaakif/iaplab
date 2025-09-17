@@ -54,9 +54,13 @@ export const DATAS = [
       { title: "Recherche opérationnelle et optimisation", icon: BarChart3, Url: 'https://drive.google.com/drive/folders/13mTR2-C1TK5JzEX9qv9JRe_IEVmtcJrg' },
     ],
     youtube: [
+      { title: 'Structures de Données en C', icon: Youtube, Url: 'https://www.youtube.com/watch?v=WyYHahUwEZc&list=PLbwarkNdAQxCiuRfnrN-wg1XCb0mnQeEG&index=2' },
+      { title: 'Programmation web 1', Url: 'https://youtube.com/playlist?list=PLknwEmKsW8OuN04Odt2sJqt4aAnkp-iYA&si=2IPt8VBuCnToYxuS', icon: Youtube },
+      { title: 'Modélisation objet  UML', Url: 'https://www.youtube.com/watch?v=wWnDP5YXyxk&list=PLjXcpCBIph8w3fNehQwxSdwzb3zbauv4Q', icon: Youtube },
+
     ],
     extras: [
-      { title: 'PROBA STATS SEANCE 1 TABLEAU', Url: 'https://drive.google.com/drive/folders/1oEjVfQIAWXk9tDkESbG20_mzwMXj1Ypx', icon: Images }
+      { title: 'PROBA STATS seance 1 ( tableu )', Url: 'https://drive.google.com/drive/folders/1oEjVfQIAWXk9tDkESbG20_mzwMXj1Ypx', icon: Images },
     ]
   },
   {

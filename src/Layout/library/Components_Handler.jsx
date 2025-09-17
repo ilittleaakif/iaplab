@@ -81,10 +81,11 @@ export const SemesterContainer = ({ extras, youtube, modules, sectionRef }) => {
               <h2 className="text-lg font-bold">OTHER RESSOURCES</h2>
             </div>
           </div>
-
-          {extras.map((extra, i) => (
-            <ExtraCard key={i} Link={extra.Url} title={extra.title} icon={extra.icon} />
-          ))}
+          <div className="flex flex-col gap-2">
+            {extras.map((extra, i) => (
+              <ExtraCard key={i} Link={extra.Url} title={extra.title} icon={extra.icon} />
+            ))}
+          </div>
         </>
       }
     </section>

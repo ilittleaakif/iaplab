@@ -49,7 +49,7 @@ function HeroSection({ libRef }) {
           <SplitText
             text="Welcome to the most comprehensive IAP library. Embark on your learning adventure with innovative resources and interactive experiences."
             className="md:text-lg text-xs text-center text-text-soft"
-            delay={300}
+            delay={250}
             duration={0.6}
             ease="power3.out"
             splitType="words"
