@@ -10,7 +10,7 @@ function HeroSection({ libRef }) {
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
-      strings: ["Learn.", "Create.", "Discover.", "Study.", "Explore.", "Build.", "Grow."],
+      strings: ["Learn.", "Create.", "Discover.", "Explore.", "Build.", "Grow."],
       typeSpeed: 170,
       backSpeed: 30,
       backDelay: 2000,
@@ -41,7 +41,7 @@ function HeroSection({ libRef }) {
       <div className="relative z-10 text-center" >
         <h1 className="text-[34px] md:text-7xl font-bold md:my-4 my-3 text-text animate-[fade-in_1s_ease-out_forwards]">
           <span>to {" "}</span>
-          <span className="inline-block text-transparent bg-gradient-to-r from-accent to-second bg-clip-text animate-pulse-grow" ref={typedRef}></span>
+          <span className="inline-block  text-transparent bg-gradient-to-r from-accent to-second bg-clip-text animate-pulse-grow" ref={typedRef}></span>
         </h1>
 
         <div className="md:max-w-3xl max-w-3/4 mx-auto  font-light leading-relaxed opacity-0 text-light/85 animate-fadein">
