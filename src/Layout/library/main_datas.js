@@ -69,3 +69,14 @@ export const SECTION_DATA = [
     youtube: []
   },
 ];
+
+
+export const OTHER_LABS = [
+  {
+    libName: 'FPK', libUrl: 'https://fpk-biblio.netlify.app/'
+  }, {
+    libName: 'FSC', libUrl: 'https://drive.google.com/drive/folders/1o9M39ygX0rmkaGrLR4iuGxI47A70nYrE'
+  }
+];
+
+

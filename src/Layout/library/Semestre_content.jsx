@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { SemesterContainer } from "./ModulesHandler";
 import { SECTION_DATA } from "./main_datas";
-import { ArrowLeftIcon } from "lucide-react";
+import { ArrowLeftIcon, LibraryBig } from "lucide-react";
 
 const SemsterContent = () => {
   const { name } = useParams();

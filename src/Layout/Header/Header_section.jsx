@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Youtube, Inbox, Info, MenuIcon, MessageCircleQuestionMark } from 'lucide-react';
+import { MenuIcon } from 'lucide-react';
 import { tempInboxData } from './inbox_datas';
 
 import AboutDialog from './about_dialog';
@@ -77,7 +77,7 @@ function Header() {
           className={`md:text-4xl leading-none text-3xl font-logo font-extrabold transition flex items-end `} translate='no'>
           <span className="text-accent drop-shadow-[0_0_12px_var(--accent)]">IAP</span>
           <span className="text-sub drop-shadow-[0_0_12px_var(--sub)]">LAB</span>
-          <span className="text-text-soft text-sm font-gortesk ml-1">Beta</span>
+          <span className="text-text-soft text-sm font-main ml-1">Beta</span>
         </div>
 
         {/* Navbar */}
