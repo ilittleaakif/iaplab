@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { CalendarRange, ChevronDown, ArrowRight, DiamondPlus, Layers } from "lucide-react";
+import { CalendarRange, ArrowRight, Layers } from "lucide-react";
 
 const OpenLink = (link) => window.open(link, "_blank");
 
@@ -74,15 +73,13 @@ export const SemesterContainer = ({ extras, youtube, semester, modules, sectionR
           <div className="flex items-center justify-between pb-3 border-b">
             <div className="flex items-center gap-3 uppercase">
               <Layers />
-              <h2 className="text-lg font-bold">RESSOURCES</h2>
+              <h2 className="text-lg font-bold">OTHER RESSOURCES</h2>
             </div>
           </div>
 
-          <div className="">
-            {extras.map((extra, i) => (
-              <ExtraCard key={i} Link={extra.Url} title={extra.title} icon={extra.icon} />
-            ))}
-          </div>
+          {extras.map((extra, i) => (
+            <ExtraCard key={i} Link={extra.Url} title={extra.title} icon={extra.icon} />
+          ))}
         </>
       }
     </section>

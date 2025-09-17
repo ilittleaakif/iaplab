@@ -6,8 +6,8 @@ import {
 } from "lucide-react";
 
 export const SEMESTRES = {
-  "Année 1": ["Semestre 1", "Semestre 2"],
-  "Année 2": ["Semestre 3", "Semestre 4"],
+  "FIRST YEAR": ["Semestre 1", "Semestre 2"],
+  "SECOND YEAR": ["Semestre 3", "Semestre 4"],
 };
 
 export const SECTION_DATA = [
@@ -56,7 +56,7 @@ export const SECTION_DATA = [
     youtube: [
     ],
     extras: [
-      { title: 'PROBA STATS SEANCE 1 TABLEAU', link: 'https://drive.google.com/drive/folders/1oEjVfQIAWXk9tDkESbG20_mzwMXj1Ypx?usp=drive_link', icon: Images }
+      { title: 'PROBA STATS SEANCE 1 TABLEAU', Url: 'https://drive.google.com/drive/folders/1oEjVfQIAWXk9tDkESbG20_mzwMXj1Ypx', icon: Images }
     ]
   },
   {

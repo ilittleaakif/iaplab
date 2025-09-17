@@ -35,7 +35,7 @@ const Suggest = () => {
   };
 
   return (
-    <div className="font-gortesk min-h-screen bg-bg-soft text-text flex items-center justify-center flex-col">
+    <div className="font-main min-h-screen bg-bg-soft text-text flex items-center justify-center flex-col">
       <ArrowLeftIcon className="absolute left-8 top-8 cursor-pointer" onClick={() => navigate(-1)} />
 
       {/* Header */}

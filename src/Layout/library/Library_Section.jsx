@@ -24,7 +24,7 @@ const LibrarySection = forwardRef((props, ref) => {
             </div>
 
             {/* Semester Cards */}
-            <div className="grid grid-cols-2 gap-6 mx-auto">
+            <div className="grid grid-cols-2 gap-6 mx-auto uppercase">
               {sems.map((semester, idx) => (
                 <div
                   key={idx}
@@ -45,7 +45,7 @@ const LibrarySection = forwardRef((props, ref) => {
       <div className="md:space-y-6 space-y-2 my-10 mx-auto px-4 md:px-12 max-w-7xl" >
         <div className="flex items-center gap-3 pb-3 border-b border-border text-bg uppercase">
           <Calendar className="w-6 h-6" />
-          <h2 className="text-xl font-bold">AUTRES FACULTES</h2>
+          <h2 className="text-xl font-bold uppercase">other faculties</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -63,7 +63,7 @@ const LibrarySection = forwardRef((props, ref) => {
 
 
       {/* Extras Cards */}
-      <div className="grid max-w-6xl md:gap-8 gap-4 px-4 py-12 mx-auto md:grid-cols-3">
+      <div className="grid max-w-7xl md:gap-8 gap-4 px-4 py-12 mx-auto grid-cols-1 md:grid-cols-3">
         <UnivCard Link={'https://drive.google.com/drive/folders/16Hykdvbrpv7yPeTWSG493T6JkP8fdgeS'} accent={'second'} icon={GraduationCap} title={"Cycle d'ingénieur"} des={"Vous souhaitez vous préparer au Cycle d'ingénieur ?"} btn={"Cliquez ici"} />
         <UnivCard Link={'https://guideinfo.netlify.app/'} accent={'second'} icon={BookOpen} title={"Orientation"} des={"Tu as un DUEG ou une licence en informatique ? Tu veux connaître tous les masters et cycles d'ingénieur en informatique au Maroc ?"} btn={"Cliquez ici"} />
         <UnivCard Link={'https://chat.whatsapp.com/FPp1wV6TMNg0ZKeVeHPfqS?mode=ems_copy_t'} accent={'whatsapp'} icon={MessageCircleMore} title={"Groupe WhatsApp"} des={"Rejoignez le groupe WhatsApp pour les semestres S1-S2"} btn={"Rejoignez"} />
