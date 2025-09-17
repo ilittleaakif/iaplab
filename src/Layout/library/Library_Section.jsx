@@ -1,14 +1,13 @@
 import { forwardRef, useRef } from "react";
-import { SEMESTRES, OTHER_LABS } from "./main_datas";
+import { SEMESTRES, OTHER_LABS } from "../../Data/Library_Datas";
 import { BookOpen, LibraryBig, GraduationCap, MessageCircleMore, Calendar, CalendarDays } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { UnivCard } from "./ModulesHandler";
+import { UnivCard } from "./Components_Handler";
 
 
 const LibrarySection = forwardRef((props, ref) => {
   const navigate = useNavigate();
   const OpenLink = (link) => window.open(link, "_blank");
-
 
   return (
     <div className="py-10 font-main" ref={ref}>
@@ -24,7 +23,7 @@ const LibrarySection = forwardRef((props, ref) => {
             </div>
 
             {/* Semester Cards */}
-            <div className="grid grid-cols-2 gap-6 mx-auto uppercase">
+            <div className="grid grid-cols-2 md:gap-6 gap-2 mx-auto uppercase">
               {sems.map((semester, idx) => (
                 <div
                   key={idx}

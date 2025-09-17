@@ -1,8 +1,8 @@
-import { CalendarRange, ArrowRight, Layers } from "lucide-react";
+import { CalendarRange, ArrowRight, Layers, Import, Youtube, YoutubeIcon, Video, Play } from "lucide-react";
 
 const OpenLink = (link) => window.open(link, "_blank");
 
-const ExtraCard = ({ title, icon: Icon, Link }) => {
+export const ExtraCard = ({ title, icon: Icon, Link }) => {
   return (
     <div onClick={() => OpenLink(Link)} className="flex items-center gap-3 px-6 py-4 transition cursor-pointer text-text bg-bg-soft active:*:text-text active:bg-bg-soft/90">
       <Icon />
@@ -11,16 +11,7 @@ const ExtraCard = ({ title, icon: Icon, Link }) => {
   );
 };
 
-const YoutubeCard = ({ title, icon: Icon, Link }) => {
-  return (
-    <div onClick={() => OpenLink(Link)} className="flex items-center justify-between px-6 py-4 transition cursor-pointer text-text bg-youtube active:*:text-text active:bg-youtube/90">
-      <p className="font-semibold text-center md:text-lg">{title}</p>
-      <i class="fa-brands fa-youtube"></i>
-    </div>
-  );
-};
-
-const ModuleCard = ({ title, icon: Icon, Link }) => {
+export const ModuleCard = ({ title, icon: Icon, Link }) => {
   return (
     <div
       onClick={() => OpenLink(Link)}
@@ -31,7 +22,21 @@ const ModuleCard = ({ title, icon: Icon, Link }) => {
   );
 };
 
-export const SemesterContainer = ({ extras, youtube, semester, modules, sectionRef }) => {
+export const YoutubeCard = ({ title, Link }) => {
+  return (
+    <div
+      onClick={() => OpenLink(Link)}
+      className="text-youtube p-6 border-2 border-border flex flex-col items-center justify-center hover:text-text hover:bg-gradient-to-br hover:from-red-500 hover:to-red-700     active:bg-red-100 active:text-red-700 cursor-pointer transition-all">
+      <Youtube className="w-8 h-8 mb-2" />
+      <div className="font-bold text-center text-md">{title}</div>
+    </div>
+  );
+};
+
+
+
+
+export const SemesterContainer = ({ extras, youtube, modules, sectionRef }) => {
   return (
     <section ref={sectionRef} className="md:p-6 p-4 space-y-6 shadow-md">
 
@@ -55,7 +60,7 @@ export const SemesterContainer = ({ extras, youtube, semester, modules, sectionR
           <div className="flex items-center justify-between pb-3 border-b">
             <div className="flex items-center gap-3 uppercase">
               <Layers />
-              <h2 className="text-lg font-bold">YOUTUBE</h2>
+              <h2 className="text-lg font-bold">YOUTUBE COURSES</h2>
             </div>
           </div>
 

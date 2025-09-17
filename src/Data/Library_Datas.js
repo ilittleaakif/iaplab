@@ -10,7 +10,7 @@ export const SEMESTRES = {
   "SECOND YEAR": ["Semestre 3", "Semestre 4"],
 };
 
-export const SECTION_DATA = [
+export const DATAS = [
   {
     semester: "Semestre 1",
     modules: [

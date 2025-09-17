@@ -2,7 +2,7 @@ import { ArrowLeftIcon, Heart } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import SplitText from "../../assets/SplitText";
+import SplitText from "../../assets/SPLITTEXT";
 
 function ProvideSection() {
   const [file, setFile] = useState(null);
