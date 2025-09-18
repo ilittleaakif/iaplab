@@ -95,18 +95,18 @@ export const SemesterContainer = ({ extras, youtube, modules, sectionRef }) => {
 export const UnivCard = ({ icon: Icon, title, des, btn, accent, Link }) => {
   return (
     <div
-      onClick={() => OpenLink(Link)}
-      style={{ borderColor: `var(--${accent})` }}
-      className={`rounded-md h-fit md:h-auto  flex flex-col justify-between md:p-8 p-6 transition-all border-2 hover:shadow-xl`}>
+      style={{ backgroundColor: `var(--${accent})` }}
+      className={`text-text h-fit md:h-auto  flex flex-col justify-between md:p-8 p-4 transition-all border-2 border-text hover:shadow-xl`}>
 
       <div className="flex items-center mb-4">
-        <Icon className={`md:w-8 md:h-8 w-6 h-6 mr-3`} style={{ color: `var(--${accent})` }} />
-        <h2 className="text-lg font-semibold md:text-xl text-bg">{title}</h2>
+        <Icon className={`md:w-8 md:h-8 w-6 h-6 mr-3`} />
+        <h2 className="text-lg font-semibold md:text-xl">{title}</h2>
       </div>
-      <p className="mb-6 text-bg-soft">{des}</p>
+      <p className="mb-6 text-text-soft">{des}</p>
       <button
-        style={{ color: `var(--${accent})` }}
-        className={`cursor-pointer inline-flex items-center  font-medium hover:underline`}>
+      onClick={() => OpenLink(Link)}
+
+        className={` cursor-pointer inline-flex items-center  font-medium hover:underline`}>
         <span>{btn}</span>
         <ArrowRight className="w-5 h-5 ml-2" />
       </button>

@@ -6,8 +6,8 @@ import {
 } from "lucide-react";
 
 export const SEMESTRES = {
-  "FIRST YEAR": ["Semestre 1", "Semestre 2"],
-  "SECOND YEAR": ["Semestre 3", "Semestre 4"],
+  "First Year": ["Semestre 1", "Semestre 2"],
+  "Second Year": ["Semestre 3", "Semestre 4"],
 };
 
 export const DATAS = [

@@ -36,8 +36,3 @@ export default function ITFieldsCards() {
   );
 }
 
-<div className="min-h-screen w-full bg-[#020617] relative">
-  {/* Magenta Orb Grid Background */}
-  
-     {/* Your Content/Components */}
-</div>
