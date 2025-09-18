@@ -13,13 +13,16 @@ const LibrarySection = forwardRef((props, ref) => {
     <div className="py-6 font-main bg-black text-text" ref={ref}>
 
 
-      <button class="group relative flex flex-row items-center justify-center gap-2 rounded-lg px-4 py-1 mx-auto text-sm font-medium bg-[#1a1b2e] shadow-[inset_0_-6px_8px_#4f46e51a] transition duration-500 ease-out hover:shadow-[inset_0_-4px_8px_#4338ca3d]">
-        <div class="absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-violet-500/60 via-blue-500/60 to-violet-500/60 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-[1px] ![mask-composite:subtract]"></div>
-        <i class="fa-classic fa-solid fa-moon text-blue-400"></i>
-        <span class="inline animate-gradient whitespace-pre bg-gradient-to-r from-violet-400 via-blue-400 to-indigo-700 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent [--bg-size:300%] text-center">
-          New Dark Look
-        </span>
-      </button>
+      <div className="relative w-fit mx-auto flex items-center text-center">
+        <button class="group relative flex flex-row items-center justify-center gap-2 rounded-lg px-4 py-1 mx-auto text-sm font-medium bg-[#1a1b2e] shadow-[inset_0_-6px_8px_#4f46e51a] transition duration-500 ease-out hover:shadow-[inset_0_-4px_8px_#4338ca3d]">
+          <div class="absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-violet-500/60 via-blue-500/60 to-violet-500/60 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-[1px] ![mask-composite:subtract]"></div>
+          <i class="fa-classic fa-solid fa-moon text-blue-400"></i>
+          <span class="inline animate-gradient whitespace-pre bg-gradient-to-r from-violet-400 via-blue-400 to-indigo-700 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent [--bg-size:300%] text-center">
+            New Dark Look
+          </span>
+        </button>
+        <span className='left-1/2 -translate-x-1/2 font-hand text-white text-shadow-[0_0_10px_white] md:text-[18px] text-[12px] absolute md:-bottom-4 -bottom-2'>by Zakariax</span>
+      </div>
 
 
 
