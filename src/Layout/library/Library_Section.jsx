@@ -83,15 +83,6 @@ const LibrarySection = forwardRef((props, ref) => {
         <UnivCard Link={'https://chat.whatsapp.com/DwTyDHiMfbdGSarPEMBeW5'} accent={'green'} icon={MessageCircleMore} title={"Groupe WhatsApp"} des={"Rejoignez le groupe WhatsApp pour les semestres S3-S4"} btn={"Rejoignez"} />
       </div>
 
-      <div className="p-10 mt-16 text-center text-white bg-bg-soft mx-4">
-        <h3 className="mb-2 text-2xl font-bold">Des idées pour de nouvelles fonctionnalités ?</h3>
-        <p className="mb-6 text-slate-300">Partagez vos suggestions afin d’améliorer votre expérience</p>
-        <button onClick={() => navigate('/suggest')} className="px-6 py-3 font-semibold transition bg-second cursor-pointer hover:translate-[4px] shadow-[4px_4px_0_var(--text)] hover:shadow-none">
-          Envoyer une suggestion
-        </button>
-      </div>
-
-
 
     </div >
 
