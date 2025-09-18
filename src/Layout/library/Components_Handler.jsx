@@ -97,7 +97,7 @@ export const UnivCard = ({ icon: Icon, title, des, btn, accent, Link }) => {
     <div
       onClick={() => OpenLink(Link)}
       style={{ borderColor: `var(--${accent})` }}
-      className={`rounded-md  flex flex-col justify-between md:p-8 p-6 transition-all border-2 hover:shadow-xl`}>
+      className={`rounded-md h-fit md:h-auto  flex flex-col justify-between md:p-8 p-6 transition-all border-2 hover:shadow-xl`}>
 
       <div className="flex items-center mb-4">
         <Icon className={`md:w-8 md:h-8 w-6 h-6 mr-3`} style={{ color: `var(--${accent})` }} />

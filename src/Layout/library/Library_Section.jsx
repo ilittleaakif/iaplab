@@ -17,12 +17,12 @@ const LibrarySection = forwardRef((props, ref) => {
 
       <div className="md:space-y-12 space-y-8 my-10 mx-auto px-4 md:px-12 max-w-7xl">
         {Object.entries(SEMESTRES).map(([year, sems]) => (
-          <div key={year} className="space-y-6">
+          <div key={year} className="md:space-y-6 space-y-4">
 
             {/* Heading */}
-            <div className="flex items-center gap-3 pb-3 border-b border-border text-bg uppercase">
-              <Calendar className="w-6 h-6" />
-              <h2 className="text-xl font-bold">{year}</h2>
+            <div className="flex items-center gap-3 pb-2 border-b border-border text-bg uppercase">
+              <Calendar className="md:w-6 md:h-6 w-5 h-5" />
+              <h2 className="md:text-xl font-bold">{year}</h2>
             </div>
 
             {/* Semester Cards */}
@@ -31,10 +31,10 @@ const LibrarySection = forwardRef((props, ref) => {
                 <div
                   key={idx}
                   onClick={() => navigate(`/semester/${encodeURIComponent(semester)}`)}
-                  className="rounded-md flex flex-col items-center justify-center md:p-8 p-6 text-center border-2 border-border cursor-pointer shadow-md hover:shadow-xl  hover:bg-bg-soft  active:bg-bg hover:text-text transition-all "
+                  className="rounded-md flex flex-col items-center justify-center md:p-8 p-4 text-center border-2 border-border cursor-pointer shadow-md hover:shadow-xl  hover:bg-bg-soft  active:bg-bg hover:text-text transition-all "
                 >
                   <GraduationCap className="w-8 h-8 md:w-12 md:h-12 mb-4 text-accent" />
-                  <h3 className="text-lg font-bold">{semester}</h3>
+                  <h3 className="md:text-lg text-sm font-bold ">{semester}</h3>
                 </div>
               ))}
             </div>
@@ -45,17 +45,17 @@ const LibrarySection = forwardRef((props, ref) => {
 
       {/* other libraries */}
       <div className="md:space-y-6 space-y-2 my-10 mx-auto px-4 md:px-12 max-w-7xl" >
-        <div className="flex items-center gap-3 pb-3 border-b border-border text-bg uppercase">
-          <Calendar className="w-6 h-6" />
-          <h2 className="text-xl font-bold uppercase">other faculties</h2>
-        </div>
+         <div className="flex items-center gap-3 pb-2 border-b border-border text-bg uppercase">
+              <Calendar className="md:w-6 md:h-6 w-5 h-5" />
+              <h2 className="md:text-xl font-bold">other faculties</h2>
+            </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {OTHER_LABS.map((lab, idx) => (
             <div
               onClick={() => OpenLink(lab.libUrl)}
-              className="rounded-md text-bg p-6 border-2 border-border flex flex-col items-center justify-center hover:text-text hover:bg-gradient-to-br hover:from-bg hover:to-bg/80 active:bg-bg active:text-text cursor-pointer transition-all">
-              <LibraryBig className="w-8 h-8 mb-2 text-accent" />
+              className="rounded-md text-bg md:p-6 p-4 border-2 border-border flex gap-3 md:flex-col items-center md:justify-center hover:text-text hover:bg-gradient-to-br hover:from-bg hover:to-bg/80 active:bg-bg active:text-text cursor-pointer transition-all">
+              <LibraryBig className="w-5 h-5 md:w-8 md:h-8 text-accent" />
               <div className="font-bold text-center text-md">{lab.libName}</div>
             </div>
           ))}
