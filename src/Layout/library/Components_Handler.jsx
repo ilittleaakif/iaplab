@@ -4,7 +4,7 @@ const OpenLink = (link) => window.open(link, "_blank");
 
 export const ExtraCard = ({ title, icon: Icon, Link }) => {
   return (
-    <div onClick={() => OpenLink(Link)} className="flex items-center gap-3 px-6 py-4 transition cursor-pointer text-text bg-bg-soft active:*:text-text active:bg-bg-soft/90">
+    <div onClick={() => OpenLink(Link)} className="rounded-md flex items-center gap-3 px-6 py-4 transition cursor-pointer text-text bg-bg-soft active:*:text-text active:bg-bg-soft/90">
       <Icon />
       <p className="font-semibold text-center md:text-lg">{title}</p>
     </div>
@@ -15,7 +15,7 @@ export const ModuleCard = ({ title, icon: Icon, Link }) => {
   return (
     <div
       onClick={() => OpenLink(Link)}
-      className="text-bg p-6 border-2 border-border flex flex-col items-center justify-center hover:text-text hover:bg-gradient-to-br hover:from-bg hover:to-bg/80 active:bg-bg active:text-text cursor-pointer transition-all">
+      className="rounded-md  text-bg p-6 border-2 border-border flex flex-col items-center justify-center hover:text-text hover:bg-gradient-to-br hover:from-bg hover:to-bg/80 active:bg-bg active:text-text cursor-pointer transition-all">
       <Icon className="w-8 h-8 mb-2" />
       <div className="font-bold text-center text-md">{title}</div>
     </div>
@@ -26,7 +26,7 @@ export const YoutubeCard = ({ title, Link }) => {
   return (
     <div
       onClick={() => OpenLink(Link)}
-      className="text-youtube p-6 border-2 border-border flex flex-col items-center justify-center hover:text-text hover:bg-gradient-to-br hover:from-red-500 hover:to-red-700     active:bg-red-100 active:text-red-700 cursor-pointer transition-all">
+      className="rounded-md text-youtube p-6 border-2 border-border flex flex-col items-center justify-center hover:text-text hover:bg-gradient-to-br hover:from-red-500 hover:to-red-700     active:bg-red-100 active:text-red-700 cursor-pointer transition-all">
       <Youtube className="w-8 h-8 mb-2" />
       <div className="font-bold text-center text-md">{title}</div>
     </div>
@@ -97,7 +97,7 @@ export const UnivCard = ({ icon: Icon, title, des, btn, accent, Link }) => {
     <div
       onClick={() => OpenLink(Link)}
       style={{ borderColor: `var(--${accent})` }}
-      className={`flex flex-col justify-between md:p-8 p-6 transition-all border-2 hover:shadow-xl`}>
+      className={`rounded-md  flex flex-col justify-between md:p-8 p-6 transition-all border-2 hover:shadow-xl`}>
 
       <div className="flex items-center mb-4">
         <Icon className={`md:w-8 md:h-8 w-6 h-6 mr-3`} style={{ color: `var(--${accent})` }} />

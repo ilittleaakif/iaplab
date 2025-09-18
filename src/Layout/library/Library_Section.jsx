@@ -31,7 +31,7 @@ const LibrarySection = forwardRef((props, ref) => {
                 <div
                   key={idx}
                   onClick={() => navigate(`/semester/${encodeURIComponent(semester)}`)}
-                  className="flex flex-col items-center justify-center md:p-8 p-6 text-center bg-text border-2 border-border cursor-pointer shadow-md hover:shadow-xl  hover:bg-bg-soft  active:bg-bg hover:text-text transition-all "
+                  className="rounded-md flex flex-col items-center justify-center md:p-8 p-6 text-center border-2 border-border cursor-pointer shadow-md hover:shadow-xl  hover:bg-bg-soft  active:bg-bg hover:text-text transition-all "
                 >
                   <GraduationCap className="w-8 h-8 md:w-12 md:h-12 mb-4 text-accent" />
                   <h3 className="text-lg font-bold">{semester}</h3>
@@ -54,7 +54,7 @@ const LibrarySection = forwardRef((props, ref) => {
           {OTHER_LABS.map((lab, idx) => (
             <div
               onClick={() => OpenLink(lab.libUrl)}
-              className="text-bg p-6 border-2 border-border flex flex-col items-center justify-center hover:text-text hover:bg-gradient-to-br hover:from-bg hover:to-bg/80 active:bg-bg active:text-text cursor-pointer transition-all">
+              className="rounded-md text-bg p-6 border-2 border-border flex flex-col items-center justify-center hover:text-text hover:bg-gradient-to-br hover:from-bg hover:to-bg/80 active:bg-bg active:text-text cursor-pointer transition-all">
               <LibraryBig className="w-8 h-8 mb-2 text-accent" />
               <div className="font-bold text-center text-md">{lab.libName}</div>
             </div>

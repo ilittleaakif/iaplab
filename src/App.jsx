@@ -8,6 +8,7 @@ import ProvideSection from "./Layout/provide/Provide_section";
 import Suggest from "./Layout/Suggest/Suggest_section";
 import Footer from "./Layout/Footer/footer_section";
 import SemsterContent from "./Layout/library/Semestre_preview";
+import ELibraySection from "./Layout/E-library/ELibrary_Container";
 
 function App() {
   const libRef = useRef(null);
@@ -29,6 +30,7 @@ function App() {
       <Route path="/semester/:name" element={<SemsterContent />} />
       <Route path="/provide" element={<ProvideSection />} />
       <Route path="/suggest" element={<Suggest />} />
+      <Route path="/eLibray" element={<ELibraySection />} />
     </Routes>
   );
 }
