@@ -1,6 +1,6 @@
 import { Laptop, Globe, Smartphone, Database, Cloud, ShieldCheck, Cpu, Bot } from "lucide-react";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-
+import CodingIll from '../../assets/codingGuy.svg'
 
 const categories = [
   { titleAr: "تطوير البرمجيات", titleEn: "Software Development", icon: Laptop },
@@ -17,12 +17,8 @@ export default function ITFieldsCards() {
   return (
     <div className="min-h-screen gap-4 flex items-center justify-center flex-col text-text bg-bg font-arabic p-10">
       <div className="flex flex-col items-center my-10">
-        <DotLottieReact
-          src="https://lottie.host/1ef95892-9afe-44d1-8586-2b30d8506858/Y7NmyZZEXK.lottie"
-          loop
-          autoplay
-        />
-        <span className="font-main text-[#3364C5] font-bold">En Development ...</span>
+        <img src={CodingIll} className="md:w-60 w-4/5" />
+        <span className="font-main text-[#588865] font-bold"> Coming soon...</span>
       </div>
       <div className="grid grid-cols-1 w-full max-w-7xl  md:grid-cols-3 gap-6">
         {categories.map((cat, idx) => (

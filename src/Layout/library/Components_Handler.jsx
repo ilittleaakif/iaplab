@@ -2,11 +2,15 @@ import { CalendarRange, ArrowRight, Layers, Youtube } from "lucide-react";
 
 const OpenLink = (link) => window.open(link, "_blank");
 
+
+
 export const ExtraCard = ({ title, icon: Icon, Link }) => {
   return (
-    <div onClick={() => OpenLink(Link)} className="flex items-center gap-3 px-6 py-4 transition cursor-pointer text-text bg-bg-soft active:*:text-text active:bg-bg-soft/90">
-      <Icon />
-      <p className="font-semibold text-center md:text-lg">{title}</p>
+    <div
+      onClick={() => OpenLink(Link)}
+      className="text-accent gap-3 border-2 border-accent p-6 flex flex-col items-center justify-center hover:-translate-y-1 active:translate-y-1 cursor-pointer transition-all">
+      <Icon className="w-8 h-8 " />
+      <div className="font-bold text-text-soft text-center text-md">{title}</div>
     </div>
   );
 };
@@ -84,7 +88,7 @@ export const SemesterContainer = ({ extras, youtube, modules, sectionRef }) => {
           </div>
 
 
-          <div className="flex flex-col gap-2">
+          <div className="grid md:grid-cols-4 grid-cols-2 gap-2">
             {extras.map((extra, i) => (
               <ExtraCard key={i} Link={extra.Url} title={extra.title} icon={extra.icon} />
             ))}

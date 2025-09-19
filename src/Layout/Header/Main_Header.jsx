@@ -19,12 +19,12 @@ function Header() {
   return (
     <header ref={headerRef} className={`fixed w-full z-50 flex top-0 items-center justify-center p-4 md:p-8 transition-all select-none  ${scrolled ? 'bg-black py-4 md:py-5' : 'bg-transparent'}`} >
       {/* Logo */}
-      <div className={`md:text-4xl relative text-3xl font-logo font-extrabold transition flex flex-col items-center`}><div>
+      <div className={`animate-fadein md:text-4xl relative text-3xl font-logo font-extrabold transition flex flex-col items-center`}><div>
         <span className="text-accent drop-shadow-[0_0_12px_var(--accent)]">IAP</span>
         <span className="text-sub drop-shadow-[0_0_12px_var(--sub)]">LAB</span>
         {/* update */}
       </div>
-        <span className='font-cute  text-green-500 text-shadow-[0_0_10px] md:text-[16px] text-[12px] absolute md:-bottom-2.5 -bottom-2'>neever stop</span>
+        <span className='font-cute animate-pulse text-green-500 text-shadow-[0_0_10px] md:text-[16px] text-[12px] absolute md:-bottom-2.5 -bottom-2'>neeever stop</span>
       </div>
     </header >
   );

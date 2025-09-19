@@ -16,7 +16,6 @@ function HeroSection({ libRef }) {
       backSpeed: 30,
       backDelay: 2000,
       loop: true,
-      cursorChar: '_'
     });
     return () => typed.destroy();
   }, []);
@@ -24,11 +23,13 @@ function HeroSection({ libRef }) {
   return (
     <div className="select-none relative flex bg-black items-center justify-center min-h-screen overflow-hidden font-main ">
 
-      {/* Background */}
       <div
         className="absolute inset-0 z-0"
-        style={{ background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 92, 246, 0.25), transparent 70%), #000000",}}
+        style={{
+          background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99, 102, 241, 0.25), transparent 70%), #000000",
+        }}
       />
+
 
       {/* Hero Content */}
       <div className="relative z-10 text-center" >

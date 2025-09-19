@@ -12,8 +12,6 @@ const SemsterContent = () => {
   return (
     <div className="bg-bg font-main min-h-screen relative overflow-hidden">
 
-
-
       <header className="w-full flex gap-4 items-center p-6 z-20 text-text">
         <ArrowLeftIcon className="cursor-pointer" onClick={() => navigate(-1)} />
         <span className="text-xl font-bold">{targetSemester.semester}</span>

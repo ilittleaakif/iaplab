@@ -82,7 +82,7 @@ const LibrarySection = forwardRef((props, ref) => {
             data.whatGroup &&
             <div key={idx}
               onClick={() => OpenLink(data.whatGroup.link)}
-              className="rounded-lg bg-bg flex-row border-2 border-[#128C7E] md:p-6 p-4 flex gap-3  items-center md:justify-center  active:translate-y-1  hover:-translate-y-1 hover:shadow-[0_0_10px_#128C7E] cursor-pointer transition-all">
+              className="rounded-lg  bg-bg flex-row border-2 border-[#128C7E] md:p-6 p-4 flex gap-3  items-center md:justify-center  active:translate-y-1  hover:-translate-y-1 hover:shadow-[0_0_10px_#128C7E] cursor-pointer transition-all">
               <i class="fa-brands fa- fa-whatsapp text-[#128C7E] text-xl"></i>
               <div className="font-bold text-center text-md">{data.whatGroup.title}</div>
             </div>
@@ -90,17 +90,35 @@ const LibrarySection = forwardRef((props, ref) => {
         </div>
       </div>
 
+      {/* Techs Mails */}
+      <div className="md:space-y-6 space-y-4 my-10 mx-auto px-4 max-w-7xl text-text" >
+        <div className="flex items-center gap-3 pb-2 border-b border-border">
+          <UsersRound className="md:w-6 md:h-6 w-5 h-5" />
+          <h2 className="md:text-xl font-bold">Teachers Academic Mails</h2>
+        </div>
+
+        <h1 className="mx-auto w-fit animate-pulse text-sub">Coming...</h1>
+      </div>
+
+
+
+      {/* Extras Cards */}
       <div className="mx-auto max-w-4/5 justify-center pt-4 border-text-soft mt-32 flex items-center gap-2 border-t">
         <h1>Student HelpUp</h1>
         <HeartHandshake />
       </div>
 
 
-      {/* Extras Cards */}
-      <div className="grid max-w-7xl md:gap-6 gap-4 px-4 py-8 mx-auto grid-cols-1 md:grid-cols-3 ">
-        <UnivCard clickEvent={() => navigate('/eLibrary')} accent={'youtube'} icon={BookOpen} title={"E-Library"} des={"Découvre une e-librairie dédiée à l’informatique : apprends différents domaines IT, accède à des cours gratuits et trouve des ressources pour progresser dans ta carrière."} btn={"Cliquez ici"} />
-        <UnivCard Link={'https://drive.google.com/drive/folders/16Hykdvbrpv7yPeTWSG493T6JkP8fdgeS'} accent={'second'} icon={GraduationCap} title={"Cycle d'ingénieur"} des={"Vous souhaitez vous préparer au Cycle d'ingénieur ?"} btn={"Cliquez ici"} />
-        <UnivCard Link={'https://guideinfo.netlify.app/'} accent={'second'} icon={BookOpen} title={"Orientation"} des={"Tu as un DUEG ou une licence en informatique ? Tu veux connaître tous les masters et cycles d'ingénieur en informatique au Maroc ?"} btn={"Cliquez ici"} />
+      <div className="grid max-w-7xl md:gap-6 gap-4 px-4 py-8 mx-auto grid-cols-1 md:grid-cols-3">
+        <div className="gap-2 flex flex-col items-center">
+          <UnivCard clickEvent={() => navigate('/eLibrary')} accent={'youtube'} icon={BookOpen} title={"E-Library"} des={"Découvre une e-librairie dédiée à l’informatique : apprends différents domaines IT, accède à des cours gratuits et trouve des ressources pour progresser dans ta carrière."} btn={"Cliquez ici"} />
+        </div>
+        <div className="gap-2 flex flex-col items-center">
+          <UnivCard Link={'https://drive.google.com/drive/folders/16Hykdvbrpv7yPeTWSG493T6JkP8fdgeS'} accent={'second'} icon={GraduationCap} title={"Cycle d'ingénieur"} des={"Vous souhaitez vous préparer au Cycle d'ingénieur ?"} btn={"Cliquez ici"} />
+        </div>
+        <div className="gap-2 flex flex-col items-center">
+          <UnivCard Link={'https://guideinfo.netlify.app/'} accent={'second'} icon={BookOpen} title={"Orientation"} des={"Tu as un DUEG ou une licence en informatique ? Tu veux connaître tous les masters et cycles d'ingénieur en informatique au Maroc ?"} btn={"Cliquez ici"} />
+        </div>
       </div>
 
     </div >
