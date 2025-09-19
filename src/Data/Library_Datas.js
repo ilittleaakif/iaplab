@@ -5,14 +5,11 @@ import {
   Youtube, Images
 } from "lucide-react";
 
-export const SEMESTRES = {
-  "First Year": ["Semestre 1", "Semestre 2"],
-  "Second Year": ["Semestre 3", "Semestre 4"],
-};
 
 export const DATAS = [
   {
     semester: "Semestre 1",
+    whatGroup: { title: "Groupe WhatsApp S1", link: 'https://chat.whatsapp.com/FPp1wV6TMNg0ZKeVeHPfqS?mode=ems_copy_t' },
     modules: [
       { title: "Algèbre 1", icon: Sigma, Url: 'https://drive.google.com/drive/folders/18et-Wtf3lySIsDWh6Vx1WlBvDMdDfEs1' },
       { title: "Analyse 1", icon: Calculator, Url: 'https://drive.google.com/drive/folders/1GsRaJMtZ_S5gHW91kS64YpdYfLzdQcY2' },
@@ -25,14 +22,15 @@ export const DATAS = [
       { title: 'programmation en C1', icon: Youtube, Url: 'https://www.youtube.com/watch?v=I4U0sQDw5Nw&list=PLZpzLuUp9qXxKSkKT43ppqzb8c2ahO4VS' },
       { title: 'Algorithmique', icon: Youtube, Url: 'https://www.youtube.com/watch?v=m_yj2p6SCEM&list=PLZpzLuUp9qXwrApSukhtvpi4U6l-INcTI' },
       { title: 'Électronique Numérique', icon: Youtube, Url: 'https://www.youtube.com/watch?v=h5IEj1U4iVw&list=PLU7IbxWzSiXTGMOjd30HFjMwssoVNbAA9' },
-      { title: 'Analyse', icon: Youtube, Url: 'https://www.youtube.com/watch?v=AwuqG0agXCI&list=PLh8CSljgwDFR166V-x0tMKUX_m_OKdTrG' },
-      { title: 'Algebre', icon: Youtube, Url: 'https://www.youtube.com/watch?v=f2HrMWmke4o&list=PLh8CSljgwDFTEsLrTYE4J0S8WPKPAd1w5' },
+      { title: 'Analyse 1', icon: Youtube, Url: 'https://www.youtube.com/watch?v=AwuqG0agXCI&list=PLh8CSljgwDFR166V-x0tMKUX_m_OKdTrG' },
+      { title: 'Algebre 1', icon: Youtube, Url: 'https://www.youtube.com/watch?v=f2HrMWmke4o&list=PLh8CSljgwDFTEsLrTYE4J0S8WPKPAd1w5' },
     ],
     extras: [
     ]
   },
   {
     semester: "Semestre 2",
+    whatGroup: null,
     modules: [
       { title: "Algèbre 2", icon: Sigma, Url: 'https://drive.google.com/drive/folders/1Bpsv6prigV80T0tTXks9SYinlo1W6BNL' },
       { title: "Analyse 2", icon: Calculator, Url: 'https://drive.google.com/drive/folders/1ADo1ArYmpRjUBUE0w6khMYpB6SsLLVJl' },
@@ -45,6 +43,7 @@ export const DATAS = [
   },
   {
     semester: "Semestre 3",
+    whatGroup: { title: "Groupe WhatsApp S3", link: 'https://chat.whatsapp.com/DwTyDHiMfbdGSarPEMBeW5' },
     modules: [
       { title: "Probabilités et statistiques", icon: BarChart3, Url: 'https://drive.google.com/drive/folders/1jJgb2tr9ibbJ0IDL6iIHSrZzMVtd2IVa' },
       { title: "Structures de Données en C", icon: Layers, Url: 'https://drive.google.com/drive/folders/1pmW91q8Id2cy-1ZDrjHefTaHMUBO3uSo' },
@@ -65,6 +64,7 @@ export const DATAS = [
   },
   {
     semester: "Semestre 4",
+    whatGroup: null,
     modules: [
       { title: "Réseaux", icon: Network, Url: 'https://drive.google.com/drive/folders/1S9j3tajkZE22FzteArcNJmdyUfoBh2qv' },
       { title: "Analyse Numérique", icon: Route, Url: 'https://drive.google.com/drive/folders/1izEbcRq1hhsshtW6636IrISiMsngq7pj' },
