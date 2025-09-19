@@ -1,5 +1,4 @@
 import { Laptop, Globe, Smartphone, Database, Cloud, ShieldCheck, Cpu, Bot } from "lucide-react";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import CodingIll from '../../assets/codingGuy.svg'
 
 const categories = [

@@ -94,7 +94,7 @@ const LibrarySection = forwardRef((props, ref) => {
       <div className="md:space-y-6 space-y-4 my-10 mx-auto px-4 max-w-7xl text-text" >
         <div className="flex items-center gap-3 pb-2 border-b border-border">
           <UsersRound className="md:w-6 md:h-6 w-5 h-5" />
-          <h2 className="md:text-xl font-bold">Teachers Academic Mails</h2>
+          <h2 className="md:text-xl font-bold">Profs Academic Mails</h2>
         </div>
 
         <h1 className="mx-auto w-fit animate-pulse text-sub">Coming...</h1>
