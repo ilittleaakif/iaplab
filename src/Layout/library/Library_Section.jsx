@@ -1,4 +1,4 @@
-import { forwardRef, useRef } from "react";
+import { forwardRef } from "react";
 import { SEMESTRES, OTHER_LABS } from "../../Data/Library_Datas";
 import { BookOpen, LibraryBig, GraduationCap, MessageCircleMore, Calendar, CalendarDays } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -13,15 +13,15 @@ const LibrarySection = forwardRef((props, ref) => {
     <div className="py-6 font-main bg-black text-text" ref={ref}>
 
 
+
       <div className="relative w-fit mx-auto flex items-center text-center">
         <button class="group relative flex flex-row items-center justify-center gap-2 rounded-lg px-4 py-1 mx-auto text-sm font-medium bg-[#1a1b2e] shadow-[inset_0_-6px_8px_#4f46e51a] transition duration-500 ease-out hover:shadow-[inset_0_-4px_8px_#4338ca3d]">
-          <div class="absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-violet-500/60 via-blue-500/60 to-violet-500/60 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-[1px] ![mask-composite:subtract]"></div>
-          <i class="fa-classic fa-solid fa-moon text-blue-400"></i>
-          <span class="inline animate-gradient whitespace-pre bg-gradient-to-r from-violet-400 via-blue-400 to-indigo-700 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent [--bg-size:300%] text-center">
-            New Dark Look
+          <div class="absolute inset-0 block h-full w-full animate-background bg-gradient-to-r from-orange-500/60 via-yellow-500/60 to-orange-500/60 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-[1px] ![mask-composite:subtract]"></div>
+          <i class="fa-classic fa-solid fa-moon text-orange-400"></i>
+          <span class="font-arabic inline animate-background whitespace-pre bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-700 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent [--bg-size:300%] text-center">
+            جمعة مباركة
           </span>
         </button>
-        <span className='left-1/2 -translate-x-1/2 font-hand text-white text-shadow-[0_0_10px_white] md:text-[18px] text-[12px] absolute md:-bottom-4 -bottom-2'>by Zakariax</span>
       </div>
 
 
@@ -79,6 +79,7 @@ const LibrarySection = forwardRef((props, ref) => {
       <div className="grid max-w-7XL md:gap-6 gap-4 px-4 py-8 mx-auto grid-cols-1 md:grid-cols-3">
         <UnivCard Link={'https://drive.google.com/drive/folders/16Hykdvbrpv7yPeTWSG493T6JkP8fdgeS'} accent={'second'} icon={GraduationCap} title={"Cycle d'ingénieur"} des={"Vous souhaitez vous préparer au Cycle d'ingénieur ?"} btn={"Cliquez ici"} />
         <UnivCard Link={'https://guideinfo.netlify.app/'} accent={'second'} icon={BookOpen} title={"Orientation"} des={"Tu as un DUEG ou une licence en informatique ? Tu veux connaître tous les masters et cycles d'ingénieur en informatique au Maroc ?"} btn={"Cliquez ici"} />
+        <UnivCard clickEvent={() => navigate('/eLibrary')} accent={'second'} icon={BookOpen} title={"Orientation"} des={"Tu as un DUEG ou une licence en informatique ? Tu veux connaître tous les masters et cycles d'ingénieur en informatique au Maroc ?"} btn={"Cliquez ici"} />
         <UnivCard Link={'https://chat.whatsapp.com/FPp1wV6TMNg0ZKeVeHPfqS?mode=ems_copy_t'} accent={'green'} icon={MessageCircleMore} title={"Groupe WhatsApp"} des={"Rejoignez le groupe WhatsApp pour les semestres S1-S2"} btn={"Rejoignez"} />
         <UnivCard Link={'https://chat.whatsapp.com/DwTyDHiMfbdGSarPEMBeW5'} accent={'green'} icon={MessageCircleMore} title={"Groupe WhatsApp"} des={"Rejoignez le groupe WhatsApp pour les semestres S3-S4"} btn={"Rejoignez"} />
       </div>

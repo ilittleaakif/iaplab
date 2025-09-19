@@ -15,7 +15,7 @@ export const ModuleCard = ({ title, icon: Icon, Link }) => {
   return (
     <div
       onClick={() => OpenLink(Link)}
-      className="rounded-md  text-bg p-6 border-2 border-border flex flex-col items-center justify-center hover:text-text hover:bg-gradient-to-br hover:from-bg hover:to-bg/80 active:bg-bg active:text-text cursor-pointer transition-all">
+      className="rounded-md text-text bg-bg-soft p-6 border-2 border-text-soft flex flex-col items-center justify-center hover:text-text hover:bg-gradient-to-br hover:from-bg hover:to-bg/80 active:bg-bg active:text-text cursor-pointer transition-all">
       <Icon className="w-8 h-8 mb-2" />
       <div className="font-bold text-center text-md">{title}</div>
     </div>
@@ -38,11 +38,11 @@ export const YoutubeCard = ({ title, Link }) => {
 
 export const SemesterContainer = ({ extras, youtube, modules, sectionRef }) => {
   return (
-    <section ref={sectionRef} className="md:p-6 p-4 space-y-6 shadow-md">
+    <section ref={sectionRef} className="md:p-6 p-4 space-y-6 shadow-md text-text">
 
       {/* Modules */}
       <>
-        <div className="flex items-center gap-3 pb-3 border-b text-bg uppercase">
+        <div className="flex items-center gap-3 pb-3 border-b   uppercase">
           <CalendarRange />
           <h2 className="text-lg font-bold">MODULES</h2>
         </div>
@@ -92,7 +92,7 @@ export const SemesterContainer = ({ extras, youtube, modules, sectionRef }) => {
   );
 };
 
-export const UnivCard = ({ icon: Icon, title, des, btn, accent, Link }) => {
+export const UnivCard = ({ icon: Icon, title, des, btn, accent, Link, clickEvent = null }) => {
   return (
     <div
       style={{ backgroundColor: `var(--${accent})` }}
@@ -104,7 +104,7 @@ export const UnivCard = ({ icon: Icon, title, des, btn, accent, Link }) => {
       </div>
       <p className="mb-6 text-text-soft">{des}</p>
       <button
-      onClick={() => OpenLink(Link)}
+        onClick={clickEvent ? clickEvent : () => OpenLink(Link)}
 
         className={` cursor-pointer inline-flex items-center  font-medium hover:underline`}>
         <span>{btn}</span>

@@ -30,7 +30,7 @@ function App() {
       <Route path="/semester/:name" element={<SemsterContent />} />
       <Route path="/provide" element={<ProvideSection />} />
       <Route path="/suggest" element={<Suggest />} />
-      <Route path="/eLibray" element={<ELibraySection />} />
+      <Route path="/eLibrary" element={<ELibraySection />} />
     </Routes>
   );
 }

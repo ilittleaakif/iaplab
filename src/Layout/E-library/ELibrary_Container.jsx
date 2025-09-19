@@ -1,4 +1,5 @@
 import { Laptop, Globe, Smartphone, Database, Cloud, ShieldCheck, Cpu, Bot } from "lucide-react";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 
 const categories = [
@@ -16,8 +17,12 @@ export default function ITFieldsCards() {
   return (
     <div className="min-h-screen gap-4 flex items-center justify-center flex-col text-text bg-bg font-arabic p-10">
       <div className="flex flex-col items-center ">
-
-        <span className="font-main text-sub font-bold">Under Development ...</span>
+        <DotLottieReact
+          src="https://lottie.host/1ef95892-9afe-44d1-8586-2b30d8506858/Y7NmyZZEXK.lottie"
+          loop
+          autoplay
+        />
+        <span className="font-main text-[#3364C5] font-bold">Under Development ...</span>
       </div>
       <div className="grid grid-cols-1 w-full max-w-7xl  md:grid-cols-3 gap-6">
         {categories.map((cat, idx) => (
@@ -31,7 +36,6 @@ export default function ITFieldsCards() {
           </div>
         ))}
       </div>
-      <h1 className="font-main my-6 text-xl">Mading with <span className="  text-sub font-bold text-shadow-[0_0_20px_gold]">ZakariaX</span></h1>
     </div>
   );
 }

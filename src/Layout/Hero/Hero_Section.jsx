@@ -22,16 +22,13 @@ function HeroSection({ libRef }) {
   }, []);
 
   return (
-    <div className="select-none relative flex bg-black items-center justify-center min-h-screen overflow-hidden font-main bg-[radial-gradient(circle_at_center,rgba(138,43,226,0.2)_0%,rgba(75,0,130,0.1)_25%,rgba(72,61,139,0.05)_50%,transparent_70%),linear-gradient(135deg,#0b0b1f_0%,#1c0f3a_50%,#1a0f3d_100%)]">
-    <div
-      className="absolute inset-0 z-0"
-      style={{
-        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 92, 246, 0.25), transparent 70%), #000000",
-      }}
-    />
-  
+    <div className="select-none relative flex bg-black items-center justify-center min-h-screen overflow-hidden font-main ">
 
-
+      {/* Background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{ background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 92, 246, 0.25), transparent 70%), #000000",}}
+      />
 
       {/* Hero Content */}
       <div className="relative z-10 text-center" >

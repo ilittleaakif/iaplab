@@ -60,7 +60,7 @@ export const DATAS = [
 
     ],
     extras: [
-      { title: 'PROBA STATS seance 1 ( tableu )', Url: 'https://drive.google.com/drive/folders/1oEjVfQIAWXk9tDkESbG20_mzwMXj1Ypx', icon: Images },
+      { title: 'PROBA STATS seance 1', Url: 'https://drive.google.com/drive/folders/1oEjVfQIAWXk9tDkESbG20_mzwMXj1Ypx', icon: Images },
     ]
   },
   {
