@@ -42,7 +42,7 @@ const DevCard = ({ Name, Role, Logo, GitLink, InstaLink, WhaLink, Accent }) => {
 
 const Footer = () => {
   return (
-    <footer className="w-full py-10 relative overflow-hidden font-main select-none">
+    <footer className="w-full py-10  relative overflow-hidden font-main select-none">
       {/* Azure Depths Background */}
       <div
         className="absolute inset-0 z-0"

@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Almarai:wght@300;400;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
 @import "tailwindcss";
 
 
@@ -24,6 +27,8 @@
   --font-logo: "Righteous", sans-serif;
   --font-hand: "Allura", cursive;
   --font-arabic: "Almarai", sans-serif;
+  --font-cute: "Indie Flower", cursive;
+
 
   /* action btns */
   --shadow-action: 0 0 100px var(--accent);

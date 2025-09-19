@@ -10,7 +10,7 @@ const LibrarySection = forwardRef((props, ref) => {
   const OpenLink = (link) => window.open(link, "_blank");
 
   return (
-    <div className="py-4 font-main bg-black text-text" ref={ref}>
+    <div className="py-6 font-main bg-black text-text" ref={ref}>
 
 
 
@@ -35,7 +35,7 @@ const LibrarySection = forwardRef((props, ref) => {
         </div>
 
         {/* Semester Cards */}
-        <div className="grid grid-cols-4 md:gap-6 gap-2 mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 md:gap-6 gap-3 mx-auto">
           {DATAS.map((data, idx) => (
             <div
               key={idx}
@@ -57,7 +57,7 @@ const LibrarySection = forwardRef((props, ref) => {
           <h2 className="md:text-xl font-bold">Other Faculties</h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
           {OTHER_LABS.map((lab, idx) => (
             <div key={idx}
               onClick={() => OpenLink(lab.libUrl)}
@@ -77,7 +77,7 @@ const LibrarySection = forwardRef((props, ref) => {
           <h2 className="md:text-xl font-bold">Groupes WhatsApp</h2>
         </div>
 
-        <div className="grid grid-cols-2  gap-4">
+        <div className="grid md:grid-cols-2 grid-cols-1  gap-4">
           {DATAS.map((data, idx) => (
             data.whatGroup &&
             <div key={idx}
@@ -90,19 +90,18 @@ const LibrarySection = forwardRef((props, ref) => {
         </div>
       </div>
 
-      <div className="mx-auto max-w-4/5 justify-center pt-4 border-text-soft mt-12 flex items-center gap-2 border-t">
+      <div className="mx-auto max-w-4/5 justify-center pt-4 border-text-soft mt-32 flex items-center gap-2 border-t">
         <h1>Student HelpUp</h1>
         <HeartHandshake />
       </div>
 
 
       {/* Extras Cards */}
-      <div className="grid max-w-7xl md:gap-6 gap-4 px-4 py-8 mx-auto grid-cols-1 md:grid-cols-3  ">
+      <div className="grid max-w-7xl md:gap-6 gap-4 px-4 py-8 mx-auto grid-cols-1 md:grid-cols-3 ">
+        <UnivCard clickEvent={() => navigate('/eLibrary')} accent={'youtube'} icon={BookOpen} title={"E-Library"} des={"Découvre une e-librairie dédiée à l’informatique : apprends différents domaines IT, accède à des cours gratuits et trouve des ressources pour progresser dans ta carrière."} btn={"Cliquez ici"} />
         <UnivCard Link={'https://drive.google.com/drive/folders/16Hykdvbrpv7yPeTWSG493T6JkP8fdgeS'} accent={'second'} icon={GraduationCap} title={"Cycle d'ingénieur"} des={"Vous souhaitez vous préparer au Cycle d'ingénieur ?"} btn={"Cliquez ici"} />
         <UnivCard Link={'https://guideinfo.netlify.app/'} accent={'second'} icon={BookOpen} title={"Orientation"} des={"Tu as un DUEG ou une licence en informatique ? Tu veux connaître tous les masters et cycles d'ingénieur en informatique au Maroc ?"} btn={"Cliquez ici"} />
-        <UnivCard clickEvent={() => navigate('/eLibrary')} accent={'youtube'} icon={BookOpen} title={"E-Library"} des={"Découvre une e-librairie dédiée à l’informatique : apprends différents domaines IT, accède à des cours gratuits et trouve des ressources pour progresser dans ta carrière."} btn={"Cliquez ici"} />
       </div>
-
 
     </div >
 

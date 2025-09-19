@@ -1,10 +1,10 @@
-import { CalendarRange, ArrowRight, Layers, Import, Youtube, YoutubeIcon, Video, Play } from "lucide-react";
+import { CalendarRange, ArrowRight, Layers, Youtube } from "lucide-react";
 
 const OpenLink = (link) => window.open(link, "_blank");
 
 export const ExtraCard = ({ title, icon: Icon, Link }) => {
   return (
-    <div onClick={() => OpenLink(Link)} className="rounded-md flex items-center gap-3 px-6 py-4 transition cursor-pointer text-text bg-bg-soft active:*:text-text active:bg-bg-soft/90">
+    <div onClick={() => OpenLink(Link)} className="flex items-center gap-3 px-6 py-4 transition cursor-pointer text-text bg-bg-soft active:*:text-text active:bg-bg-soft/90">
       <Icon />
       <p className="font-semibold text-center md:text-lg">{title}</p>
     </div>
@@ -15,8 +15,8 @@ export const ModuleCard = ({ title, icon: Icon, Link }) => {
   return (
     <div
       onClick={() => OpenLink(Link)}
-      className="rounded-md text-text bg-bg-soft p-6 border-2 border-text-soft flex flex-col items-center justify-center hover:text-text hover:bg-gradient-to-br hover:from-bg hover:to-bg/80 active:bg-bg active:text-text cursor-pointer transition-all">
-      <Icon className="w-8 h-8 mb-2" />
+      className="text-text gap-3 border-2 border-text p-6 flex flex-col items-center justify-center hover:-translate-y-1 active:translate-y-1 cursor-pointer transition-all">
+      <Icon className="w-8 h-8 " />
       <div className="font-bold text-center text-md">{title}</div>
     </div>
   );
@@ -26,8 +26,8 @@ export const YoutubeCard = ({ title, Link }) => {
   return (
     <div
       onClick={() => OpenLink(Link)}
-      className="rounded-md text-youtube p-6 border-2 border-border flex flex-col items-center justify-center hover:text-text hover:bg-gradient-to-br hover:from-red-500 hover:to-red-700     active:bg-red-100 active:text-red-700 cursor-pointer transition-all">
-      <Youtube className="w-8 h-8 mb-2" />
+      className="text-youtube gap-3 border-2 border-youtube p-6 flex flex-col items-center justify-center hover:-translate-y-1 active:translate-y-1 cursor-pointer transition-all">
+      <Youtube className="w-8 h-8" />
       <div className="font-bold text-center text-md">{title}</div>
     </div>
   );
@@ -36,15 +36,16 @@ export const YoutubeCard = ({ title, Link }) => {
 
 
 
+
 export const SemesterContainer = ({ extras, youtube, modules, sectionRef }) => {
   return (
-    <section ref={sectionRef} className="md:p-6 p-4 space-y-6 shadow-md text-text">
+    <section ref={sectionRef} className="md:p-6 p-4 space-y-8 text-text">
 
       {/* Modules */}
       <>
-        <div className="flex items-center gap-3 pb-3 border-b   uppercase">
+        <div className="flex items-center gap-3 pb-3 border-b">
           <CalendarRange />
-          <h2 className="text-lg font-bold">MODULES</h2>
+          <h2 className="text-lg font-bold">Modules</h2>
         </div>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -58,9 +59,9 @@ export const SemesterContainer = ({ extras, youtube, modules, sectionRef }) => {
       {youtube?.length > 0 &&
         <>
           <div className="flex items-center justify-between pb-3 border-b">
-            <div className="flex items-center gap-3 uppercase">
+            <div className="flex items-center gap-3">
               <Layers />
-              <h2 className="text-lg font-bold">YOUTUBE COURSES</h2>
+              <h2 className="text-lg font-bold">Youtube Playlists</h2>
             </div>
           </div>
 
@@ -76,11 +77,13 @@ export const SemesterContainer = ({ extras, youtube, modules, sectionRef }) => {
       {extras?.length > 0 &&
         <>
           <div className="flex items-center justify-between pb-3 border-b">
-            <div className="flex items-center gap-3 uppercase">
+            <div className="flex items-center gap-3">
               <Layers />
-              <h2 className="text-lg font-bold">OTHER RESSOURCES</h2>
+              <h2 className="text-lg font-bold">Pictures</h2>
             </div>
           </div>
+
+
           <div className="flex flex-col gap-2">
             {extras.map((extra, i) => (
               <ExtraCard key={i} Link={extra.Url} title={extra.title} icon={extra.icon} />
@@ -92,23 +95,22 @@ export const SemesterContainer = ({ extras, youtube, modules, sectionRef }) => {
   );
 };
 
-export const UnivCard = ({ icon: Icon, title, des, btn, accent, Link, clickEvent = null }) => {
+export const UnivCard = ({ icon: Icon, title, des, btn, Link, clickEvent = null }) => {
   return (
     <div
-      style={{ backgroundColor: `var(--${accent})` }}
-      className={`text-text h-fit md:h-auto  flex flex-col justify-between md:p-8 p-4 transition-all border-2 border-text hover:shadow-xl`}>
+      className={`bg-gradient-to-br  to-[#1d1d1d] from-[#111] rounded-xl text-text flex flex-col justify-between md:p-6 p-4 h-fit transition-all`}>
 
       <div className="flex items-center mb-4">
         <Icon className={`md:w-8 md:h-8 w-6 h-6 mr-3`} />
-        <h2 className="text-lg font-semibold md:text-xl">{title}</h2>
+        <h2 className="text-lg font-bold md:text-xl">{title}</h2>
       </div>
+
       <p className="mb-6 text-text-soft">{des}</p>
       <button
         onClick={clickEvent ? clickEvent : () => OpenLink(Link)}
-
-        className={` cursor-pointer inline-flex items-center  font-medium hover:underline`}>
+        className={`cursor-pointer inline-flex items-center gap-2 font-medium hover:underline`}>
         <span>{btn}</span>
-        <ArrowRight className="w-5 h-5 ml-2" />
+        <ArrowRight className="w-4 h-4 md:w-5 md:h-5 " />
       </button>
     </div>
   )
