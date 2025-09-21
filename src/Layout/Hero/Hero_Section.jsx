@@ -32,7 +32,6 @@ function HeroSection({ libRef }) {
         }}
       />
 
-      <img src={doodle1} className="absolute  bottom-0 right-0 max-h-80"/>
 
 
       {/* Hero Content */}
