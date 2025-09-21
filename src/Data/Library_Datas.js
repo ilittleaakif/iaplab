@@ -101,8 +101,7 @@ export const AcMails = [
     semester: "Semestre 3",
     Datas:
       [
-        { Name: 'Ms, Mohmmad', Module: 'Programmation Web', Mail: 'Mailtest@uca.ac.ma' },
-        { Name: 'Ms, test', Module: 'Algebre Lineaire', Mail: 'Mohmmad134@gmail.com' },
+        { Name: 'Mr, test', Module: 'Programmation Web', Mail: 'aMailToTest@uca.ac.ma' },
       ]
 
 

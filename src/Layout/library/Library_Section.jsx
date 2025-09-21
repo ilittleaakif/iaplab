@@ -82,9 +82,10 @@ const LibrarySection = forwardRef((props, ref) => {
           {AcMails.map((data, idx) => (
             <div key={idx}
               onClick={() => navigate(`/Acmails/${encodeURIComponent(data.semester)}`)}
-              className="rounded-lg bg-bg  border-2 border-second md:p-6 p-4 flex gap-3 md:flex-col items-center md:justify-center  active:translate-y-1  hover:-translate-y-1 cursor-pointer transition-all">
-              <Calendar className="w-5 h-5 md:w-8 md:h-8 text-second" />
-              <div className="font-bold text-center text-md">{data.semester}</div>
+              className="flex md:flex-col flex-row gap-3 rounded-lg bg-bg items-center justify-center md:p-6 p-4 text-center cursor-pointer border-2 border-second active:translate-y-2 hover:-translate-y-2  transition-all "
+              >
+              <Calendar className="w-7 h-7 md:w-10 md:h-10 text-second" />
+              <div className="font-bold text-center text-sm md:text-md">{data.semester}</div>
             </div>
           ))}
         </div>
