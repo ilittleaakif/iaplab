@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
-import { OTHER_LABS, DATAS } from "../../Data/Library_Datas";
-import { BookOpen, LibraryBig, GraduationCap, MessageCircleMore, Calendar, CalendarDays, UsersRound, HeartHandshake } from "lucide-react";
+import { OTHER_LABS, DATAS, AcMails } from "../../Data/Library_Datas";
+import { BookOpen, LibraryBig, GraduationCap, UsersRound, HeartHandshake, BookText, BookOpenText, AtSign, Calendar } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { UnivCard } from "./Components_Handler";
 
@@ -30,8 +30,8 @@ const LibrarySection = forwardRef((props, ref) => {
 
         {/* Heading */}
         <div className="flex text-text items-center gap-3 pb-2 border-b border-border">
-          <Calendar className="md:w-6 md:h-6 w-5 h-5" />
-          <h2 className="md:text-xl font-bold">Semestres</h2>
+          <BookText className="md:w-6 md:h-6 w-5 h-5" />
+          <h2 className="md:text-xl font-bold">Courses</h2>
         </div>
 
         {/* Semester Cards */}
@@ -53,8 +53,8 @@ const LibrarySection = forwardRef((props, ref) => {
       {/* other libraries */}
       <div className="md:space-y-6 space-y-4 my-10 mx-auto px-4 max-w-7xl text-text" >
         <div className="flex items-center gap-3 pb-2 border-b border-border">
-          <Calendar className="md:w-6 md:h-6 w-5 h-5" />
-          <h2 className="md:text-xl font-bold">Other Faculties</h2>
+          <BookOpenText className="md:w-6 md:h-6 w-5 h-5" />
+          <h2 className="md:text-xl font-bold">Other Labs</h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
@@ -70,11 +70,33 @@ const LibrarySection = forwardRef((props, ref) => {
       </div>
 
 
+
+      {/* Profs Mails */}
+      <div className="md:space-y-6 space-y-4 my-10 mx-auto px-4 max-w-7xl text-text" >
+        <div className="flex items-center gap-3 pb-2 border-b border-border">
+          <AtSign className="md:w-6 md:h-6 w-5 h-5" />
+          <h2 className="md:text-xl font-bold">Academic Mails</h2>
+        </div>
+
+        <div className="grid grid-cols-2 gap-3">
+          {AcMails.map((data, idx) => (
+            <div key={idx}
+              onClick={() => navigate(`/Acmails/${encodeURIComponent(data.semester)}`)}
+              className="rounded-lg bg-bg  border-2 border-second md:p-6 p-4 flex gap-3 md:flex-col items-center md:justify-center  active:translate-y-1  hover:-translate-y-1 cursor-pointer transition-all">
+              <Calendar className="w-5 h-5 md:w-8 md:h-8 text-second" />
+              <div className="font-bold text-center text-md">{data.semester}</div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+
+
       {/* WhaGroups */}
       <div className="md:space-y-6 space-y-4 my-10 mx-auto px-4 max-w-7xl text-text" >
         <div className="flex items-center gap-3 pb-2 border-b border-border">
           <UsersRound className="md:w-6 md:h-6 w-5 h-5" />
-          <h2 className="md:text-xl font-bold">Groupes WhatsApp</h2>
+          <h2 className="md:text-xl font-bold"> WhatsApp Groupes</h2>
         </div>
 
         <div className="grid md:grid-cols-2 grid-cols-1  gap-4">
@@ -90,15 +112,8 @@ const LibrarySection = forwardRef((props, ref) => {
         </div>
       </div>
 
-      {/* Techs Mails */}
-      <div className="md:space-y-6 space-y-4 my-10 mx-auto px-4 max-w-7xl text-text" >
-        <div className="flex items-center gap-3 pb-2 border-b border-border">
-          <UsersRound className="md:w-6 md:h-6 w-5 h-5" />
-          <h2 className="md:text-xl font-bold">Profs Academic Mails</h2>
-        </div>
 
-        <h1 className="mx-auto w-fit animate-pulse text-sub">Coming...</h1>
-      </div>
+
 
 
 

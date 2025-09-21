@@ -2,7 +2,8 @@ import {
   Sigma, Calculator, Cpu, GitBranch, Code, Monitor,
   Activity, Globe, Database, Shield, Network, Route,
   BarChart3, Layers, Terminal, Boxes,
-  Youtube, Images
+  Youtube, Images,
+  Mail
 } from "lucide-react";
 
 
@@ -14,7 +15,7 @@ export const DATAS = [
       { title: "Algèbre 1", icon: Sigma, Url: 'https://drive.google.com/drive/folders/18et-Wtf3lySIsDWh6Vx1WlBvDMdDfEs1' },
       { title: "Analyse 1", icon: Calculator, Url: 'https://drive.google.com/drive/folders/1GsRaJMtZ_S5gHW91kS64YpdYfLzdQcY2' },
       { title: "Électronique Numérique", icon: Cpu, Url: 'https://drive.google.com/drive/folders/13_SUi5FNjh2M8z-cgWYA5MKrAC2A-EyX' },
-      { title: "Algorithmique & Programmation en C 1", icon: GitBranch, Url: 'https://drive.google.com/drive/folders/11Zcn-AnEtC3kNnQXkqWaZvAk4WHIlRgA' },
+      { title: "Algorithmique & Programmation C1", icon: GitBranch, Url: 'https://drive.google.com/drive/folders/11Zcn-AnEtC3kNnQXkqWaZvAk4WHIlRgA' },
       { title: "Programmation en Python 1", icon: Code, Url: 'https://drive.google.com/drive/folders/11beEc_I2tjV_ftomzbdMULooqeMur9Nj' },
       { title: "Architecture des ordinateurs", icon: Monitor, Url: 'https://drive.google.com/drive/folders/12MMcZ4FBuYc-s3zbAuYlWa0VpO7Rvfm0' },
     ],
@@ -62,7 +63,7 @@ export const DATAS = [
       { title: 'PROBA STATS seance 1', Url: 'https://drive.google.com/drive/folders/1oEjVfQIAWXk9tDkESbG20_mzwMXj1Ypx', icon: Images },
       { title: 'ROO seance 1', Url: 'https://drive.google.com/drive/folders/1sz_XDfB9d4zzoMWLLCeCE18fq1H3XqO_', icon: Images },
     ]
-    
+
   },
   {
     semester: "Semestre 4",
@@ -89,3 +90,21 @@ export const OTHER_LABS = [
 ];
 
 
+export const AcMails = [
+  {
+    semester: "Semestre 1",
+    Datas: {
+
+    }
+  },
+  {
+    semester: "Semestre 3",
+    Datas:
+      [
+        { Name: 'Ms, Mohmmad', Module: 'Programmation Web', Mail: 'Mailtest@uca.ac.ma' },
+        { Name: 'Ms, test', Module: 'Algebre Lineaire', Mail: 'Mohmmad134@gmail.com' },
+      ]
+
+
+  },
+]

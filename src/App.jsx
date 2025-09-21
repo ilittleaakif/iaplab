@@ -11,6 +11,7 @@ import Suggest from "./Layout/Suggest/Suggest_section";
 import Footer from "./Layout/Footer/footer_section";
 import SemsterContent from "./Layout/library/Semestre_preview";
 import ELibraySection from "./Layout/E-library/ELibrary_Container";
+import ProfMails from "./Layout/library/ProfMails";
 
 
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/provide" element={<ProvideSection />} />
         <Route path="/suggest" element={<Suggest />} />
         <Route path="/Elibrary" element={<ELibraySection />} />
+        <Route path="/Acmails/:name" element={<ProfMails />} />
       </Routes>
 
   );
