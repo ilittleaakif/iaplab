@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Typed from "typed.js";
 import SplitText from "../../assets/SPLITTEXT";
 import { ActionBtn } from "./Action_Button";
+import doodle1 from '../../assets/doodles/chilling.svg'
+import doodle2 from '../../assets/doodles/reading.svg'
 
 function HeroSection({ libRef }) {
   const typedRef = useRef(null);
@@ -29,6 +31,8 @@ function HeroSection({ libRef }) {
           background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99, 102, 241, 0.25), transparent 70%), #000000",
         }}
       />
+
+      <img src={doodle1} className="absolute  bottom-0 right-0 max-h-80"/>
 
 
       {/* Hero Content */}
