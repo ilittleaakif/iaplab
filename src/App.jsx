@@ -1,3 +1,5 @@
+import { useLocation } from "react-router-dom";
+import { useLayoutEffect } from "react";
 import { useRef } from "react";
 import { Route, Routes } from "react-router-dom";
 
@@ -9,6 +11,9 @@ import Suggest from "./Layout/Suggest/Suggest_section";
 import Footer from "./Layout/Footer/footer_section";
 import SemsterContent from "./Layout/library/Semestre_preview";
 import ELibraySection from "./Layout/E-library/ELibrary_Container";
+
+
+
 
 function App() {
   const libRef = useRef(null);
@@ -25,13 +30,14 @@ function App() {
   };
 
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/semester/:name" element={<SemsterContent />} />
-      <Route path="/provide" element={<ProvideSection />} />
-      <Route path="/suggest" element={<Suggest />} />
-      <Route path="/Elibrary" element={<ELibraySection />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/semester/:name" element={<SemsterContent />} />
+        <Route path="/provide" element={<ProvideSection />} />
+        <Route path="/suggest" element={<Suggest />} />
+        <Route path="/Elibrary" element={<ELibraySection />} />
+      </Routes>
+
   );
 }
 

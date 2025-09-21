@@ -22,13 +22,7 @@ function HeroSection({ libRef }) {
 
   return (
     <div className="select-none relative flex bg-black items-center justify-center min-h-screen overflow-hidden font-main ">
-
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99, 102, 241, 0.25), transparent 70%), #000000",
-        }}
-      />
+      <div className="absolute inset-0 z-0" style={{ background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99, 102, 241, 0.25), transparent 70%), #000000", }} />
 
 
 
@@ -39,8 +33,8 @@ function HeroSection({ libRef }) {
           <span className="inline-block  text-transparent bg-gradient-to-r from-accent to-second bg-clip-text animate-pulse-grow" ref={typedRef}></span>
         </h1>
 
+        {/* Greeting */}
         <div className="md:max-w-3xl max-w-3/4 mx-auto  font-light leading-relaxed opacity-0 text-light/85 animate-fadein">
-          {/* Greeting */}
           <p className="md:text-xl  text-md font-semibold text-text">Hello my freind! 👋</p>
           <SplitText
             text="Welcome to the most comprehensive IAP library. Embark on your learning adventure with innovative resources and interactive experiences."

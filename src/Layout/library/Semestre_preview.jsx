@@ -2,12 +2,20 @@ import { useNavigate, useParams } from "react-router-dom";
 import { SemesterContainer } from "./Components_Handler";
 import { DATAS } from "../../Data/Library_Datas";
 import { ArrowLeftIcon } from "lucide-react";
+import { useEffect } from "react";
 
 const SemsterContent = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, []);
+
+
   const { name } = useParams();
   const targetSemester = DATAS.find(s => s.semester === name);
   const navigate = useNavigate();
   if (!targetSemester) return <h2 className="text-center text-bg mt-20">Semestre introuvable !</h2>;
+
+
 
   return (
     <div className="bg-bg font-main min-h-screen relative overflow-hidden">
