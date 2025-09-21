@@ -20,10 +20,10 @@ function Header() {
       {/* Logo */}
       <div className={`animate-fadein md:text-4xl relative text-3xl font-logo font-extrabold transition flex flex-col items-center`}><div>
         <span className="text-accent drop-shadow-[0_0_12px_var(--accent)]">IAP</span>
-        <span className="text-sub drop-shadow-[0_0_12px_var(--sub)]">LAB</span>
+        <span className="text-third drop-shadow-[0_0_12px_var(--third)]">LAB</span>
         {/* update */}
       </div>
-        <span className='font-cute animate-pulse text-cyan-400 text-shadow-[0_0_10px] md:text-[16px] text-[12px] absolute md:-bottom-2.5 -bottom-2'>Always with u!!</span>
+        <span className='font-cute animate-pulse text-fourth text-shadow-[0_0_10px] md:text-[16px] text-[12px] absolute md:-bottom-2.5 -bottom-2'>Always with u!!</span>
       </div>
     </header >
   );

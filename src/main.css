@@ -5,21 +5,60 @@
 
 
 :root {
+  /* Backgrounds */
   --bg: #111;
   --bg-soft: #1e1f23;
+  --bg-dark: #0a0a0f;
+  --bg-card: #1f1f28;
+
+  /* Text */
   --text: #f8f8ff;
   --text-soft: #d9e0ec;
-  --accent: #2563EB;
-  --second: #6129bb;
-  --sub: #FFD700;
-  --border: #2c2c34;
 
+  /* neutral */
+  --neutral: #888888;
+  --neutral-light: #b0b0b0;
+  --neutral-dark: #4c4c4c;
+
+  /* Borders */
+  --border: #2c2c34;
+  --border-light: #3a3a45;
+  --border-dark: #1f1f28;
+
+  /* Primary / Accents */
+  --accent: #2563EB;
+  --accent-light: #3b82f6;
+
+  --second: #6129bb;
+  --second-light: #7c3aed;
+
+  --third: #FFD700;
+  --third-light: #ffea70;
+
+  --fourth: #4CAF50;
+  --fourth-light: #81C784;
+
+  --fifth: #FF5722;
+  --fifth-light: #FF8A50;
+
+  --sixth: #00BCD4;
+  --sixth-light: #33CFE0;
+
+  --seventh: #E91E63;
+  --seventh-light: #FF6090;
+
+  --eighth: #795548;
+  --eighth-light: #A17C63;
+
+  /* Brands / Socials */
   --youtube: #FF0000;
-  --green: #357a4b;
+  --whatsapp: #128C7E;
 }
 
 
+
 @theme {
+  /* Fonts */
   --font-mono: "Space Mono", monospace;
   --font-poppins: "poppins", arial;
   --font-main: "Space Grotesk", sans-serif;
@@ -28,25 +67,39 @@
   --font-arabic: "Almarai", sans-serif;
   --font-cute: "Indie Flower", cursive;
 
-
-  /* action btns */
   --shadow-action: 0 0 100px var(--accent);
 
   --color-bg: var(--bg);
+  --color-bg-dark: var(--bg-dark);
   --color-bg-soft: var(--bg-soft);
+  --color-bg-card: var(--bg-card);
+
   --color-text: var(--text);
   --color-text-soft: var(--text-soft);
+
   --color-accent: var(--accent);
   --color-second: var(--second);
-  --color-sub: var(--sub);
-  --color-border: var(--border);
+  --color-third: var(--third);
+  --color-fourth: var(--fourth);
+  --color-fifth: var(--fifth);
+  --color-sixth: var(--sixth);
+  --color-seventh: var(--seventh);
+  --color-eighth: var(--eighth);
+
 
   --color-youtube: var(--youtube);
-  --color-whatsapp: var(--green);
+  --color-whatsapp: var(--whatsapp);
 
-  /* Logo */
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+  --color-border-dark: var(--border-dark);
+
+  --color-neutral: var(--neutral);
+  --color-neutral-light: var(--neutral-light);
+  --color-neutral-dark: var(--neutral-dark);
+
+
   --animate-pulse-grow: pulseGlow 4s ease infinite;
-
   --animate-fadein: fade-in 1s ease forwards;
   --animate-float: float 2s ease alternate infinite;
   --animate-slideup: SlidUp 1s ease forwards;

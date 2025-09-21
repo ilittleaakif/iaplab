@@ -1,8 +1,8 @@
 import { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Typed from "typed.js";
-import SplitText from "../../assets/SPLITTEXT";
-import { ActionBtn } from "./Action_Button";
+import SplitText from "../../Assets/SplitText";
+import { ActionBtn } from "../../Components/Action_Button";
 
 function HeroSection({ libRef }) {
   const typedRef = useRef(null);

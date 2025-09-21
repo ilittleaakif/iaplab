@@ -1,7 +1,7 @@
 import { Heart, Github, MessageCircle, Instagram } from "lucide-react";
 
-import pfp from '../../assets/pfp.png'
-import pfp2 from '../../assets/pfp2.jpeg'
+import pfp from '/Logos/zakaria.png'
+import pfp2 from '/Logos/adam.jpeg'
 const OpenLink = (link) => window.open(link, "_blank");
 
 const DevCard = ({ Name, Role, Logo, GitLink, InstaLink, WhaLink, Accent }) => {

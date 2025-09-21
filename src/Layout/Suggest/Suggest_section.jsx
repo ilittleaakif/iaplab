@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowLeftIcon, Send } from "lucide-react";
 import { db } from "../../Data/FirebaseConfig"
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import SplitText from "../../assets/SPLITTEXT";
+import SplitText from "../../Assets/SplitText";
 import { useNavigate } from "react-router-dom";
 
 const Suggest = () => {
