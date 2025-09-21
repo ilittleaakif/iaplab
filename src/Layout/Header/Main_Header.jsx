@@ -23,7 +23,7 @@ function Header() {
         <span className="text-sub drop-shadow-[0_0_12px_var(--sub)]">LAB</span>
         {/* update */}
       </div>
-        <span className='font-cute animate-pulse text-amber-300 text-shadow-[0_0_10px] md:text-[16px] text-[12px] absolute md:-bottom-2.5 -bottom-2'>Just Leep Going!!</span>
+        <span className='font-cute animate-pulse text-amber-300 text-shadow-[0_0_10px] md:text-[16px] text-[12px] absolute md:-bottom-2.5 -bottom-2'>Just Keep Going!!</span>
       </div>
     </header >
   );
