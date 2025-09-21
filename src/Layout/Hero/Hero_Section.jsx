@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import Typed from "typed.js";
 import SplitText from "../../assets/SPLITTEXT";
 import { ActionBtn } from "./Action_Button";
-import doodle1 from '../../assets/doodles/chilling.svg'
-import doodle2 from '../../assets/doodles/reading.svg'
 
 function HeroSection({ libRef }) {
   const typedRef = useRef(null);
@@ -14,9 +12,9 @@ function HeroSection({ libRef }) {
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: ["Learn.", "Create.", "Discover.", "Explore.", "Build.", "Grow."],
-      typeSpeed: 170,
-      backSpeed: 30,
-      backDelay: 2000,
+      typeSpeed: 180,
+      backSpeed: 20,
+      backDelay: 4000,
       loop: true,
     });
     return () => typed.destroy();
@@ -73,9 +71,9 @@ function HeroSection({ libRef }) {
           <ActionBtn
             gradient="bg-gradient-to-br from-violet-500 via-violet-600 to-violet-700"
             accent={'var(--second)'}
-            label="Share documents"
+            label="Discover E-Library"
             icon="fa-solid fa-file-circle-plus"
-            clickEvent={() => navigate('/provide')}
+            clickEvent={() => navigate('/elibrary')}
             delay={'1s'}
           />
           <ActionBtn

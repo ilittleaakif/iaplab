@@ -61,8 +61,8 @@ const LibrarySection = forwardRef((props, ref) => {
           {OTHER_LABS.map((lab, idx) => (
             <div key={idx}
               onClick={() => OpenLink(lab.libUrl)}
-              className="rounded-lg bg-bg  border-2 border-accent md:p-6 p-4 flex gap-3 md:flex-col items-center md:justify-center  active:translate-y-1  hover:-translate-y-1 cursor-pointer transition-all">
-              <LibraryBig className="w-5 h-5 md:w-8 md:h-8 text-accent" />
+              className="rounded-lg bg-bg  border-2 border-sub md:p-6 p-4 flex gap-3 md:flex-col items-center md:justify-center  active:translate-y-1  hover:-translate-y-1 cursor-pointer transition-all">
+              <LibraryBig className="w-5 h-5 md:w-8 md:h-8 text-sub" />
               <div className="font-bold text-center text-md">{lab.libName}</div>
             </div>
           ))}
@@ -103,9 +103,9 @@ const LibrarySection = forwardRef((props, ref) => {
 
 
       {/* Extras Cards */}
-      <div className="mx-auto max-w-4/5 justify-center pt-4 border-text-soft mt-32 flex items-center gap-2 border-t">
+      <div className="mx-auto  *:drop-shadow-[0_0_8px] *:drop-shadow-sub text-sub max-w-4/5 justify-center pt-4 border-text-soft mt-32 flex items-center gap-2 border-t">
         <h1>Student HelpUp</h1>
-        <HeartHandshake />
+        <HeartHandshake size={17} />
       </div>
 
 
