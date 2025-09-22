@@ -93,17 +93,41 @@ export const OTHER_LABS = [
 export const AcMails = [
   {
     semester: "Semestre 1",
-    Datas: {
-
-    }
+    Datas: [
+      { Name: 'M, Ilyass OUAZZANI TAYBI', Module: 'Algorithmique & Programmation C1', Mail: 'i.ouazzani@uca.com' },
+    ]
   },
   {
     semester: "Semestre 3",
     Datas:
       [
-        { Name: 'Mr, test', Module: 'Programmation Web', Mail: 'aMailToTest@uca.ac.ma' },
+      { Name: 'M, Ilyass OUAZZANI TAYBI', Module: 'Probabilités et statistiques', Mail: 'm1.louriki@uca.ac.ma' },
       ]
 
 
   },
-]
+];
+
+
+export const Schedules = [
+  {
+    semester: "Semestre 1",
+    Datas:
+      [
+
+      ]
+  },
+  {
+    semester: "Semestre 3",
+    Datas:
+      [
+        { title: 'Emploie Groupe 1', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+        { title: 'Emploie Groupe 2', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+        { title: 'Emploie Groupe 3', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+        { title: 'Emploie Groupe 4', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+        { title: 'Emploie Groupe 5', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+      ]
+
+
+  },
+];

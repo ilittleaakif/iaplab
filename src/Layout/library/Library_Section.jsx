@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
-import { OTHER_LABS, DATAS, AcMails } from "../../Data/Library_Datas";
-import { BookOpen, LibraryBig, GraduationCap, UsersRound, HeartHandshake, BookText, BookOpenText, AtSign, Calendar, HardDrive, BookAudioIcon, CalendarDaysIcon } from "lucide-react";
+import { OTHER_LABS, DATAS, AcMails, Schedules } from "../../Data/Library_Datas";
+import { BookOpen, GraduationCap, UsersRound, HeartHandshake, BookText, BookOpenText, AtSign, Calendar, HardDrive, BookAudioIcon, CalendarDaysIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { UnivCard } from "./Components_Handler";
 import { LibraryCard } from "../../Components/Library_Card";
@@ -64,11 +64,14 @@ const LibrarySection = forwardRef((props, ref) => {
           </div>
         </div>
 
+        {/* Schedules */}
         <div className="space-y-2 md:space-y-3">
           <LibraryHeading title={'Schedules'} icon={CalendarDaysIcon} />
-          <p className="text-fifth animate-pulse text-center font-mono tracking-tighter">Coming Soon ...</p>
-          {/* <div className="grid grid-cols-2 md:gap-4 gap-2 mx-auto"> */}
-          {/* </div> */}
+          <div className="grid grid-cols-2 md:gap-4 gap-2 mx-auto">
+            {Schedules.map((data, idx) => (
+              <LibraryCard accent='fourth' key={idx} title={data.semester} icon={Calendar} onClick={() => navigate(`/Schedules/${encodeURIComponent(data.semester)}`)} />
+            ))}
+          </div>
         </div>
 
       </div>
