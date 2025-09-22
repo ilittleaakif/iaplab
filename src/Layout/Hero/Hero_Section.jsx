@@ -80,6 +80,18 @@ function HeroSection({ libRef }) {
           />
 
         </div>
+
+
+
+        <div className="relative mt-6  w-fit mx-auto flex items-center text-center">
+          <button class="group relative flex flex-row items-center justify-center gap-2 rounded-lg px-4 py-1 mx-auto text-sm font-medium bg-[#1a1b2e] shadow-[inset_0_-6px_8px_#4f46e51a] transition duration-500 ease-out hover:shadow-[inset_0_-4px_8px_#4338ca3d]">
+            <div class="absolute inset-0 block h-full w-full animate-background bg-gradient-to-r from-fourth  to-second bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-[1px] ![mask-composite:subtract]"></div>
+            <span class="font-main inline  text-[10px] md:text-sm animate-background whitespace-pre bg-gradient-to-r from-fourth to-sixth  bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent [--bg-size:300%] text-center">
+              Emplois des temps ajoutés!
+            </span>
+          </button>
+        </div>
+
       </div >
     </div >
   );
