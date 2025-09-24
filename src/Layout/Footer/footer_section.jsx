@@ -1,38 +1,32 @@
 import { Heart, Github, MessageCircle, Instagram } from "lucide-react";
-
+import * as Wizard from '../../Data/Wizard'
 import pfp from '/Logos/zakaria.png'
 import pfp2 from '/Logos/adam.jpeg'
-const OpenLink = (link) => window.open(link, "_blank");
 
 const DevCard = ({ Name, Role, Logo, GitLink, InstaLink, WhaLink, Accent }) => {
   return (
     <div
-      style={{ borderColor: `var(--${Accent})` }}
-      className="group bg-bg-soft/5 backdrop-blur-sm rounded-sm p-4 border border-white/10 hover:border-accent/30 transition-all duration-300 min-w-[280px]">
+      style={{ '--local': `var(--${Accent})` }}
+      className="group rounded-sm p-4 border-2 border-[var(--local)] min-w-[280px]">
+
       <div className="flex items-center gap-3 mb-3">
         <img src={Logo} className="rounded-full h-10 w-10 object-cover" />
-        <div className="flex-1">
-          <h3 className="text-lg text-shadow-[0_0_10px_rgba(255,255,255,0.4)] font-semibold text-text">{Name}</h3>
-        </div>
-        <div>
-          <span
-            style={{ color: `var(--${Accent})`, borderColor: `var(--${Accent})` }}
-            className="px-3 py-1 text-xs rounded-full border">{Role}</span>
-        </div>
+        <h3 className="flex-1 text-lg text-shadow-[0_0_10px_var(--local)] font-semibold text-text">{Name}</h3>
+
+        <span className="px-2 text-[var(--local)] border-[var(--local)] py-0.5 text-xs rounded-full border ">{Role}</span>
       </div>
+
       {/* Social Links */}
       <div className="flex items-center justify-start gap-2 pt-2">
-        <span onClick={() => OpenLink(GitLink)} className="p-2 rounded-full bg-white/5 text-white/60 hover:bg-blue-500/20 hover:text-white cursor-pointer transition-colors duration-200">
-          <Github size={16} />
-        </span>
-
-        <span onClick={() => OpenLink(WhaLink)} className="p-2 rounded-full bg-white/5 text-white/60 hover:bg-green-500/20 hover:text-white cursor-pointer transition-colors duration-200">
-          <MessageCircle size={16} />
-        </span>
-
-        <span onClick={() => OpenLink(InstaLink)} className="p-2 rounded-full bg-white/5 text-white/60 hover:bg-pink-500/20 hover:text-white cursor-pointer transition-colors duration-200">
-          <Instagram size={16} />
-        </span>
+        <i
+          onClick={() => Wizard.OpenLink(GitLink)}
+          className="fa-brands fa-github rounded-full text-white/40 hover:text-blue-900 cursor-pointer transition-colors"></i>
+        <i
+          onClick={() => Wizard.OpenLink(GitLink)}
+          className="fa-brands fa-whatsapp rounded-full text-white/40 hover:text-whatsapp cursor-pointer transition-colors"></i>
+        <i
+          onClick={() => Wizard.OpenLink(GitLink)}
+          className="fa-brands fa-instagram rounded-full text-white/40 hover:text-orange-400 cursor-pointer transition-colors"></i>
       </div>
 
     </div>
@@ -57,8 +51,8 @@ const Footer = () => {
         {/* Minimal Developer Cards */}
         <h1 className=" text-center my-4">Built By</h1>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
-          <DevCard Name={'ZakariaX'} Logo={pfp} Role={'FrontEnd'} Accent={'accent'} WhaLink={'https://wa.me/212673999182'} GitLink={'https://github.com/Zakariaiouiri'} />
-          <DevCard Name={'Adaam'} Logo={pfp2} Role={'BackEnd'} Accent={'second'} WhaLink={'https://wa.me/212656105609'} />
+          <DevCard Name={'ZakariaX'} Logo={pfp} Role={'FrontEnd'} Accent={'second'} WhaLink={'https://wa.me/212673999182'} GitLink={'https://github.com/Zakariaiouiri'} />
+          <DevCard Name={'Adaam'} Logo={pfp2} Role={'BackEnd'} Accent={'accent'} WhaLink={'https://wa.me/212656105609'} />
         </div>
 
         <div className="w-fit mx-auto my-6 flex items-center gap-2">

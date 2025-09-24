@@ -2,26 +2,6 @@ import { ArrowRight, Grid2X2Plus, ListVideo, BookAIcon } from "lucide-react";
 const OpenLink = (link) => window.open(link, "_blank");
 
 
-export const UnivCard = ({ icon: Icon, title, des, btn, Link, clickEvent = null }) => {
-  return (
-    <div
-      className={`bg-gradient-to-br  to-[#1d1d1d] from-[#111] rounded-xl text-text flex flex-col justify-between md:p-6 p-4 h-fit transition-all`}>
-
-      <div className="flex items-center mb-4">
-        <Icon className={`md:w-8 md:h-8 w-6 h-6 mr-3`} />
-        <h2 className="text-lg font-bold md:text-xl">{title}</h2>
-      </div>
-
-      <p className="mb-6 text-text-soft">{des}</p>
-      <button
-        onClick={clickEvent ? clickEvent : () => OpenLink(Link)}
-        className={`cursor-pointer inline-flex items-center gap-2 font-medium hover:underline`}>
-        <span>{btn}</span>
-        <ArrowRight className="w-4 h-4 md:w-5 md:h-5 " />
-      </button>
-    </div>
-  )
-}
 
 
 export const ModuleCard = ({ title, icon: Icon, Link, accent, ClassIcon = null }) => {

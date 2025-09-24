@@ -55,7 +55,7 @@ function HeroSection({ libRef }) {
         {/* Action Buttons */}
         <div className="flex flex-col justify-center gap-4 px-10 mx-auto mt-6 md:px-0 md:w-full md:flex-row">
           <ActionBtn
-            gradient="bg-gradient-to-br from-blue-500 via-blue-700 to-blue-900"
+            // gradient="bg-gradient-to-br from-blue-500 via-blue-700 to-blue-900"
             accent={'#1D4ED8'}
             label="Discover the lessons"
             icon="fa-solid fa-graduation-cap"
@@ -63,7 +63,7 @@ function HeroSection({ libRef }) {
             delay={'.6s'}
           />
           <ActionBtn
-            gradient="bg-gradient-to-br from-violet-500 via-violet-600 to-violet-700"
+            // gradient="bg-gradient-to-br from-violet-500 via-violet-600 to-violet-700"
             accent={'var(--second)'}
             label="Discover E-Library"
             icon="fa-solid fa-file-circle-plus"
@@ -71,7 +71,7 @@ function HeroSection({ libRef }) {
             delay={'1s'}
           />
           <ActionBtn
-            gradient="bg-gradient-to-br from-green-500 via-green-600 to-green-700"
+            // gradient="bg-gradient-to-br from-green-500 via-green-600 to-green-700"
             accent={'#15803D'}
             label="Provide a suggestion"
             icon="fa-solid fa-lightbulb"

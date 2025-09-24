@@ -4,12 +4,15 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./Layout/Header/Main_Header"
 import HeroSection from "./Layout/Hero/Hero_Section";
 import LibararySection from "./Layout/library/Library_Section";
-import Suggest from "./Layout/Suggest/Suggest_section";
 import Footer from "./Layout/Footer/footer_section";
-import SemsterContent from "./Layout/library/Semestre_preview";
+
+import Suggest from "./Layout/Suggest/Suggest_section";
+
+import SemsterContent from "./Layout/library/Semestre_Section";
 import ELibraySection from "./Layout/E-library/ELibrary_Container";
-import ProfMails from "./Layout/library/ProfMails";
 import SchedulesSection from "./Layout/library/Schedules";
+import ProfMails from "./Layout/library/ProfMails";
+
 
 
 

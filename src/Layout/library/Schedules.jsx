@@ -3,10 +3,20 @@ import { DATAS } from "../../Data/Library_Datas";
 import { ArrowLeftIcon, DownloadIcon, XIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 
+
 const SchedulesSection = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
+
+  const handleDownload = (url, filename) => {
+    const link = document.createElement("a");
+    link.href = url;       // the image/file URL
+    link.download = filename; // the name for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const { semester } = useParams();
   const targetSemester = DATAS.find((s) => s.semester === semester);
@@ -41,7 +51,9 @@ const SchedulesSection = () => {
                 </div>
                 <div className="flex items-center justify-between w-full py-4 px-5 bg-black/30 backdrop-blur-md">
                   <span className="font-medium text-sm md:text-base truncate">{data.title}</span>
-                  <DownloadIcon className="text-text-soft cursor-pointer hover:text-eighth transition" />
+                  <DownloadIcon
+                    onClick={() => handleDownload(data.imgUrl, `${data.title}.jpg`)}
+                    className="text-text-soft cursor-pointer hover:text-eighth transition" />
                 </div>
               </div>
             ))}
@@ -55,7 +67,7 @@ const SchedulesSection = () => {
           className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
           onClick={() => setPreviewImg(null)}
         >
-          <div className="relative max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
+          <div className="relative max-w-7xl w-full" onClick={(e) => e.stopPropagation()}>
             <XIcon
               onClick={() => setPreviewImg(null)}
               className="absolute bg-bg/40 p-1 rounded-full top-2 right-2 text-text cursor-pointer hover:text-seventh transition" size={28} />
