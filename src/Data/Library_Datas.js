@@ -3,7 +3,8 @@ import {
   Activity, Globe, Database, Shield, Network, Route,
   BarChart3, Layers, Terminal, Boxes,
   Youtube, Images,
-  Mail
+  Mail,
+  Computer
 } from "lucide-react";
 
 
@@ -28,19 +29,20 @@ export const DATAS = [
         { title: 'Analyse 1', icon: Youtube, Url: 'https://www.youtube.com/watch?v=AwuqG0agXCI&list=PLh8CSljgwDFR166V-x0tMKUX_m_OKdTrG' },
         { title: 'Algebre 1', icon: Youtube, Url: 'https://www.youtube.com/watch?v=f2HrMWmke4o&list=PLh8CSljgwDFTEsLrTYE4J0S8WPKPAd1w5' },
       ],
+    pictures: [],
     extras: [],
     AcMails:
       [
         { Name: 'M, Ilyass OUAZZANI TAYBI', Module: 'Algorithmique & Programmation C1', Mail: 'i.ouazzani@uca.com' },
       ],
-    Schedules:null
-      // [
-      //   { title: 'Emploie Groupe 1', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-      //   { title: 'Emploie Groupe 2', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-      //   { title: 'Emploie Groupe 3', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-      //   { title: 'Emploie Groupe 4', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-      //   { title: 'Emploie Groupe 5', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-      // ]
+    Schedules: null
+    // [
+    //   { title: 'Emploie Groupe 1', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+    //   { title: 'Emploie Groupe 2', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+    //   { title: 'Emploie Groupe 3', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+    //   { title: 'Emploie Groupe 4', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+    //   { title: 'Emploie Groupe 5', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+    // ]
   },
   {
     semester: "Semestre 2",
@@ -52,9 +54,10 @@ export const DATAS = [
         { title: "Traitement Signal", icon: Activity, Url: 'https://drive.google.com/drive/folders/1ZFQ2nVtFRwYleFyicl-raQXPxbCxB05n' },
         { title: "Algorithmique & Programmation en C 2", icon: GitBranch, Url: 'https://drive.google.com/drive/folders/12YFSYdfjz-BopHRxRxpRsgBnKZNdZpcx' },
         { title: "Programmation en Python 2", icon: Code, Url: 'https://drive.google.com/drive/folders/12Yn8-ryX4p6Edhh8gL-KSAwIX6Uh6FGq' },
-        { title: "Programmation Web 1", icon: Globe, Url: 'https://drive.google.com/drive/folders/1OXbQyBTAsaXeJF3INN6YdpaVzJD1qyAU' },
+        { title: "Progr ammation Web 1", icon: Globe, Url: 'https://drive.google.com/drive/folders/1OXbQyBTAsaXeJF3INN6YdpaVzJD1qyAU' },
       ],
     youtube: null,
+    pictures: null,
     extras: null,
     AcMails: null,
     Schedules: null,
@@ -78,10 +81,15 @@ export const DATAS = [
         { title: 'Modélisation objet  UML', Url: 'https://www.youtube.com/watch?v=wWnDP5YXyxk&list=PLjXcpCBIph8w3fNehQwxSdwzb3zbauv4Q', icon: Youtube },
 
       ],
+    pictures:
+      [
+        { title: 'ROO seance 1', Url: 'https://drive.google.com/drive/folders/1sz_XDfB9d4zzoMWLLCeCE18fq1H3XqO_', icon: Images },
+        { title: 'PROBA STATS seance 1', Url: 'https://drive.google.com/drive/folders/1oEjVfQIAWXk9tDkESbG20_mzwMXj1Ypx', icon: Images },
+      ],
     extras:
       [
-        { title: 'PROBA STATS seance 1', Url: 'https://drive.google.com/drive/folders/1oEjVfQIAWXk9tDkESbG20_mzwMXj1Ypx', icon: Images },
-        { title: 'ROO seance 1', Url: 'https://drive.google.com/drive/folders/1sz_XDfB9d4zzoMWLLCeCE18fq1H3XqO_', icon: Images },
+        { title: 'Ubuntu setup ', Url: 'https://drive.google.com/drive/folders/1sz_XDfB9d4zzoMWLLCeCE18fq1H3XqO_', icon: Computer },
+        { title: 'Google Classroom (Code : fvodiijc) ', Url: 'https://classroom.google.com', icon: Computer },
       ],
     AcMails:
       [

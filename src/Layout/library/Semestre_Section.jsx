@@ -18,10 +18,10 @@ const SemsterContent = () => {
   const InactiveSemester = targetSemester.semester.includes('2') || targetSemester.semester.includes('4');
   if (!targetSemester) return <h2 className="text-center text-bg mt-20">Semestre introuvable !</h2>;
 
-  const Card = ({ ClickEvent, Link = null, title, icon: Icon, ClassIcon, accent }) => {
+  const Card = ({ ClickEvent, Link = null, title, icon: Icon, ClassIcon, accent = null }) => {
     return (
       <div
-
+      
         onClick={InactiveSemester ? undefined : Link ? () => OpenLink(Link) : ClickEvent}
         className={cn(
           "font-main border-2 border-border text-text flex items-center gap-3 rounded-xs md:p-5 p-3 cursor-pointer transition bg-gradient-to-br from-bg-card to-bg",

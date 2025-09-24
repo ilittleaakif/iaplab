@@ -1,8 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
+import Typed from 'typed.js';
 
 function Header() {
   const headerRef = useRef(null);
   const [scrolled, setScrolled] = useState(false);
+  const TypedRef = useRef();
+
+  useEffect(() => {
+    const typed = new Typed(TypedRef.current, {
+      strings: ["Keep learning!"],
+      typeSpeed: 80,
+      cursorChar: ''
+    });
+    return () => typed.destroy();
+  }, []);
 
   const handleScroll = () => {
     if (!headerRef.current) return;
@@ -16,16 +27,13 @@ function Header() {
   }, []);
 
   return (
-    <header ref={headerRef} className={`fixed w-full z-50 flex top-0 items-center justify-center p-4 md:p-8 transition-all select-none  ${scrolled ? 'bg-black py-4 md:py-4' : 'bg-transparent'}`} >
-      {/* Logo */}
-      <div className={`animate-fadein md:text-4xl text-3xl tracking-tighter relative  font-logo font-extrabold transition flex flex-col items-center`}>
-        <div>
-          <span className="text-third drop-shadow-[0_0_12px_var(--third)]">IAP</span>
-          <span className="text-accent drop-shadow-[0_0_12px_var(--accent)]">LAB</span>
-        </div>
-        {/* update */}
-        <p className='font-cute animate-pulse-grow text-fifth text-shadow-[0_0_10px] md:text-[16px] text-[12px] absolute md:-bottom-2.5 -bottom-1'>Learn!!</p>
+    <header ref={headerRef} className={`fixed w-full z-50 flex top-0 flex-col items-center justify-center p-4 md:p-8 transition-all select-none  ${scrolled ? 'bg-black py-4 md:py-4' : 'bg-transparent'}`} >
+      {/* logo */}
+      <div className='relative '>
+        <span className="animate-fadein md:text-4xl text-3xl relative font-logo transition bg-gradient-to-r from-accent to-sixth  bg-clip-text text-transparent drop-shadow-[0_0_25px_var(--sixth)]">IAPLAB</span>
+        <p ref={TypedRef} className='font-hand animate-pulse-grow text-third text-shadow-[0_0_10px] md:text-[12px] text-[10px] absolute left-1/2 -translate-x-1/2 md:-bottom-2.5 -bottom-[8px] block whitespace-nowrap'>keep going!</p>
       </div>
+      <div className={`w-11/12 h-[2px] mt-5 bg-sixth/70 shadow-[0_0_30px_var(--sixth)] ${scrolled ? 'hidden' : 'blcok'} `}></div>
     </header >
   );
 }
