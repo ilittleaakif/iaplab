@@ -33,14 +33,14 @@ export const DATAS = [
       [
         { Name: 'M, Ilyass OUAZZANI TAYBI', Module: 'Algorithmique & Programmation C1', Mail: 'i.ouazzani@uca.com' },
       ],
-    Schedules:
-      [
-        { title: 'Emploie Groupe 1', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-        { title: 'Emploie Groupe 2', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-        { title: 'Emploie Groupe 3', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-        { title: 'Emploie Groupe 4', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-        { title: 'Emploie Groupe 5', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-      ]
+    Schedules:null
+      // [
+      //   { title: 'Emploie Groupe 1', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+      //   { title: 'Emploie Groupe 2', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+      //   { title: 'Emploie Groupe 3', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+      //   { title: 'Emploie Groupe 4', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+      //   { title: 'Emploie Groupe 5', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
+      // ]
   },
   {
     semester: "Semestre 2",
@@ -54,8 +54,8 @@ export const DATAS = [
         { title: "Programmation en Python 2", icon: Code, Url: 'https://drive.google.com/drive/folders/12Yn8-ryX4p6Edhh8gL-KSAwIX6Uh6FGq' },
         { title: "Programmation Web 1", icon: Globe, Url: 'https://drive.google.com/drive/folders/1OXbQyBTAsaXeJF3INN6YdpaVzJD1qyAU' },
       ],
-    youtube: [],
-    extras: [],
+    youtube: null,
+    extras: null,
     AcMails: null,
     Schedules: null,
   },
@@ -109,8 +109,8 @@ export const DATAS = [
         { title: "Programmation objet avec C++", icon: Boxes, Url: 'https://drive.google.com/drive/folders/1qiN5AEtMY2kB2UyK4kzITLprTq5ocQZm' },
         { title: "Sécurité Informatique", icon: Shield, Url: 'https://drive.google.com/drive/folders/15vgfR4Mp7Y21lfG48AsD6HwkyBGUosTF' },
       ],
-    youtube: [],
-    extras: [],
+    youtube: null,
+    extras: null,
     AcMails: null,
     Schedules: null
   },

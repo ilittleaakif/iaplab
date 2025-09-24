@@ -12,7 +12,7 @@ const LibrarySection = forwardRef((props, ref) => {
   const OpenLink = (link) => window.open(link, "_blank");
 
   return (
-    <div className="py-6 font-main bg-black text-text" ref={ref}>
+    <div className=" font-main bg-black text-text" ref={ref}>
 
       {/* Sections Container */}
       <div className="md:space-y-12 space-y-8 max-w-7xl mx-auto px-4">

@@ -55,7 +55,7 @@ const Footer = () => {
           <DevCard Name={'Adaam'} Logo={pfp2} Role={'BackEnd'} Accent={'accent'} WhaLink={'https://wa.me/212656105609'} />
         </div>
 
-        <div className="w-fit mx-auto my-6 flex items-center gap-2">
+        <div className="w-fit text-sm md:text-lg mx-auto my-6 flex items-center gap-2">
           <span>Are you a web developer?</span>
           <span className="text-accent font-bold cursor-pointer hover:text-second transition-colors">Team up</span>
         </div>

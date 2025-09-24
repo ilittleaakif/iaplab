@@ -34,7 +34,7 @@ const SemsterContent = () => {
           ClassIcon ?
             <i className={ClassIcon}></i>
             :
-            <Icon className="md:h-7 md:w-7 h-4 w-4 text-accent " />
+            <Icon className="md:h-7 md:w-7 h-4 w-4 text-fourth " />
         }
         <p className="md:text-lg text-sm">{title}</p>
       </div>

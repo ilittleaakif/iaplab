@@ -24,7 +24,7 @@ function Header() {
           <span className="text-accent drop-shadow-[0_0_12px_var(--accent)]">LAB</span>
         </div>
         {/* update */}
-        <p className='font-cute animate-pulse-grow text-fourth text-shadow-[0_0_10px] md:text-[16px] text-[12px] absolute md:-bottom-2.5 -bottom-1'>Keep it UUUP</p>
+        <p className='font-cute animate-pulse-grow text-fifth text-shadow-[0_0_10px] md:text-[16px] text-[12px] absolute md:-bottom-2.5 -bottom-1'>Learn!!</p>
       </div>
     </header >
   );

@@ -1,23 +1,15 @@
 import { useNavigate, useParams } from "react-router-dom";
+import { ArrowLeftIcon, MailIcon, CopyIcon, UserIcon, BookOpenIcon, } from "lucide-react";
 import { DATAS } from '../../Data/Library_Datas'
-import {
-  ArrowLeftIcon,
-  MailIcon,
-  CopyIcon,
-  UserIcon,
-  BookOpenIcon,
-} from "lucide-react";
 import { useEffect } from "react";
+import * as wizard from '../../Data/Wizard'
 
 const ProfMails = () => {
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
+  useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }, []);
 
   const { name } = useParams();
   const targetSemester = DATAS.find((s) => s.semester === name);
   const navigate = useNavigate();
-  const copyToClipboard = (query) => navigator.clipboard.writeText(query);
 
   if (!targetSemester) return (<h2 className="text-center text-text mt-20">Semestre introuvable !</h2>);
 
@@ -57,7 +49,7 @@ const ProfMails = () => {
 
                 {/* Copy btn */}
                 <button
-                  onClick={() => copyToClipboard(data.Mail)}
+                  onClick={() => wizard.copyToClipboard(data.Mail)}
                   className="flex items-center rounded-md gap-2 px-2 py-1 text-sm bg-accent/20 cursor-pointer hover:bg-accent/10 transition text-text">
                   <CopyIcon className="w-3 h-3" />
                   <span>Copy</span>

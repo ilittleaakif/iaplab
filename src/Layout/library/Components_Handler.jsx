@@ -55,7 +55,7 @@ export const SemesterContainer = ({ extras, youtube, modules, sectionRef }) => {
       }
 
       {/* Extras */}
-      {extras?.length > 0 &&
+      {(extras?.length > 0) &&
         <div div className="space-y-3">
           <div className="flex items-center gap-3 pb-3 border-b">
             <Grid2X2Plus className="h-5 w-5 md:h-6 md:w-6" />

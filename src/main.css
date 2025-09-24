@@ -42,7 +42,7 @@
   --seventh: #E91E63;
   --seventh-light: #FF6090;
 
-  --eighth: #795548;
+  --eighth: #754833;
   --eighth-light: #A17C63;
 
   /* Brands / Socials */
@@ -62,7 +62,7 @@
   --font-arabic: "Almarai", sans-serif;
   --font-cute: "Indie Flower", cursive;
 
-  --shadow-action: 0 0 100px var(--accent);
+  --shadow-action: 0 0 160px var(--local);
 
   --color-bg: var(--bg);
   --color-bg-dark: var(--bg-dark);
@@ -91,9 +91,8 @@
 
 
 
-  --animate-pulse-grow: pulseGlow 4s ease infinite;
+  --animate-pulse-grow: pulseGlow 3.5s linear infinite;
   --animate-fadein: fade-in 1s ease forwards;
   --animate-float: float 2s ease alternate infinite;
-  --animate-slideup: SlidUp 1s ease forwards;
-  --animate-background: shine 5s linear infinite;
+  --animate-background: shine 5s ease-in infinite;
 }

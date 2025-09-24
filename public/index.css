@@ -1,38 +1,3 @@
-@keyframes FadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
 @keyframes float {
 
   0%,
@@ -44,10 +9,6 @@
     transform: translateY(-5px);
   }
 }
-
-
-
-
 
 @keyframes fade-in {
   from {
@@ -74,16 +35,15 @@
 }
 
 
-
 @keyframes pulseGlow {
 
   0%,
   100% {
-    filter: brightness(1);
+    filter: brightness(.9);
   }
 
   50% {
-    filter: brightness(1.4) drop-shadow(0 0 25px var(--accent));
+    filter: brightness(1.5) drop-shadow(0 0 30px var(--second));
   }
 }
 
