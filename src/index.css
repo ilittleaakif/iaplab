@@ -3,47 +3,29 @@
 
 
 :root {
-  /* Backgrounds */
   --bg: #111;
   --bg-soft: #1e1f23;
   --bg-dark: #0a0a0f;
   --bg-card: #1f1f28;
 
-  /* Text */
   --text: #f8f8ff;
   --text-soft: #d9e0ec;
 
-  /* Borders */
   --border: #2c2c34;
   --border-light: #3a3a45;
   --border-dark: #1f1f28;
 
-  /* Primary / Accents */
   --accent: #2563EB;
   --accent-light: #3b82f6;
 
   --second: #6129bb;
-  --second-light: #7c3aed;
-
   --third: #FFD700;
-  --third-light: #ffea70;
-
   --fourth: #4CAF50;
-  --fourth-light: #81C784;
-
   --fifth: #FF5722;
-  --fifth-light: #FF8A50;
-
   --sixth: #00BCD4;
-  --sixth-light: #33CFE0;
-
   --seventh: #E91E63;
-  --seventh-light: #FF6090;
-
   --eighth: #754833;
-  --eighth-light: #A17C63;
 
-  /* Brands / Socials */
   --youtube: #FF0000;
   --whatsapp: #128C7E;
 }

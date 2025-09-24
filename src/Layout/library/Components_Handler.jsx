@@ -1,4 +1,4 @@
-import { ArrowRight, Grid2X2Plus, ListVideo, BookAIcon } from "lucide-react";
+import { ArrowRight, Grid2X2Plus, ListVideo, BookAIcon, ImagesIcon } from "lucide-react";
 const OpenLink = (link) => window.open(link, "_blank");
 
 
@@ -20,7 +20,7 @@ export const ModuleCard = ({ title, icon: Icon, Link, accent, ClassIcon = null }
 };
 
 
-export const SemesterContainer = ({ extras, youtube, modules, sectionRef }) => {
+export const SemesterContainer = ({ extras, youtube, modules, pictures, sectionRef }) => {
   return (
     <section ref={sectionRef} className=" font-main space-y-8 text-text">
 
@@ -55,11 +55,27 @@ export const SemesterContainer = ({ extras, youtube, modules, sectionRef }) => {
       }
 
       {/* Extras */}
+      {(pictures?.length > 0) &&
+        <div div className="space-y-3">
+          <div className="flex items-center gap-3 pb-3 border-b">
+            <ImagesIcon className="h-5 w-5 md:h-6 md:w-6" />
+            <h2 className="md:text-lg text-sm font-bold">Pictures</h2>
+          </div>
+
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+            {pictures.map((data, idx) => (
+              <ModuleCard accent={'fourth'} key={idx} Link={data.Url} title={data.title} icon={data.icon} />
+            ))}
+          </div>
+        </div>
+      }
+
+
       {(extras?.length > 0) &&
         <div div className="space-y-3">
           <div className="flex items-center gap-3 pb-3 border-b">
             <Grid2X2Plus className="h-5 w-5 md:h-6 md:w-6" />
-            <h2 className="md:text-lg text-sm font-bold">Pictures</h2>
+            <h2 className="md:text-lg text-sm font-bold">Extras</h2>
           </div>
 
           <div className="grid grid-cols-1 gap-3 md:grid-cols-3">

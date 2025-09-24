@@ -72,7 +72,7 @@ export const DATAS = [
         { title: "Programmation Web 2", icon: Globe, Url: 'https://drive.google.com/drive/folders/1OXbQyBTAsaXeJF3INN6YdpaVzJD1qyAU' },
         { title: "Modélisation objet UML", icon: Monitor, Url: 'https://drive.google.com/drive/folders/13cS0eHv8AeE4U3UeQdLHxwihAmGCdhad' },
         { title: "Système d'exploitation 1", icon: Terminal, Url: 'https://drive.google.com/drive/folders/1voDDFL-hkyyMJK3tcdItsl48CChlxm2g' },
-        { title: "Recherche opérationnelle et optimisation", icon: BarChart3, Url: 'https://drive.google.com/drive/folders/13mTR2-C1TK5JzEX9qv9JRe_IEVmtcJrg' },
+        { title: "Recherche opérationnelle ", icon: BarChart3, Url: 'https://drive.google.com/drive/folders/13mTR2-C1TK5JzEX9qv9JRe_IEVmtcJrg' },
       ],
     youtube:
       [
@@ -88,12 +88,15 @@ export const DATAS = [
       ],
     extras:
       [
-        { title: 'Ubuntu setup ', Url: 'https://drive.google.com/drive/folders/1sz_XDfB9d4zzoMWLLCeCE18fq1H3XqO_', icon: Computer },
+        { title: 'Ubuntu setup ', Url: 'https://www.youtube.com/watch?si=Px9EAuhjr8Uy2Hq0&v=Hva8lsV2nTk&feature=youtu.be', icon: Computer },
         { title: 'Google Classroom (Code : fvodiijc) ', Url: 'https://classroom.google.com', icon: Computer },
       ],
     AcMails:
       [
-        // { Name: 'M, Ilyass OUAZZANI TAYBI', Module: 'Algorithmique & Programmation C1', Mail: 'i.ouazzani@uca.com' },
+        { Name: '', Module: 'UML', Mail: 's.mjahed@uca.ac.ma' },
+        { Name: '', Module: 'Proba Stats', Mail: 'm1.louriki@uca.ac.ma' },
+        { Name: '', Module: 'Structures de Données', Mail: 'h.elalaoui@uca.ac.ma' },
+        { Name: '', Module: 'ROO', Mail: 't.agouti@uca.ac.ma' },
       ],
     Schedules:
       [

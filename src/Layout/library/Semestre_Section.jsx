@@ -21,7 +21,7 @@ const SemsterContent = () => {
   const Card = ({ ClickEvent, Link = null, title, icon: Icon, ClassIcon, accent = null }) => {
     return (
       <div
-      
+
         onClick={InactiveSemester ? undefined : Link ? () => OpenLink(Link) : ClickEvent}
         className={cn(
           "font-main border-2 border-border text-text flex items-center gap-3 rounded-xs md:p-5 p-3 cursor-pointer transition bg-gradient-to-br from-bg-card to-bg",
@@ -63,6 +63,7 @@ const SemsterContent = () => {
           modules={targetSemester.modules}
           extras={targetSemester.extras}
           youtube={targetSemester.youtube}
+          pictures={targetSemester.pictures}
         />
       </div>
     </div>
