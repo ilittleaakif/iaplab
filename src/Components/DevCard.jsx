@@ -2,9 +2,9 @@ import * as Wizard from "../Data/Wizard";
 
 export const DevCard = ({ Name, Role, Logo, GitLink, InstaLink, WhaLink, Accent }) => {
   return (
-    <div 
-    style={{'--local' : `var(--${Accent})`}}
-    className="relative group min-w-[280px]">
+    <div
+      style={{ '--local': `var(--${Accent})` }}
+      className="relative group min-w-[280px]">
       {/* Outer card */}
       <div className="relative flex items-center justify-center w-full h-full  overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.3)] bg-[#111]">
 

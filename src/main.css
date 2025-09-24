@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Borel&family=Funnel+Display:wght@300..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Protest+Guerrilla&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Borel&family=Funnel+Display:wght@300..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Righteous&display=swap');
 @import "tailwindcss";
 
 
@@ -53,9 +52,9 @@
 
 @theme {
   /* Fonts */
+  --font-logo: "Righteous", sans-serif;
   --font-code: "JetBrains Mono", monospace;
   --font-main: "Funnel Display", sans-serif;
-  --font-logo: "Protest Guerrilla", sans-serif;
   --font-hand: "Borel", cursive;
   --font-arabic: "Baloo Bhaijaan 2", sans-serif;
 

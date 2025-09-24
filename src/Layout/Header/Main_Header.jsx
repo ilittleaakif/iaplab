@@ -30,10 +30,9 @@ function Header() {
     <header ref={headerRef} className={`fixed w-full z-50 flex top-0 flex-col items-center justify-center p-4 md:p-8 transition-all select-none  ${scrolled ? 'bg-black py-4 md:py-4' : 'bg-transparent'}`} >
       {/* logo */}
       <div className='relative '>
-        <span className="animate-fadein md:text-4xl text-3xl relative font-logo transition bg-gradient-to-r from-accent to-sixth  bg-clip-text text-transparent drop-shadow-[0_0_25px_var(--sixth)]">IAPLAB</span>
+        <span className="font-bold animate-fadein md:text-4xl text-3xl relative font-logo transition bg-gradient-to-r from-accent to-sixth  bg-clip-text text-transparent drop-shadow-[0_0_25px_var(--sixth)]">IAPLAB</span>
         <p ref={TypedRef} className='font-hand animate-pulse-grow text-third text-shadow-[0_0_10px] md:text-[12px] text-[10px] absolute left-1/2 -translate-x-1/2 md:-bottom-2.5 -bottom-[8px] block whitespace-nowrap'>keep going!</p>
       </div>
-      <div className={`w-11/12 h-[2px] mt-5 bg-sixth/70 shadow-[0_0_30px_var(--sixth)] ${scrolled ? 'hidden' : 'blcok'} `}></div>
     </header >
   );
 }
