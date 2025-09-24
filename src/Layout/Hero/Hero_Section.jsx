@@ -53,7 +53,7 @@ function HeroSection({ libRef }) {
 
 
         {/* Action Buttons */}
-        <div className="flex flex-col justify-center gap-4 md:gap-6 px-10 mx-auto mt-6 md:px-0 md:w-full md:flex-row">
+        <div className="flex flex-col justify-center gap-4 px-10 mx-auto mt-6 md:px-0 md:w-full md:flex-row">
           <ActionBtn
             gradient="bg-gradient-to-br from-blue-500 via-blue-700 to-blue-900"
             accent={'#1D4ED8'}
@@ -82,12 +82,12 @@ function HeroSection({ libRef }) {
         </div>
 
 
-
-        <div className="relative mt-6  w-fit mx-auto flex items-center text-center">
-          <button class="group relative flex flex-row items-center justify-center gap-2 rounded-lg px-4 py-1 mx-auto text-sm font-medium bg-[#1a1b2e] shadow-[inset_0_-6px_8px_#4f46e51a] transition duration-500 ease-out hover:shadow-[inset_0_-4px_8px_#4338ca3d]">
-            <div class="absolute inset-0 block h-full w-full animate-background bg-gradient-to-r from-fourth  to-second bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-[1px] ![mask-composite:subtract]"></div>
-            <span class="font-main inline  text-[10px] md:text-sm animate-background whitespace-pre bg-gradient-to-r from-fourth to-sixth  bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent [--bg-size:300%] text-center">
-              Emplois des temps ajoutés!
+        {/* Announce */}
+        <div className="relative mt-6 animate-fadein w-fit mx-auto flex items-center text-center">
+          <button class="group relative flex flex-row items-center justify-center gap-2 rounded-full px-4 py-1 mx-auto text-sm font-medium  bg-[#1a1b2e] ">
+            <div class="absolute inset-0 block h-full w-full animate-background bg-gradient-to-r from-accent  to-second bg-[length:var(--bg-size)_100%] rounded-full [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-[1px] ![mask-composite:subtract]"></div>
+            <span class="font-main inline text-[10px] md:text-sm animate-background whitespace-pre bg-gradient-to-r from-third to-seventh bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent [--bg-size:300%] text-center">
+              New structure!
             </span>
           </button>
         </div>

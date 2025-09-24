@@ -12,7 +12,7 @@ const DevCard = ({ Name, Role, Logo, GitLink, InstaLink, WhaLink, Accent }) => {
       <div className="flex items-center gap-3 mb-3">
         <img src={Logo} className="rounded-full h-10 w-10 object-cover" />
         <div className="flex-1">
-          <h3 className="text-lg text-shadow-[0_0_10px_rgba(255,255,255,0.8)] font-semibold text-white">{Name}</h3>
+          <h3 className="text-lg text-shadow-[0_0_10px_rgba(255,255,255,0.4)] font-semibold text-text">{Name}</h3>
         </div>
         <div>
           <span

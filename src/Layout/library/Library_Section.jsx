@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { OTHER_LABS, DATAS, AcMails, Schedules } from "../../Data/Library_Datas";
+import { OTHER_LABS, DATAS } from "../../Data/Library_Datas";
 import { BookOpen, GraduationCap, UsersRound, HeartHandshake, BookText, BookOpenText, AtSign, Calendar, HardDrive, BookAudioIcon, CalendarDaysIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { UnivCard } from "./Components_Handler";
@@ -21,8 +21,8 @@ const LibrarySection = forwardRef((props, ref) => {
 
         {/* Semesters Cards */}
         <div className="space-y-2 md:space-y-3">
-          <LibraryHeading title={'Courses'} icon={BookText} />
-          <div className="grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-2 mx-auto">
+          <LibraryHeading title={'Semesters'} icon={BookText} />
+          <div className="grid grid-cols-2 md:grid-cols-2 md:gap-4 gap-2 mx-auto">
             {DATAS.map((data, idx) => (
               <LibraryCard accent='accent' key={idx} title={data.semester} icon={GraduationCap} onClick={() => navigate(`/semester/${encodeURIComponent(data.semester)}`)} />
             ))}
@@ -35,41 +35,6 @@ const LibrarySection = forwardRef((props, ref) => {
           <div className="grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-2 mx-auto">
             {OTHER_LABS.map((data, idx) => (
               <LibraryCard accent='second' key={idx} title={data.libName} icon={BookAudioIcon} onClick={() => OpenLink(data.libUrl)} />
-            ))}
-          </div>
-        </div>
-
-
-
-        {/* Profs Mails */}
-        <div className="space-y-2 md:space-y-3">
-          <LibraryHeading title={'Academic Mails'} icon={AtSign} />
-          <div className="grid grid-cols-2 md:gap-4 gap-2 mx-auto">
-            {AcMails.map((data, idx) => (
-              <LibraryCard accent='third' key={idx} title={data.semester} icon={Calendar} onClick={() => navigate(`/Acmails/${encodeURIComponent(data.semester)}`)} />
-            ))}
-          </div>
-        </div>
-
-
-
-        {/* WhaGroups */}
-        <div className="space-y-2 md:space-y-3">
-          <LibraryHeading title={'WhatsApp Groupes'} icon={UsersRound} />
-          <div className="grid grid-cols-2 md:gap-4 gap-2 mx-auto">
-            {DATAS.map((data, idx) => (
-              data.whatGroup &&
-              <LibraryCard key={idx} title={data.whatGroup.title} iconClass={'fa-brands fa-whatsapp md:text-2xl text-xl text-whatsapp'} onClick={() => OpenLink(data.whatGroup.link)} accent='whatsapp' />
-            ))}
-          </div>
-        </div>
-
-        {/* Schedules */}
-        <div className="space-y-2 md:space-y-3">
-          <LibraryHeading title={'Schedules'} icon={CalendarDaysIcon} />
-          <div className="grid grid-cols-2 md:gap-4 gap-2 mx-auto">
-            {Schedules.map((data, idx) => (
-              <LibraryCard accent='fourth' key={idx} title={data.semester} icon={Calendar} onClick={() => navigate(`/Schedules/${encodeURIComponent(data.semester)}`)} />
             ))}
           </div>
         </div>

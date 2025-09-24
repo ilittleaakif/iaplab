@@ -15,11 +15,6 @@
   --text: #f8f8ff;
   --text-soft: #d9e0ec;
 
-  /* neutral */
-  --neutral: #888888;
-  --neutral-light: #b0b0b0;
-  --neutral-dark: #4c4c4c;
-
   /* Borders */
   --border: #2c2c34;
   --border-light: #3a3a45;
@@ -94,9 +89,6 @@
   --color-border-light: var(--border-light);
   --color-border-dark: var(--border-dark);
 
-  --color-neutral: var(--neutral);
-  --color-neutral-light: var(--neutral-light);
-  --color-neutral-dark: var(--neutral-dark);
 
 
   --animate-pulse-grow: pulseGlow 4s ease infinite;

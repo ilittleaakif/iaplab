@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { AcMails } from "../../Data/Library_Datas";
+import { DATAS } from '../../Data/Library_Datas'
 import {
   ArrowLeftIcon,
   MailIcon,
@@ -15,23 +15,13 @@ const ProfMails = () => {
   }, []);
 
   const { name } = useParams();
-  const targetSemester = AcMails.find((s) => s.semester === name);
+  const targetSemester = DATAS.find((s) => s.semester === name);
   const navigate = useNavigate();
+  const copyToClipboard = (query) => navigator.clipboard.writeText(query);
 
-  if (!targetSemester)
-    return (
-      <h2 className="text-center text-text mt-20">
-        Semestre introuvable !
-      </h2>
-    );
+  if (!targetSemester) return (<h2 className="text-center text-text mt-20">Semestre introuvable !</h2>);
 
-  const mails = Array.isArray(targetSemester.Datas)
-    ? targetSemester.Datas
-    : [];
-
-  const copyToClipboard = (email) => {
-    navigator.clipboard.writeText(email);
-  };
+  const MailsDatas = Array.isArray(targetSemester.AcMails) ? targetSemester.AcMails : [];
 
   return (
     <div className=" min-h-screen relative overflow-hidden font-main">
@@ -49,10 +39,10 @@ const ProfMails = () => {
 
       {/* Content */}
       <div className="w-full md:px-16 px-4 py-6 mx-auto z-20">
-        {mails.length === 0 ? (
+        {MailsDatas.length === 0 ? (
           <p className="text-center text-lg text-text-soft">Aucun mail disponible pour ce semestre.</p>
         ) : (
-          mails.map((data, idx) => (
+          MailsDatas.map((data, idx) => (
             <div
               key={idx}
               className="bg-bg p-5 text-text mb-6 border border-border"
