@@ -6,28 +6,39 @@ import { ExtraCard } from "../../Components/Extra_Card";
 import { LibraryCard } from "../../Components/Library_Card";
 import { LibraryHeading } from "../../Components/Library_Heading";
 import * as Wizard from '../../Data/Wizard'
+import woman from '/Assets/woman.svg'
+import SplitText from "../../Assets/SplitText";
 
 const LibrarySection = forwardRef((props, ref) => {
   const navigate = useNavigate();
   const OpenLink = (link) => window.open(link, "_blank");
 
   return (
-    <div className=" font-main bg-black text-text" ref={ref}>
+    <div className=" font-main relative bg-bg text-text" ref={ref}>
+
+      <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: `  repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),  repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),  repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),  repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)`, }} />
+
+      <div className="animate-fadein text-center md:text-base text-xs px-5 w-fit md:mx-auto mx-4 text-text-soft font-hand border-b mb-8">
+        <span>"May your days be bright as these pages, and your thoughts as free as sunlight."</span>
+      </div>
+
 
       {/* Sections Container */}
-      <div className="md:space-y-12 space-y-8 max-w-7xl mx-auto px-4">
-
+      <div className="md:space-y-12 z-10 space-y-8 max-w-7xl mx-auto px-4">
 
 
         {/* Semesters Cards */}
         <div className="space-y-2 md:space-y-3">
           <LibraryHeading title={'Semesters'} icon={BookText} />
-          <div className="grid grid-cols-2 md:grid-cols-2 md:gap-4 gap-2 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-2 mx-auto">
             {DATAS.map((data, idx) => (
               <LibraryCard key={idx} title={data.semester} icon={GraduationCap} onClick={() => navigate(`/semester/${encodeURIComponent(data.semester)}`)} />
             ))}
           </div>
         </div>
+
+        {/* <img src={Students} className="w-full shadow-c max-w-7xl mx-auto" /> */}
+
 
         {/* other libraries */}
         <div className="space-y-2 md:space-y-3">
@@ -42,8 +53,10 @@ const LibrarySection = forwardRef((props, ref) => {
       </div>
 
 
+
       {/* Extras Cards */}
-      <div className="mx-auto *:drop-shadow-[0_0_8px] *:drop-shadow-sub text-third max-w-4/5 justify-center pt-4 border-text-soft mt-32 flex items-center gap-2 border-t">
+      <img src={woman} className="w-1/2 max-w-56 mx-auto mt-24" />
+      <div className="mx-auto text-text-soft max-w-4/5 justify-center pt-4 border-text-soft  flex items-center gap-2 border-t">
         <h1>Student HelpUp</h1>
         <HeartHandshake size={17} />
       </div>

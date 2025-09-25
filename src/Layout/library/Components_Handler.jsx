@@ -4,17 +4,17 @@ const OpenLink = (link) => window.open(link, "_blank");
 
 
 
-export const ModuleCard = ({ title, icon: Icon, Link, accent, ClassIcon = null }) => {
+export const ModuleCard = ({ title, icon: Icon, Link, ClassIcon = null }) => {
   return (
     <div
       onClick={() => OpenLink(Link)}
-      className={`text-text bg-gradient-to-br from-bg-card to-bg md:gap-3 rounded-sm gap-2 border-2 border-border-light md:p-6 p-3 flex md:flex-col items-center md:justify-center hover:-translate-y-1 active:translate-y-1 cursor-pointer transition-all`}>
+      className={`text-text font-main md:gap-3 gap-2 border-2 border-border md:p-6 p-3 flex md:flex-col items-center md:justify-center  cursor-pointer transition-all hover:border-border-dark`}>
       {ClassIcon ?
         <i className={ClassIcon}></i>
         :
         <Icon className="w-5 h-5 md:w-8 md:h-8 " />
       }
-      <div className="font-bold text-center text-sm md:text-[16px]">{title}</div>
+      <div className="font-semibold tracking-tight text-center text-[12px] md:text-[16px]">{title}</div>
     </div >
   );
 };
@@ -22,7 +22,7 @@ export const ModuleCard = ({ title, icon: Icon, Link, accent, ClassIcon = null }
 
 export const SemesterContainer = ({ extras, youtube, modules, pictures, sectionRef }) => {
   return (
-    <section ref={sectionRef} className=" font-main space-y-8 text-text">
+    <section ref={sectionRef} className="font-code space-y-8 text-text">
 
       {/* Modules */}
       <div className="space-y-3">

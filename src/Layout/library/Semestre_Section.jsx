@@ -18,17 +18,13 @@ const SemsterContent = () => {
   const InactiveSemester = targetSemester.semester.includes('2') || targetSemester.semester.includes('4');
   if (!targetSemester) return <h2 className="text-center text-bg mt-20">Semestre introuvable !</h2>;
 
-  const Card = ({ ClickEvent, Link = null, title, icon: Icon, ClassIcon, accent = null }) => {
+  const Card = ({ ClickEvent, Link = null, title, icon: Icon, ClassIcon }) => {
     return (
       <div
-
         onClick={InactiveSemester ? undefined : Link ? () => OpenLink(Link) : ClickEvent}
         className={cn(
-          "font-main border-2 border-border text-text flex items-center gap-3 rounded-xs md:p-5 p-3 cursor-pointer transition bg-gradient-to-br from-bg-card to-bg",
-          InactiveSemester
-            ? "opacity-50 cursor-not-allowed pointer-events-none"
-            : "hover:-translate-y-1 active:translate-y-1"
-        )}
+          "font-main border-2 font-semibold border-border hover:border-border-dark text-text flex items-center gap-3 md:p-5 p-3 cursor-pointer transition",
+          InactiveSemester && "opacity-50 cursor-not-allowed pointer-events-none")}
       >
         {
           ClassIcon ?
@@ -42,14 +38,16 @@ const SemsterContent = () => {
   }
 
   return (
-    <div className="bg-bg font-main min-h-screen relative overflow-hidden">
+    <div className="bgbg font-main min-h-screen relative overflow-hidden">
+      <div className="absolute pointer-events-none inset-0 z-0" style={{ backgroundImage: "repeating-linear-gradient(0deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 1px, transparent 1px, transparent 4px)", }} />
 
-      <header className="w-full flex gap-4 items-center p-6 z-20 text-text">
-        <ArrowLeftIcon className="cursor-pointer transition-colors hover:text-accent" onClick={() => navigate(-1)} />
+
+      <header className="w-full flex gap-4 items-center md:p-6 p-4 z-10 text-text">
+        <ArrowLeftIcon className="cursor-pointer h-5 w-5 md:h-5 md:w-5 transition-colors hover:text-accent" onClick={() => navigate(-1)} />
         <span className="text-xl font-bold">{targetSemester.semester}</span>
       </header>
 
-      <div className="w-full md:px-20 px-4 py-6 mx-auto z-20">
+      <div className="w-full md:px-20 px-4 py-6 mx-auto z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
           <Card ClickEvent={() => navigate(`/Schedules/${encodeURIComponent(targetSemester.semester)}`)} title={'Les emploies des temps'} icon={Calendar} accent={'fifth'} />
           <Card ClickEvent={() => navigate(`/Acmails/${encodeURIComponent(targetSemester.semester)}`)} title={'Les mails academics'} icon={AtSign} accent={'fourth'} />
@@ -57,7 +55,7 @@ const SemsterContent = () => {
         </div>
       </div>
 
-      <div className="w-full md:px-20 px-4 py-6 mx-auto z-20">
+      <div className="w-full md:px-20 px-4 py-6 mx-auto z-10">
         <SemesterContainer
           semester={targetSemester.semester}
           modules={targetSemester.modules}

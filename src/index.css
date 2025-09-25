@@ -3,31 +3,56 @@
 
 
 :root {
-  --bg: #111;
-  --bg-soft: #1e1f23;
-  --bg-dark: #0a0a0f;
-  --bg-card: #1f1f28;
+  /* ===== Backgrounds ===== */
+  --bg: #ffffff;
+  /* main background */
+  --bg-soft: #f5f6fa;
+  /* subtle off-white / section bg */
+  --bg-card: #fdfdfd;
+  /* card background */
+  --bg-dark: #212428;
+  /* card background */
 
-  --text: #f8f8ff;
-  --text-soft: #d9e0ec;
+  /* ===== Text ===== */
+  --text: #111111;
+  /* primary text */
+  --text-soft: #444444;
+  /* secondary text */
+  --text-muted: #666666;
+  /* tertiary text, subtle notes */
 
-  --border: #2c2c34;
-  --border-light: #3a3a45;
-  --border-dark: #1f1f28;
+  /* ===== Borders ===== */
+  --border: #e0e0e0;
+  /* default border */
+  --border-light: #f0f0f0;
+  /* very light border / dividers */
+  --border-dark: #818181;
+  /* darker border for emphasis */
 
-  --accent: #2563EB;
+  --accent: #2563eb;
+  /* primary accent (blue) */
   --accent-light: #3b82f6;
+  /* lighter blue */
 
-  --second: #6129bb;
-  --third: #FFD700;
-  --fourth: #4CAF50;
-  --fifth: #FF5722;
-  --sixth: #00BCD4;
-  --seventh: #E91E63;
-  --eighth: #754833;
+  --second: #6d28d9;
+  /* deep violet */
+  --third: #fbbf24;
+  /* golden yellow */
+  --fourth: #22c55e;
+  /* green */
+  --fifth: #f97316;
+  /* orange */
+  --sixth: #06b6d4;
+  /* cyan */
+  --seventh: #ec4899;
+  /* pink */
+  --eighth: #a16207;
+  /* warm brown/amber */
 
-  --youtube: #FF0000;
-  --whatsapp: #128C7E;
+  --youtube: #ff0000;
+  --whatsapp: #25d366;
+
+
 }
 
 
@@ -50,8 +75,10 @@
 
   --color-text: var(--text);
   --color-text-soft: var(--text-soft);
+  --color-text-muted: var(--text-muted);
 
   --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
   --color-second: var(--second);
   --color-third: var(--third);
   --color-fourth: var(--fourth);
@@ -69,11 +96,15 @@
   --color-border-dark: var(--border-dark);
 
 
+  --shadow-a: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-b: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-c: 0 10px 15px rgba(0, 0, 0, 0.15);
+
 
   --animate-pulse-grow: pulseGlow 3.5s linear infinite;
   --animate-fadein: fade-in 1s ease forwards;
   --animate-float: float 2s ease alternate infinite;
   --animate-background: shine 5s ease-in infinite;
+  --animate-wipe-y: wipe-y 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0s 1 normal both;
+
 }
-
-

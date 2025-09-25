@@ -27,7 +27,9 @@ const SchedulesSection = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden font-main">
-      <div className="absolute inset-0 -z-10" style={{ background: "radial-gradient(circle at top, #1c1c1c, #000000)", }} />
+      <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: `  repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),  repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),  repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),  repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)`, }} />
+
+
 
       {/* Header */}
       <header className="w-full flex items-center gap-3 p-6 z-20 text-text sticky top-0">

@@ -8,7 +8,7 @@ function Header() {
 
   useEffect(() => {
     const typed = new Typed(TypedRef.current, {
-      strings: ["Keep learning!"],
+      strings: ["Lightful as YOU!!!"],
       typeSpeed: 80,
       cursorChar: ''
     });
@@ -27,11 +27,11 @@ function Header() {
   }, []);
 
   return (
-    <header ref={headerRef} className={`fixed w-full z-50 flex top-0 flex-col items-center justify-center p-4 md:p-8 transition-all select-none  ${scrolled ? 'bg-black py-4 md:py-4' : 'bg-transparent'}`} >
+    <header ref={headerRef} className={`fixed w-full z-50 flex top-0 flex-col items-center justify-center p-4 md:p-8 transition-all select-none  ${scrolled ? 'bg-bg/90 py-4 md:py-4' : 'bg-transparent'}`} >
       {/* logo */}
       <div className='relative '>
-        <span className="font-bold animate-fadein md:text-4xl text-3xl relative font-logo transition bg-gradient-to-r from-accent to-sixth  bg-clip-text text-transparent drop-shadow-[0_0_25px_var(--sixth)]">IAPLAB</span>
-        <p ref={TypedRef} className='font-hand animate-pulse-grow text-third text-shadow-[0_0_10px] md:text-[12px] text-[10px] absolute left-1/2 -translate-x-1/2 md:-bottom-2.5 -bottom-[8px] block whitespace-nowrap'>keep going!</p>
+        <span className="font-bold animate-fadein md:text-4xl text-3xl relative font-logo transition bg-gradient-to-r from-text to-bg-dark  bg-clip-text text-transparent ">IAPLAB</span>
+        <p ref={TypedRef} className='font-hand text-text-muted  md:text-[12px] text-[10px] absolute left-1/2 -translate-x-1/2 md:-bottom-[14px] -bottom-[11px] block whitespace-nowrap'></p>
       </div>
     </header >
   );
