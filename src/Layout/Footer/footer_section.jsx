@@ -4,6 +4,7 @@ import pfp from '/Logos/zakaria.png'
 import pfp2 from '/Logos/adam.jpeg'
 import frontend from '/Assets/frontend.svg'
 import backend from '/Assets/backend.svg'
+import CodingGuy from '/Assets/GuyCoding.png'
 
 
 import { DevCard } from "../../Components/DevCard";
@@ -28,6 +29,7 @@ const Footer = () => {
           <span className="text-fourth font-bold cursor-pointer hover:text-second transition-colors">Team up</span>
         </div>
 
+        <img src={CodingGuy} className="mx-auto md:max-w-52 max-w-1/3" />
         {/* Bottom section */}
         <div className="text-center border-t border-text/10 pt-6">
           <div className="flex items-center  justify-center gap-2 mb-4">

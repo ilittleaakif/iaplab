@@ -3,6 +3,7 @@ import { ArrowLeftIcon, MailIcon, CopyIcon, UserIcon, BookOpenIcon, } from "luci
 import { DATAS } from '../../Data/Library_Datas'
 import { useEffect } from "react";
 import * as wizard from '../../Data/Wizard'
+import SubHeader from "../../Components/SubHeader";
 
 const ProfMails = () => {
   useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }, []);
@@ -21,13 +22,7 @@ const ProfMails = () => {
       <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: `  repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),  repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),  repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),  repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)`, }} />
 
       {/* Header */}
-      <header className="w-full flex gap-4 items-center p-6 z-20 text-text">
-        <ArrowLeftIcon
-          className="cursor-pointer hover:text-blue-400 transition"
-          onClick={() => navigate(-1)}
-        />
-        <span className="text-xl font-bold">{targetSemester.semester}</span>
-      </header>
+      <SubHeader title={`${targetSemester.semester} - Emails des profs`} />
 
       {/* Content */}
       <div className="w-full md:px-16 px-4 py-6 mx-auto z-20">

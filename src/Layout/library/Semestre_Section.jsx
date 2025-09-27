@@ -1,9 +1,10 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { SemesterContainer } from "./Components_Handler";
 import { DATAS } from "../../Data/Library_Datas";
-import { ArrowLeftIcon, AtSign, Calendar, UsersRoundIcon } from "lucide-react";
+import {  AtSign, Calendar, UsersRoundIcon } from "lucide-react";
 import { useEffect } from "react";
 import { cn } from "@sglara/cn";
+import SubHeader from "../../Components/SubHeader";
 
 const SemsterContent = () => {
   useEffect(() => {
@@ -42,10 +43,8 @@ const SemsterContent = () => {
       <div className="absolute pointer-events-none inset-0 z-0" style={{ backgroundImage: "repeating-linear-gradient(0deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 1px, transparent 1px, transparent 4px)", }} />
 
 
-      <header className="w-full flex gap-4 items-center md:p-6 p-4 z-10 text-text">
-        <ArrowLeftIcon className="cursor-pointer h-5 w-5 md:h-5 md:w-5 transition-colors hover:text-accent" onClick={() => navigate(-1)} />
-        <span className="text-xl font-bold">{targetSemester.semester}</span>
-      </header>
+      <SubHeader title={targetSemester.semester} />
+
 
       <div className="w-full md:px-20 px-4 py-6 mx-auto z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">

@@ -1,26 +1,48 @@
-import { forwardRef } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import { OTHER_LABS, DATAS } from "../../Data/Library_Datas";
-import { BookOpen, GraduationCap, UsersRound, HeartHandshake, BookText, BookOpenText, AtSign, Calendar, HardDrive, BookAudioIcon, CalendarDaysIcon } from "lucide-react";
+import { BookOpen, GraduationCap, HeartHandshake, BookText, BookOpenText, BookAudioIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+
 import { ExtraCard } from "../../Components/Extra_Card";
 import { LibraryCard } from "../../Components/Library_Card";
 import { LibraryHeading } from "../../Components/Library_Heading";
 import * as Wizard from '../../Data/Wizard'
 import woman from '/Assets/woman.svg'
-import SplitText from "../../Assets/SplitText";
 
 const LibrarySection = forwardRef((props, ref) => {
   const navigate = useNavigate();
   const OpenLink = (link) => window.open(link, "_blank");
+
+  // Quran Ayah state
+  const [ayah, setAyah] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const fetchRandomAyah = async () => {
+    setLoading(true);
+    try {
+      const resp = await fetch("https://api.quranhub.com/v1/ayah/random");
+      const data = await resp.json();
+      setAyah(data.data || data);
+    } catch (err) {
+      console.error("Error fetching ayah:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchRandomAyah();
+  }, []);
+
+
 
   return (
     <div className=" font-main relative bg-bg text-text" ref={ref}>
 
       <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: `  repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),  repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),  repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),  repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)`, }} />
 
-      <div className="animate-fadein text-center md:text-base text-xs px-5 w-fit md:mx-auto mx-4 text-text-soft font-hand border-b mb-8">
-        <span>"May your days be bright as these pages, and your thoughts as free as sunlight."</span>
-      </div>
+
+
 
 
       {/* Sections Container */}
@@ -36,6 +58,25 @@ const LibrarySection = forwardRef((props, ref) => {
             ))}
           </div>
         </div>
+
+
+        <div className="animate-fadein text-center md:text-lg text-sm px-5 w-fit mx-auto  text-text-soft font-hand border-b mb-8">
+          {loading && <span>Loading...</span>}
+          {ayah ? (
+            <>
+              <p className="font-arabic text-text">"{ayah.text}"</p>
+              <p className="mt-2 text-[0.7rem] text-text-muted font-arabic">
+                سورة {ayah.surah?.name} — آية {ayah.numberInSurah}
+              </p>
+
+            </>
+          ) : (
+            !loading && (
+              <span>""</span>
+            )
+          )}
+        </div>
+
 
         {/* <img src={Students} className="w-full shadow-c max-w-7xl mx-auto" /> */}
 

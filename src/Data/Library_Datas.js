@@ -88,7 +88,8 @@ export const DATAS = [
       ],
     extras:
       [
-        { title: 'Ubuntu setup ', Url: 'https://www.youtube.com/watch?si=Px9EAuhjr8Uy2Hq0&v=Hva8lsV2nTk&feature=youtu.be', icon: Computer },
+        { title: 'Kifash Tgad Ubuntu? ', Url: 'https://www.youtube.com/watch?si=Px9EAuhjr8Uy2Hq0&v=Hva8lsV2nTk&feature=youtu.be', icon: Computer },
+        { title: 'Shanahowa Linux? ', Url: 'https://youtu.be/C6WsWlEH16k?si=Gy2nI7KvGrOxXjM0', icon: Computer },
         { title: 'Google Classroom (Code : fvodiijc) ', Url: 'https://classroom.google.com', icon: Computer },
       ],
     AcMails:

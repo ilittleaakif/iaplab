@@ -72,3 +72,13 @@
     background-position: -100%
   }
 }
+
+@keyframes m3leg {
+  0% {
+   rotate: .6deg;
+  }
+
+  100% {
+    rotate: -.6deg;
+  }
+}

@@ -8,7 +8,7 @@ function Header() {
 
   useEffect(() => {
     const typed = new Typed(TypedRef.current, {
-      strings: ["Lightful as YOU!!!"],
+      strings: ["No pain No V"],
       typeSpeed: 80,
       cursorChar: ''
     });

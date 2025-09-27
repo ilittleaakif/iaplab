@@ -1,7 +1,8 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { DATAS } from "../../Data/Library_Datas";
-import { ArrowLeftIcon, DownloadIcon, XIcon } from "lucide-react";
+import { DownloadIcon, XIcon } from "lucide-react";
 import { useEffect, useState } from "react";
+import SubHeader from "../../Components/SubHeader";
 
 
 const SchedulesSection = () => {
@@ -9,22 +10,14 @@ const SchedulesSection = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
 
-  const handleDownload = (url, filename) => {
-    const link = document.createElement("a");
-    link.href = url;       // the image/file URL
-    link.download = filename; // the name for the downloaded file
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   const { semester } = useParams();
   const targetSemester = DATAS.find((s) => s.semester === semester);
-  const navigate = useNavigate();
   const [previewImg, setPreviewImg] = useState(null);
-  if (!targetSemester) return (<h2 className="text-center text-red-400 mt-20 text-xl font-semibold">Introuvable !</h2>);
   const schedules = Array.isArray(targetSemester.Schedules) ? targetSemester.Schedules : [];
 
+
+  if (!targetSemester) return (<h2 className="text-center text-red-400 mt-20 text-xl font-semibold">Introuvable !</h2>);
   return (
     <div className="min-h-screen relative overflow-hidden font-main">
       <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: `  repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),  repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),  repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),  repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)`, }} />
@@ -32,10 +25,8 @@ const SchedulesSection = () => {
 
 
       {/* Header */}
-      <header className="w-full flex items-center gap-3 p-6 z-20 text-text sticky top-0">
-        <ArrowLeftIcon className="cursor-pointer hover:text-accent transition" onClick={() => navigate(-1)} />
-        <span className="text-xl md:text-xl">{targetSemester.semester}</span>
-      </header>
+      <SubHeader title={`${targetSemester.semester} - Emploies Des temps`} />
+
 
       {/* Content */}
       <div className="w-full max-w-7xl mx-auto px-4 md:px-8 py-8 z-20">
@@ -51,12 +42,8 @@ const SchedulesSection = () => {
                     className="h-auto w-full object-cover transform group-hover:scale-105 transition duration-500"
                   />
                 </div>
-                <div className="flex items-center justify-between w-full py-4 px-5 bg-black/30 backdrop-blur-md">
-                  <span className="font-medium text-sm md:text-base truncate">{data.title}</span>
-                  <DownloadIcon
-                    onClick={() => handleDownload(data.imgUrl, `${data.title}.jpg`)}
-                    className="text-text-soft cursor-pointer hover:text-eighth transition" />
-                </div>
+                <p className="font-medium text-sm md:text-base truncate w-full py-4 px-5 bg-text/10 backdrop-blur-md">{data.title}</p>
+
               </div>
             ))}
           </div>

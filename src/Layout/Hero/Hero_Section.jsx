@@ -29,7 +29,7 @@ function HeroSection({ libRef }) {
 
 
       {/* Content Grid */}
-      <div className="relative z-10 grid w-full mx-auto px-6 md:px-20 md:gap-10 gap-6 md:grid-cols-2 items-center">
+      <div className="relative z-10 grid w-full mx-auto px-6 md:px-10 md:gap-4 gap-6 md:grid-cols-2 items-center">
         {/* Left Content */}
         <div className="flex flex-col gap-1">
           <h1 className="text-[40px] md:text-7xl font-bold text-text-soft leading-tight animate-[fade-in_1s_ease-out_forwards]">
@@ -46,7 +46,7 @@ function HeroSection({ libRef }) {
             </p>
             <SplitText
               text="Welcome to the most comprehensive IAP library. Embark on your learning adventure with innovative resources and interactive experiences."
-              className="md:text-lg text-xs text-text-soft leading-relaxed"
+              className="md:text-lg text-xs text-text-soft "
               delay={200}
               duration={0.5}
               ease="power3.out"
@@ -60,37 +60,34 @@ function HeroSection({ libRef }) {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col content-start sm:flex-row gap-2  mt-1">
+          <div className="flex flex-col content-start items-center sm:flex-row gap-2 mt-2">
             <ActionBtn
-              accent="accent"
               label="Discover the lessons"
               icon="fa-solid fa-graduation-cap"
               clickEvent={() => scrollEvent(libRef)}
-              delay=".6s"
+              delay=".5s"
             />
             <ActionBtn
-              accent="second"
               label="Discover E-Library"
               icon="fa-solid fa-file-circle-plus"
               clickEvent={() => navigate("/elibrary")}
-              delay="1s"
+              delay="0.9s"
             />
             <ActionBtn
-              accent="seventh"
               label="Provide a suggestion"
               icon="fa-solid fa-lightbulb"
               clickEvent={() => navigate("/suggest")}
-              delay="1.4s"
+              delay="1.3s"
             />
           </div>
         </div>
 
         {/* Right Image */}
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex justify-center items-center">
           <img
             src={Collab}
             alt="Collaboration"
-            className="animate-wipe-y h-auto max-h-[400px] w-full max-w-md object-contain  shadow-c lg:max-h-[500px] transition-transform duration-500 hover:rotate-1"
+            className="animate-m3leg h-auto max-h-[400px] w-full max-w-md object-contain  shadow-c lg:max-h-[500px] transition-transform duration-500 hover:rotate-1"
           />
         </div>
       </div>

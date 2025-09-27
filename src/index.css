@@ -104,6 +104,7 @@
   --animate-pulse-grow: pulseGlow 3.5s linear infinite;
   --animate-fadein: fade-in 1s ease forwards;
   --animate-float: float 2s ease alternate infinite;
+  --animate-m3leg: m3leg 1s ease alternate infinite;
   --animate-background: shine 5s ease-in infinite;
   --animate-wipe-y: wipe-y 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0s 1 normal both;
 
