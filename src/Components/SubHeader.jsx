@@ -8,7 +8,7 @@ const SubHeader = ({ title }) => {
       <ArrowLeftIcon
         className="cursor-pointer hover:text-accent transition"
         onClick={() => navigate(-1)} />
-      <span className="text-lg md:text-xl">{title}</span>
+      <span className="text-[15px] md:text-xl">{title}</span>
     </header>
   )
 }

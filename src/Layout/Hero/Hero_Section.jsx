@@ -24,12 +24,12 @@ function HeroSection({ libRef }) {
   }, []);
 
   return (
-    <section className="relative flex items-center min-h-screen bg-bg overflow-hidden font-main">
+    <section className="relative select-none flex items-center min-h-screen bg-bg overflow-hidden font-main">
       <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),      repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)    `, }} />
 
 
       {/* Content Grid */}
-      <div className="relative z-10 grid w-full mx-auto px-6 md:px-10 md:gap-4 gap-6 md:grid-cols-2 items-center">
+      <div className="relative z-10 grid w-full mx-auto px-6 md:mt-0 mt-32 md:px-10 md:gap-4 gap-6 md:grid-cols-2 items-center">
         {/* Left Content */}
         <div className="flex flex-col gap-1">
           <h1 className="text-[40px] md:text-7xl font-bold text-text-soft leading-tight animate-[fade-in_1s_ease-out_forwards]">
@@ -62,22 +62,16 @@ function HeroSection({ libRef }) {
           {/* Buttons */}
           <div className="flex flex-col content-start items-center sm:flex-row gap-2 mt-2">
             <ActionBtn
-              label="Discover the lessons"
-              icon="fa-solid fa-graduation-cap"
-              clickEvent={() => scrollEvent(libRef)}
-              delay=".5s"
-            />
-            <ActionBtn
               label="Discover E-Library"
               icon="fa-solid fa-file-circle-plus"
               clickEvent={() => navigate("/elibrary")}
-              delay="0.9s"
+              delay="0.3s"
             />
             <ActionBtn
               label="Provide a suggestion"
               icon="fa-solid fa-lightbulb"
               clickEvent={() => navigate("/suggest")}
-              delay="1.3s"
+              delay="0.9s"
             />
           </div>
         </div>
@@ -86,8 +80,7 @@ function HeroSection({ libRef }) {
         <div className="flex justify-center items-center">
           <img
             src={Collab}
-            alt="Collaboration"
-            className="animate-m3leg h-auto max-h-[400px] w-full max-w-md object-contain  shadow-c lg:max-h-[500px] transition-transform duration-500 hover:rotate-1"
+            className="animate-m3leg h-auto max-h-[400px] w-full max-w-md object-contain shadow-c lg:max-h-[500px] "
           />
         </div>
       </div>

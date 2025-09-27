@@ -1,4 +1,3 @@
-
 @keyframes wipe-y {
   0% {
     transform: scaleY(0.4);
@@ -11,8 +10,6 @@
 
   }
 }
-
-
 
 @keyframes float {
 
