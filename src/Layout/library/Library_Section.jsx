@@ -4,6 +4,7 @@ import { BookOpen, GraduationCap, HeartHandshake, BookText, BookOpenText, BookAu
 import { useNavigate } from "react-router-dom";
 
 import { ExtraCard } from "../../Components/Extra_Card";
+import RandomAyah from "../../Components/Api/AyahApi";
 import { LibraryCard } from "../../Components/Library_Card";
 import { LibraryHeading } from "../../Components/Library_Heading";
 import * as Wizard from '../../Data/Wizard'
@@ -13,26 +14,12 @@ const LibrarySection = forwardRef((props, ref) => {
   const navigate = useNavigate();
   const OpenLink = (link) => window.open(link, "_blank");
 
-  // Quran Ayah state
-  const [ayah, setAyah] = useState(null);
-  const [loading, setLoading] = useState(false);
 
-  const fetchRandomAyah = async () => {
-    setLoading(true);
-    try {
-      const resp = await fetch("https://api.quranhub.com/v1/ayah/random");
-      const data = await resp.json();
-      setAyah(data.data || data);
-    } catch (err) {
-      console.error("Error fetching ayah:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
 
-  useEffect(() => {
-    fetchRandomAyah();
-  }, []);
+
+
+
+
 
 
 
@@ -46,15 +33,7 @@ const LibrarySection = forwardRef((props, ref) => {
 
 
         {/* Quran */}
-        <div className="animate-fadein text-center md:text-lg text-sm px-5 w-fit mx-auto  text-text-soft font-hand border-b mb-8">
-          {loading && <span>Loading...</span>}
-          {ayah ? (
-            <>
-              <p className="font-arabic text-text">"{ayah.text}"</p>
-              <p className="mt-2 text-[0.7rem] text-text-muted font-arabic">سورة {ayah.surah?.name} — آية {ayah.numberInSurah}</p>
-            </>
-          ) : (!loading && (<span>""</span>))}
-        </div>
+        <RandomAyah />
 
 
         {/* Semesters Cards */}
@@ -62,10 +41,13 @@ const LibrarySection = forwardRef((props, ref) => {
           <LibraryHeading title={'Semesters'} icon={BookText} />
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-2 mx-auto">
             {DATAS.map((data, idx) => (
-              <LibraryCard key={idx} title={data.semester} icon={GraduationCap} onClick={() => navigate(`/semester/${encodeURIComponent(data.semester)}`)} />
+              <LibraryCard key={idx} title={data.semester} icon={GraduationCap} onClick={() => navigate(`/semester/${data.semester}`)} />
             ))}
           </div>
         </div>
+
+
+
 
 
         {/* other Labs */}

@@ -24,20 +24,22 @@ const Footer = () => {
           <DevCard svg={backend} Name={'Adaam'} Logo={pfp2} Role={'BackEnd'} Accent={'accent'} WhaLink={'https://wa.me/212656105609'} />
         </div>
 
-        <div className="w-fit font-code tracking-tighter text-sm md:text-lg mx-auto my-6 flex items-center gap-2">
-          <span>Are you a web developer?</span>
-          <span className="text-fourth font-bold cursor-pointer hover:text-second transition-colors">Team up</span>
+        <div className="my-8">
+          <img src={CodingGuy} className="mx-auto md:max-w-[260px] w-full" />
+          <div className="w-fit font-code tracking-tighter text-sm md:text-lg mx-auto flex items-center justify-center gap-2 flex-wrap">
+            <span>Are you a web developer?</span>
+            <span className="text-[#009DE9] font-bold cursor-pointer hover:text-second transition-colors">Team up</span>
+          </div>
         </div>
 
-        <img src={CodingGuy} className="mx-auto md:max-w-52 max-w-1/3" />
         {/* Bottom section */}
-        <div className="text-center border-t border-text/10 pt-6">
-          <div className="flex items-center  justify-center gap-2 mb-4">
-            <span className="text-text/80 text-lg ">Thank you for visiting</span>
-            <Heart size={20} fill="red" className="text-red-600 animate-pulse" />
+        <div className="text-center border-t border-border-dark pt-6">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="text-text  text-lg">Thank you for visiting</span>
+            <Heart size={20} fill="red" className="text-youtube animate-pulse" />
           </div>
 
-          <div className="text-text/50 text-sm">
+          <div className="text-text-muted text-sm">
             <p className="text-xs">© 2025 IAPLAB</p>
           </div>
         </div>

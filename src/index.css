@@ -5,53 +5,33 @@
 :root {
   /* ===== Backgrounds ===== */
   --bg: #ffffff;
-  /* main background */
   --bg-soft: #f5f6fa;
-  /* subtle off-white / section bg */
   --bg-card: #fdfdfd;
-  /* card background */
-  --bg-dark: #212428;
-  /* card background */
+  --bg-dark: #596069;
 
   /* ===== Text ===== */
   --text: #111111;
-  /* primary text */
   --text-soft: #444444;
-  /* secondary text */
   --text-muted: #666666;
-  /* tertiary text, subtle notes */
 
   /* ===== Borders ===== */
   --border: #e0e0e0;
-  /* default border */
   --border-light: #f0f0f0;
-  /* very light border / dividers */
   --border-dark: #818181;
-  /* darker border for emphasis */
 
   --accent: #2563eb;
-  /* primary accent (blue) */
   --accent-light: #3b82f6;
-  /* lighter blue */
 
   --second: #6d28d9;
-  /* deep violet */
   --third: #fbbf24;
-  /* golden yellow */
   --fourth: #22c55e;
-  /* green */
   --fifth: #f97316;
-  /* orange */
   --sixth: #06b6d4;
-  /* cyan */
   --seventh: #ec4899;
-  /* pink */
   --eighth: #a16207;
-  /* warm brown/amber */
 
   --youtube: #ff0000;
   --whatsapp: #25d366;
-
 
 }
 

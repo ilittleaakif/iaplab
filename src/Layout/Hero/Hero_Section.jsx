@@ -29,10 +29,13 @@ function HeroSection({ libRef }) {
 
 
       {/* Content Grid */}
-      <div className="relative z-10 grid w-full mx-auto px-6 md:mt-0 mt-32 md:px-10 md:gap-4 gap-6 md:grid-cols-2 items-center">
+      <div className="relative z-10 grid w-full mx-auto px-6 md:mt-0 mt-28 md:px-10 md:gap-4 gap-6 md:grid-cols-2 items-center">
+
         {/* Left Content */}
         <div className="flex flex-col gap-1">
-          <h1 className="text-[40px] md:text-7xl font-bold text-text-soft leading-tight animate-[fade-in_1s_ease-out_forwards]">
+
+          {/* Typing text */}
+          <h1 className="text-[40px] md:text-7xl font-bold text-text-soft leading-tight">
             <span>to{" "}</span>
             <span
               className="inline-block text-transparent bg-gradient-to-r from-text to-text-soft bg-clip-text"
@@ -40,21 +43,20 @@ function HeroSection({ libRef }) {
             />
           </h1>
 
+          {/* Greeting text */}
           <div className="border-t-2 border-border pt-2 md:pt-6 max-w-2xl text-text-soft">
             <p className="md:text-xl text-base font-semibold text-text animate-fadein ">
               Hello my friend! 👋
             </p>
             <SplitText
               text="Welcome to the most comprehensive IAP library. Embark on your learning adventure with innovative resources and interactive experiences."
-              className="md:text-lg text-xs text-text-soft "
-              delay={200}
-              duration={0.5}
+              className="md:text-lg text-xs text-text-soft"
+              delay={100}
+              duration={1}
               ease="power3.out"
               splitType="words"
-              from={{ opacity: 0, y: 5 }}
+              from={{ opacity: 0, y: 10 }}
               to={{ opacity: 1, y: 0 }}
-              threshold={0.1}
-              rootMargin="-100px"
               textAlign="left"
             />
           </div>
@@ -80,7 +82,7 @@ function HeroSection({ libRef }) {
         <div className="flex justify-center items-center">
           <img
             src={Collab}
-            className="animate-m3leg h-auto max-h-[400px] w-full max-w-md object-contain shadow-c lg:max-h-[500px] "
+            className="animate-m3leg h-auto max-h-[400px] w-full max-w-lg object-contain shadow-c lg:max-h-[500px] "
           />
         </div>
       </div>

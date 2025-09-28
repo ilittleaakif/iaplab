@@ -19,51 +19,45 @@ const ProfMails = () => {
   return (
     <div className=" min-h-screen relative overflow-hidden font-main">
       {/* Background */}
-      <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: `  repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),  repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),  repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),  repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)`, }} />
+      <div className="absolute inset-0 -z-10" style={{ backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),  repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),  repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),  repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)`, }} />
 
       {/* Header */}
       <SubHeader title={`${targetSemester.semester} - Emails des profs`} />
 
       {/* Content */}
       <div className="w-full md:px-16 px-4 py-6 mx-auto z-20">
-        {MailsDatas.length === 0 ? (
-          <p className="text-center text-lg text-text-soft">Aucun mail disponible pour ce semestre.</p>
-        ) : (
+        {MailsDatas.length === 0 ? (<p className="text-center text-lg text-text-soft">Aucun mail disponible pour ce semestre.</p>) : (
+
           MailsDatas.map((data, idx) => (
             <div
               key={idx}
-              className="bg-bg p-5 text-text mb-6 border border-border"
+              className="bg-bg border border-border p-6 mb-6 shadow-md hover:shadow-lg transition"
             >
-              {/* Top Row */}
-              <div className="flex items-center justify-between mb-3">
-                {/* prof Name */}
-                <div className="flex items-center gap-3 border-b border-text/40">
-                  <UserIcon className="text-text-soft w-5 h-5" />
-                  <h2 className="text-lg font-semibold ">{data.Name}</h2>
-                </div>
-
-                {/* Copy btn */}
-                <button
-                  onClick={() => wizard.copyToClipboard(data.Mail)}
-                  className="flex items-center rounded-md gap-2 px-2 py-1 text-sm bg-accent/20 cursor-pointer hover:bg-accent/10 transition text-text">
-                  <CopyIcon className="w-3 h-3" />
-                  <span>Copy</span>
-                </button>
-              </div>
-
               {/* Module */}
-              <div className="flex items-center gap-2 mb-2 text-sub/80">
-                <BookOpenIcon className="w-5 h-5 text-sub" />
-                <p className="text-sm">{data.Module}</p>
+              <div className="flex items-center gap-2 mb-4 text-sub/80">
+                <BookOpenIcon className="w-5 h-5 text-accent" />
+                <p className="text-sm font-medium">{data.Module}</p>
               </div>
 
               {/* Email */}
-              <div className="flex items-center gap-2">
-                <MailIcon className="text-accent w-5 h-5" />
-                <a href={`mailto:${data.Mail}`} className="text-accent hover:underline">{data.Mail}</a>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2 text-accent">
+                  <MailIcon className="w-5 h-5" />
+                  <p className="font-semibold break-all">{data.Mail}</p>
+                </div>
+
+                {/* Copy */}
+                <button
+                  onClick={() => wizard.copyToClipboard(data.Mail)}
+                  className="flex cursor-pointer items-center gap-2 px-3 py-1.5 text-sm rounded-lg bg-accent/10 text-accent font-medium hover:bg-accent hover:text-white transition"
+                >
+                  <CopyIcon className="w-4 h-4" />
+                  <span>Copy</span>
+                </button>
               </div>
             </div>
           ))
+
         )}
       </div>
     </div>
