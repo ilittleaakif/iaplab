@@ -23,7 +23,7 @@ export const DevCard = ({ Name, Role, Logo, GitLink, InstaLink, WhaLink, svg }) 
         </div>
 
         {/* Social Links */}
-        <div className="flex items-center gap-2 p-4 text-text-soft text-lg">
+        <div className="flex items-center gap-2 p-4 text-text-soft text-xl ">
           <i
             onClick={() => Wizard.OpenLink(GitLink)}
             className="fa-brands fa-github cursor-pointer hover:text-accent transition-colors"
@@ -31,10 +31,6 @@ export const DevCard = ({ Name, Role, Logo, GitLink, InstaLink, WhaLink, svg }) 
           <i
             onClick={() => Wizard.OpenLink(WhaLink)}
             className="fa-brands fa-whatsapp cursor-pointer hover:text-fourth transition-colors"
-          ></i>
-          <i
-            onClick={() => Wizard.OpenLink(InstaLink)}
-            className="fa-brands fa-instagram cursor-pointer hover:text-seventh transition-colors"
           ></i>
         </div>
 

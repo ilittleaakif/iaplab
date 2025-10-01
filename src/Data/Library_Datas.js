@@ -85,13 +85,17 @@ export const DATAS = [
       [
         { title: 'ROO seance 1', Url: 'https://drive.google.com/drive/folders/1sz_XDfB9d4zzoMWLLCeCE18fq1H3XqO_', icon: Images },
         { title: 'PROBA STATS seance 1', Url: 'https://drive.google.com/drive/folders/1oEjVfQIAWXk9tDkESbG20_mzwMXj1Ypx', icon: Images },
+        { title: 'ROO seance 2', Url: 'https://drive.google.com/drive/folders/1BqHx15bmcZwYACBN1KhZOy3CeYVzR0RE', icon: Images },
+        { title: 'PROBA STATS seance 2', Url: 'https://drive.google.com/drive/folders/1PsAckmwfsAslC-6teiRc4c33Q5nFqvQS', icon: Images },
       ],
     extras:
       [
         { title: 'Kifash Tgad Ubuntu? ', Url: 'https://www.youtube.com/watch?si=Px9EAuhjr8Uy2Hq0&v=Hva8lsV2nTk&feature=youtu.be', icon: Computer },
         { title: 'Shanahowa Linux? ', Url: 'https://youtu.be/C6WsWlEH16k?si=Gy2nI7KvGrOxXjM0', icon: Computer },
-        { title: 'Google Classroom (Code : fvodiijc) ', Url: 'https://classroom.google.com', icon: Computer },
+        { title: 'Progra Web class (Code : fvodiijc) ', Url: 'https://classroom.google.com', icon: Computer },
+        { title: 'Structure C class (Code : gkzgcc2p) ', Url: 'https://classroom.google.com', icon: Computer },
       ],
+      
     AcMails:
       [
         { Name: '', Module: 'UML', Mail: 's.mjahed@uca.ac.ma' },

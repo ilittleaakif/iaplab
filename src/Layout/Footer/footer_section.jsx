@@ -1,4 +1,4 @@
-import { Heart, Github, MessageCircle, Instagram } from "lucide-react";
+import { Heart } from "lucide-react";
 import * as Wizard from '../../Data/Wizard'
 import pfp from '/Logos/zakaria.png'
 import pfp2 from '/Logos/adam.jpeg'
@@ -8,7 +8,10 @@ import CodingGuy from '/Assets/GuyCoding.png'
 
 
 import { DevCard } from "../../Components/DevCard";
+import { useNavigate } from "react-router-dom";
 const Footer = () => {
+
+  const navigate = useNavigate();
   return (
     <footer className="w-full py-10 relative overflow-hidden font-main select-none">
       <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),      repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)    `, }} />
@@ -28,7 +31,10 @@ const Footer = () => {
           <img src={CodingGuy} className="mx-auto md:max-w-[260px] w-full" />
           <div className="w-fit font-code tracking-tighter text-sm md:text-lg mx-auto flex items-center justify-center gap-2 flex-wrap">
             <span>Are you a web developer?</span>
-            <span className="text-[#009DE9] font-bold cursor-pointer hover:text-second transition-colors">Team up</span>
+            <span
+              className="text-[#009DE9] font-bold cursor-pointer hover:text-second transition-colors"
+              onClick={() => navigate('/hire')}
+            >Team up</span>
           </div>
         </div>
 
