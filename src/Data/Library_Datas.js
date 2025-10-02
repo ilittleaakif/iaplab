@@ -2,9 +2,7 @@ import {
   Sigma, Calculator, Cpu, GitBranch, Code, Monitor,
   Activity, Globe, Database, Shield, Network, Route,
   BarChart3, Layers, Terminal, Boxes,
-  Youtube, Images,
-  Mail,
-  Computer
+  Youtube, Images, Computer
 } from "lucide-react";
 
 
@@ -95,7 +93,7 @@ export const DATAS = [
         { title: 'Progra Web class (Code : fvodiijc) ', Url: 'https://classroom.google.com', icon: Computer },
         { title: 'Structure C class (Code : gkzgcc2p) ', Url: 'https://classroom.google.com', icon: Computer },
       ],
-      
+
     AcMails:
       [
         { Name: '', Module: 'UML', Mail: 's.mjahed@uca.ac.ma' },
@@ -109,8 +107,8 @@ export const DATAS = [
         { title: 'Emploie Groupe 2', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
         { title: 'Emploie Groupe 3', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
         { title: 'Emploie Groupe 4', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-        { title: 'Emploie Groupe 5', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-      ]
+      ],
+      exclusive: {title: 'S3 ?? Cliquer hna bash tstafd !' ,href : '/s3x'}
 
   },
   {

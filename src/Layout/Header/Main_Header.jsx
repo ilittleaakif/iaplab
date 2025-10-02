@@ -8,7 +8,7 @@ function Header() {
 
   useEffect(() => {
     const typed = new Typed(TypedRef.current, {
-      strings: ["Keep it up!"],
+      strings: ['<i class="fa-solid fa-dove"></i>حِدَاد'],
       typeSpeed: 80,
       cursorChar: ''
     });
@@ -31,7 +31,8 @@ function Header() {
       {/* logo */}
       <div className='relative'>
         <span className="font-bold animate-fadein md:text-4xl text-3xl relative font-logo transition bg-gradient-to-r from-text to-text-soft  bg-clip-text text-transparent">IAPLAB</span>
-        <p ref={TypedRef} className='font-hand text-text-muted md:text-[13px] text-[11px] absolute left-1/2 -translate-x-1/2 md:-bottom-[14px] -bottom-[11px] block whitespace-nowrap'></p>
+        <p ref={TypedRef} className='font-quran font-bold text-youtube md:text-[18px] animate-pulse text-[16px] absolute left-1/2 -translate-x-1/2 md:-bottom-[10px] -bottom-[6px] block whitespace-nowrap'>
+        </p>
       </div>
     </header >
   );

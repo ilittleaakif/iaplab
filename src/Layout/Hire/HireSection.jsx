@@ -45,8 +45,8 @@ const Hire = () => {
 
       {/* Heading */}
       <div className="w-fit mx-auto font-code my-20">
-        <h1 className="text-xl md:text-3xl font-main font-semibold mb-2 text-center">Wanna Team Up?</h1>
-        <p className="text-text-soft text-sm max-w-4xl md:text-base mb-6 text-center">Drop your details below and let’s cook up something amazing together!</p>
+        <h1 className="text-xl md:text-3xl font-main font-semibold mb-2 text-center"></h1>
+        <p className="text-text-soft text-sm max-w-4xl md:text-base mb-6 text-center"></p>
       </div>
 
       {/* Form */}

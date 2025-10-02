@@ -3,13 +3,12 @@ import { useNavigate } from "react-router-dom";
 import Typed from "typed.js";
 import SplitText from "../../Assets/SplitText";
 import { ActionBtn } from "../../Components/Action_Button";
-import Collab from "/Assets/Collab.webp";
+import Collab from "/Assets/001.png";
 
 function HeroSection({ libRef }) {
   const typedRef = useRef(null);
   const navigate = useNavigate();
-  const scrollEvent = (target) =>
-    target?.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollEvent = (target) => target?.current?.scrollIntoView({ behavior: "smooth" });
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
@@ -72,7 +71,7 @@ function HeroSection({ libRef }) {
             <ActionBtn
               label="Provide a suggestion"
               icon="fa-solid fa-lightbulb"
-              clickEvent={() => navigate("/suggest")}
+              clickEvent={() => navigate("/form/suggest")}
               delay="0.9s"
             />
           </div>
@@ -82,7 +81,7 @@ function HeroSection({ libRef }) {
         <div className="flex justify-center items-center">
           <img
             src={Collab}
-            className="animate-m3leg h-auto max-h-[400px] w-full max-w-lg object-contain shadow-c lg:max-h-[500px] "
+            className="animate-m3leg h-auto max-h-[4500px] w-full max-w-lg object-contain  "
           />
         </div>
       </div>

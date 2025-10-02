@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { SemesterContainer } from "./Components_Handler";
 import { DATAS } from "../../Data/Library_Datas";
-import {  AtSign, Calendar, UsersRoundIcon } from "lucide-react";
+import { AlertCircle, AtSign, Calendar, UsersRoundIcon } from "lucide-react";
 import { useEffect } from "react";
 import { cn } from "@sglara/cn";
 import SubHeader from "../../Components/SubHeader";
@@ -45,11 +45,21 @@ const SemsterContent = () => {
 
       <SubHeader title={targetSemester.semester} />
 
+      {/* {
+        targetSemester.exclusive &&
+        <div
+          onClick={() => navigate(targetSemester.exclusive.href)}
+          className="w-full bg-youtube rounded-xs max-w-7xl mx-auto flex items-center gap-2 text-bg p-3">
+          <AlertCircle />
+          <span>{targetSemester.exclusive.title}</span>
+        </div>
+      } */}
+
 
       <div className="w-full md:px-20 px-4 py-6 mx-auto z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
-          <Card ClickEvent={() => navigate(`/Schedules/${encodeURIComponent(targetSemester.semester)}`)} title={'Les emploies des temps'} icon={Calendar} accent={'fifth'} />
-          <Card ClickEvent={() => navigate(`/Acmails/${encodeURIComponent(targetSemester.semester)}`)} title={'Les mails academics'} icon={AtSign} accent={'fourth'} />
+          <Card ClickEvent={() => navigate(`/${targetSemester.semester}/schedules`)} title={'Les emploies des temps'} icon={Calendar} accent={'fifth'} />
+          <Card ClickEvent={() => navigate(`/${targetSemester.semester}/mails`)} title={'Les mails academics'} icon={AtSign} accent={'fourth'} />
           <Card ClickEvent={() => OpenLink(targetSemester.whatGroup.link)} title={'Groupes de whatsapp'} icon={UsersRoundIcon} accent={''} />
         </div>
       </div>

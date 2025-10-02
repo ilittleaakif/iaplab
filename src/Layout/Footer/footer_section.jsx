@@ -21,7 +21,7 @@ const Footer = () => {
 
 
         {/* Minimal Developer Cards */}
-        <h1 className="text-center my-4 w-fit mx-auto px-2 border border-border-dark text-text-soft font-code tracking-tighter text-sm">Built By</h1>
+        <h1 className="text-center shadow-[2px_2px_0_gray] my-4 w-fit mx-auto px-2 border border-border-dark text-text-soft text-sm">Built By</h1>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
           <DevCard svg={frontend} Name={'ZakariaX'} Logo={pfp} Role={'FrontEnd'} Accent={'second'} WhaLink={'https://wa.me/212673999182'} GitLink={'https://github.com/Zakariaiouiri'} />
           <DevCard svg={backend} Name={'Adaam'} Logo={pfp2} Role={'BackEnd'} Accent={'accent'} WhaLink={'https://wa.me/212656105609'} />
@@ -33,7 +33,7 @@ const Footer = () => {
             <span>Are you a web developer?</span>
             <span
               className="text-[#009DE9] font-bold cursor-pointer hover:text-second transition-colors"
-              onClick={() => navigate('/hire')}
+              onClick={() => navigate('/form/teamup')}
             >Team up</span>
           </div>
         </div>

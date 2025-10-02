@@ -6,15 +6,11 @@ import HeroSection from "./Layout/Hero/Hero_Section";
 import LibararySection from "./Layout/library/Library_Section";
 import Footer from "./Layout/Footer/footer_section";
 
-import Suggest from "./Layout/Suggest/Suggest_section";
+import Form from "./Layout/Forum/Form";
 
 import SemsterContent from "./Layout/library/Semestre_Section";
 import ELibraySection from "./Layout/E-library/ELibrary_Container";
-import SchedulesSection from "./Layout/library/Schedules";
-import ProfMails from "./Layout/library/ProfMails";
-import Hire from "./Layout/Hire/HireSection";
-
-
+import SemesterDashboard from "./Layout/library/Semestre_Dashboard";
 
 
 function App() {
@@ -32,15 +28,17 @@ function App() {
   };
 
   return (
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/semester/:name" element={<SemsterContent />} />
-        <Route path="/suggest" element={<Suggest />} />
-        <Route path="/Elibrary" element={<ELibraySection />} />
-        <Route path="/Hire" element={<Hire />} />
-        <Route path="/Acmails/:name" element={<ProfMails />} />
-        <Route path="/Schedules/:semester" element={<SchedulesSection />} />
-      </Routes>
+    <Routes>
+
+      <Route path="/" element={<HomePage />} />
+      <Route path="/semester/:name" element={<SemsterContent />} />
+      <Route path="/:semester/:section" element={<SemesterDashboard />} />
+
+      <Route path="/Elibrary" element={<ELibraySection />} />
+
+      <Route path="/form/:action" element={<Form />} />
+
+    </Routes>
 
   );
 }

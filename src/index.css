@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Borel&family=Funnel+Display:wght@300..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
 @import "tailwindcss";
 
 
@@ -44,6 +45,7 @@
   --font-main: "Funnel Display", sans-serif;
   --font-hand: "Borel", cursive;
   --font-arabic: "Baloo Bhaijaan 2", sans-serif;
+  --font-quran: "Amiri Quran", serif;
 
 
   --shadow-action: 0 0 160px var(--local);

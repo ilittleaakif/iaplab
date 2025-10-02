@@ -1,26 +1,18 @@
 import { forwardRef, useEffect, useState } from "react";
 import { OTHER_LABS, DATAS } from "../../Data/Library_Datas";
-import { BookOpen, GraduationCap, HeartHandshake, BookText, BookOpenText, BookAudioIcon } from "lucide-react";
+import { BookOpen, GraduationCap, HeartHandshake, BookText, BookOpenText, BookAudioIcon, HandFist } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import { ExtraCard } from "../../Components/Extra_Card";
 import RandomAyah from "../../Components/Api/AyahApi";
 import { LibraryCard } from "../../Components/Library_Card";
 import { LibraryHeading } from "../../Components/Library_Heading";
-import * as Wizard from '../../Data/Wizard'
 import woman from '/Assets/woman.svg'
+import anti from '/Assets/anti.webp'
 
 const LibrarySection = forwardRef((props, ref) => {
   const navigate = useNavigate();
   const OpenLink = (link) => window.open(link, "_blank");
-
-
-
-
-
-
-
-
 
 
   return (
@@ -48,8 +40,6 @@ const LibrarySection = forwardRef((props, ref) => {
 
 
 
-
-
         {/* other Labs */}
         <div className="space-y-2 md:space-y-3">
           <LibraryHeading title={'Other Labs'} icon={BookOpenText} />
@@ -62,10 +52,14 @@ const LibrarySection = forwardRef((props, ref) => {
 
       </div>
 
-
+      <div className="text-youtube w-fit mx-auto flex items-center gap-1 mt-24 mb-4">
+        <span >#RIGHT_OR_FIGHT</span>
+        <i class="fa-solid fa-hand-peace"></i>
+      </div>
 
       {/* Extras Cards */}
-      <img src={woman} className="w-1/2 max-w-56 mx-auto mt-24" />
+      {/* <img src={woman} className="w-1/2 max-w-56 mx-auto mt-24" /> */}
+      <img src={anti} className="w-1/2 max-w-56 mx-auto " />
       <div className="mx-auto text-text-soft max-w-4/5 justify-center pt-4 border-text-soft  flex items-center gap-2 border-t">
         <h1>Student HelpUp</h1>
         <HeartHandshake size={17} />

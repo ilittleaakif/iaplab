@@ -25,9 +25,13 @@ const RandomAyah = () => {
 
   return (
     <div className="mx-auto w-fit flex items-center flex-col text-center px-5 animate-fadein">
-      <p className="font-arabic text-text md:text-lg text-base ">"{ayah.text}"</p>
+      <p className="font-quran text-text md:text-lg text-base ">"{ayah.text}"</p>
       <p className="mt-2 text-[0.7rem] text-text-muted font-arabic">{ayah.surah?.name} — آية {ayah.numberInSurah}</p>
-      <button className="cursor-pointer md:text-sm hover:border-black mt-2 px-3 border border-text-muted font-main text-text-muted transition text-xs" onClick={fetchRandomAyah}>
+      <button
+        onClick={fetchRandomAyah}
+        className="cursor-pointer md:text-sm mt-2 px-3
+        border hover:bg-green-400  hover:text-bg hover:border-green-400
+        border-text-soft font-main text-text-soft transition text-xs">
         new Ayah
       </button>
     </div>
