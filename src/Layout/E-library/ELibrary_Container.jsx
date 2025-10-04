@@ -1,5 +1,5 @@
 import { Laptop, Globe, Smartphone, Database, Cloud, ShieldCheck, Cpu, Bot } from "lucide-react";
-import CodingIll from '/Assets/codingGuy.svg';
+import CodingIll from '/Assets/coder.webp';
 
 const categories = [
   { titleAr: "تطوير البرمجيات", titleEn: "Software Development", icon: Laptop },

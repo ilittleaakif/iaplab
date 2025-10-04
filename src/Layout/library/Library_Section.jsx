@@ -7,8 +7,8 @@ import { ExtraCard } from "../../Components/Extra_Card";
 import RandomAyah from "../../Components/Api/AyahApi";
 import { LibraryCard } from "../../Components/Library_Card";
 import { LibraryHeading } from "../../Components/Library_Heading";
-import woman from '/Assets/woman.svg'
-import anti from '/Assets/anti.webp'
+import clusmy from '/Assets/002.svg'
+
 
 const LibrarySection = forwardRef((props, ref) => {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ const LibrarySection = forwardRef((props, ref) => {
           <LibraryHeading title={'Semesters'} icon={BookText} />
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-2 mx-auto">
             {DATAS.map((data, idx) => (
-              <LibraryCard key={idx} title={data.semester} icon={GraduationCap} onClick={() => navigate(`/semester/${data.semester}`)} />
+              <LibraryCard key={idx} title={data.semester} icon={BookOpen} onClick={() => navigate(`/semester/${data.semester}`)} />
             ))}
           </div>
         </div>
@@ -52,14 +52,15 @@ const LibrarySection = forwardRef((props, ref) => {
 
       </div>
 
-      <div className="text-youtube w-fit mx-auto flex items-center gap-1 mt-24 mb-4">
-        <span >#RIGHT_OR_FIGHT</span>
-        <i class="fa-solid fa-hand-peace"></i>
+      <div className="uppercase md:text-xl text-[#FF5678] font-code font-bold  w-fit mx-auto flex items-center gap-1 mt-24 mb-8">
+        <span>Keep learning hommmmie !</span>
+        <i class="fa-solid fa-heart"></i>
       </div>
 
       {/* Extras Cards */}
-      {/* <img src={woman} className="w-1/2 max-w-56 mx-auto mt-24" /> */}
-      <img src={anti} className="w-1/2 max-w-56 mx-auto " />
+      <img src={clusmy} className="w-1/2 max-w-96 mx-auto " />
+
+
       <div className="mx-auto text-text-soft max-w-4/5 justify-center pt-4 border-text-soft  flex items-center gap-2 border-t">
         <h1>Student HelpUp</h1>
         <HeartHandshake size={17} />
