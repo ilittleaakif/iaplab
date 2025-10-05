@@ -6,6 +6,9 @@ import SplitText from "../../Assets/SplitText";
 import { useParams } from "react-router-dom";
 import SubHeader from "../../Components/SubHeader";
 
+import svga from '/Assets/003.svg'
+import svgb from '/Assets/004.svg'
+
 const Form = () => {
   const { action } = useParams();
   const [name, setName] = useState("");
@@ -24,6 +27,7 @@ const Form = () => {
       sendingText: "Sending...",
       successMessage: "Suggestion sent successfully!",
       errorMessage: "An error occurred. Please try again later.",
+      svg: svga
     }
     : {
       head: "Wanna Team Up?",
@@ -34,6 +38,7 @@ const Form = () => {
       sendingText: "Sending...",
       successMessage: "Message sent successfully!",
       errorMessage: "An error occurred. Please try again later.",
+      svg: svgb
     };
 
   const handleSubmit = async (e) => {
@@ -60,17 +65,21 @@ const Form = () => {
   };
 
   return (
-    <div className="font-main min-h-screen text-text bg-bg-soft relative">
-      {/* Background Gradients */}
-      <div
-        className="absolute inset-0 pointer-events-none z-10"
-        style={{backgroundImage: `radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.35), transparent 60%), radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.4), transparent 60%)`,}}
-      />
+    <div
+      style={{
+        backgroundImage: `
+        radial-gradient(circle at 20% 80%, rgba(120,119,198,0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.5) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120,119,198,0.1) 0%, transparent 50%)`,
+      }} className="font-main min-h-screen text-text bg-bg-soft relative">
+
 
       <SubHeader title={action === "teamup" ? "Team Up With Us" : "Provide a Suggestion"} />
 
+      <img src={Strings.svg} className=" animate-m3leg mt-20 mx-auto object-cover h-auto w-fit max-w-[14rem] px-5 md:mx-auto " />
+
       {/* Heading */}
-      <div className="w-full max-w-xl mx-auto font-main my-12 px-4">
+      <div className="w-full max-w-xl mx-auto font-main mb-12 px-4">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 text-center">
           {Strings.head}
         </h1>
@@ -90,7 +99,7 @@ const Form = () => {
           placeholder={Strings.namePlaceholder}
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full border border-border bg-bg px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent transition"
+          className="w-full border border-border bg-bg/60 px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent transition"
         />
 
         <textarea
@@ -99,13 +108,13 @@ const Form = () => {
           rows={5}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full border border-border bg-bg px-4 py-3 text-base resize-none focus:outline-none focus:ring-2 focus:ring-accent transition"
+          className="w-full border border-border bg-bg/60 px-4 py-3 text-base resize-none focus:outline-none focus:ring-2 focus:ring-accent transition"
         />
 
         <button
           type="submit"
           disabled={loading}
-          className={`flex items-center justify-center gap-2 px-4 md:px-8 py-3 bg-accent text-bg font-medium  shadow-md transition-transform hover:-translate-y-1 active:scale-95 ${loading ? "cursor-not-allowed opacity-70" : "cursor-pointer"}`}
+          className={`flex items-center justify-center gap-2 px-4 md:px-8 py-3 bg-eighth text-bg font-medium  shadow-md transition-transform hover:-translate-y-1 active:scale-95 ${loading ? "cursor-not-allowed opacity-70" : "cursor-pointer"}`}
         >
           <Send size={18} />
           <span>{loading ? Strings.sendingText : Strings.buttonText}</span>

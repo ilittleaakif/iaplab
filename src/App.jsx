@@ -6,7 +6,8 @@ import HeroSection from "./Layout/Hero/Hero_Section";
 import LibararySection from "./Layout/library/Library_Section";
 import Footer from "./Layout/Footer/footer_section";
 
-import Form from "./Layout/Forum/Form";
+import Form from "./Layout/Form/Form";
+
 
 import SemsterContent from "./Layout/library/Semestre_Section";
 import ELibraySection from "./Layout/E-library/ELibrary_Container";

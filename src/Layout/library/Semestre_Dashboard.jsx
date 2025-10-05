@@ -1,20 +1,13 @@
-import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import {
-  MailIcon,
-  CopyIcon,
-  BookOpenIcon,
-  AlertCircleIcon,
-  XIcon,
-} from "lucide-react";
+import { MailIcon, CopyIcon, BookOpenIcon, AlertCircleIcon, XIcon, } from "lucide-react";
+import { useParams } from "react-router-dom";
 import { DATAS } from "../../Data/Library_Datas";
+
 import * as wizard from "../../Data/Wizard";
 import SubHeader from "../../Components/SubHeader";
 
 const SemesterDashboard = () => {
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
+  useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }, []);
 
   const { semester, section } = useParams();
   const targetSemester = DATAS.find((s) => s.semester === semester);
@@ -22,13 +15,8 @@ const SemesterDashboard = () => {
   const [previewImg, setPreviewImg] = useState(null);
 
   if (!targetSemester)
-    return (
-      <h2 className="text-center text-red-400 mt-20 text-xl font-semibold">
-        Semestre introuvable !
-      </h2>
-    );
+    return (<h2 className="text-center text-red-400 mt-20 text-xl font-semibold">Semestre introuvable !</h2>);
 
-  // Determine data based on section
   const isMails = section === "mails";
   const isSchedules = section === "schedules";
 
@@ -48,7 +36,7 @@ const SemesterDashboard = () => {
       />
 
       {/* Header */}
-      <SubHeader title={isMails ? `${targetSemester.semester} - Emails des profs` : `${targetSemester.semester} - Emplois des temps`}/>
+      <SubHeader title={isMails ? `${targetSemester.semester} - Emails des profs` : `${targetSemester.semester} - Emplois des temps`} />
 
       {/* Optional warning for schedules */}
       {isSchedules && (

@@ -21,26 +21,14 @@ export const DATAS = [
       ],
     youtube:
       [
-        { title: 'programmation en C1', icon: Youtube, Url: 'https://www.youtube.com/watch?v=I4U0sQDw5Nw&list=PLZpzLuUp9qXxKSkKT43ppqzb8c2ahO4VS' },
-        { title: 'Algorithmique', icon: Youtube, Url: 'https://www.youtube.com/watch?v=m_yj2p6SCEM&list=PLZpzLuUp9qXwrApSukhtvpi4U6l-INcTI' },
-        { title: 'Électronique Numérique', icon: Youtube, Url: 'https://www.youtube.com/watch?v=h5IEj1U4iVw&list=PLU7IbxWzSiXTGMOjd30HFjMwssoVNbAA9' },
-        { title: 'Analyse 1', icon: Youtube, Url: 'https://www.youtube.com/watch?v=AwuqG0agXCI&list=PLh8CSljgwDFR166V-x0tMKUX_m_OKdTrG' },
-        { title: 'Algebre 1', icon: Youtube, Url: 'https://www.youtube.com/watch?v=f2HrMWmke4o&list=PLh8CSljgwDFTEsLrTYE4J0S8WPKPAd1w5' },
+        { title: 'programmation en C1', Url: 'https://www.youtube.com/watch?v=I4U0sQDw5Nw&list=PLZpzLuUp9qXxKSkKT43ppqzb8c2ahO4VS' },
+        { title: 'Algorithmique', Url: 'https://www.youtube.com/watch?v=m_yj2p6SCEM&list=PLZpzLuUp9qXwrApSukhtvpi4U6l-INcTI' },
+        { title: 'Électronique Numérique', Url: 'https://www.youtube.com/watch?v=h5IEj1U4iVw&list=PLU7IbxWzSiXTGMOjd30HFjMwssoVNbAA9' },
+        { title: 'Analyse 1', Url: 'https://www.youtube.com/watch?v=AwuqG0agXCI&list=PLh8CSljgwDFR166V-x0tMKUX_m_OKdTrG' },
+        { title: 'Algebre 1', Url: 'https://www.youtube.com/watch?v=f2HrMWmke4o&list=PLh8CSljgwDFTEsLrTYE4J0S8WPKPAd1w5' },
       ],
     pictures: [],
     extras: [],
-    AcMails:
-      [
-        { Name: 'M, Ilyass OUAZZANI TAYBI', Module: 'Algorithmique & Programmation C1', Mail: 'i.ouazzani@uca.com' },
-      ],
-    Schedules: null
-    // [
-    //   { title: 'Emploie Groupe 1', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-    //   { title: 'Emploie Groupe 2', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-    //   { title: 'Emploie Groupe 3', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-    //   { title: 'Emploie Groupe 4', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-    //   { title: 'Emploie Groupe 5', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-    // ]
   },
   {
     semester: "Semestre 2",
@@ -57,7 +45,6 @@ export const DATAS = [
     youtube: null,
     pictures: null,
     extras: null,
-    AcMails: null,
     Schedules: null,
   },
   {
@@ -74,9 +61,9 @@ export const DATAS = [
       ],
     youtube:
       [
-        { title: 'Structures de Données en C', icon: Youtube, Url: 'https://www.youtube.com/watch?v=WyYHahUwEZc&list=PLbwarkNdAQxCiuRfnrN-wg1XCb0mnQeEG&index=2' },
-        { title: 'Programmation web 1', Url: 'https://youtube.com/playlist?list=PLknwEmKsW8OuN04Odt2sJqt4aAnkp-iYA&si=2IPt8VBuCnToYxuS', icon: Youtube },
-        { title: 'Modélisation objet  UML', Url: 'https://www.youtube.com/watch?v=wWnDP5YXyxk&list=PLjXcpCBIph8w3fNehQwxSdwzb3zbauv4Q', icon: Youtube },
+        { title: 'Structures de Données en C', Url: 'https://www.youtube.com/watch?v=WyYHahUwEZc&list=PLbwarkNdAQxCiuRfnrN-wg1XCb0mnQeEG&index=2' },
+        { title: 'Programmation web 1', Url: 'https://youtube.com/playlist?list=PLknwEmKsW8OuN04Odt2sJqt4aAnkp-iYA&si=2IPt8VBuCnToYxuS' },
+        { title: 'Modélisation objet  UML', Url: 'https://www.youtube.com/watch?v=wWnDP5YXyxk&list=PLjXcpCBIph8w3fNehQwxSdwzb3zbauv4Q' },
 
       ],
     pictures:
@@ -93,23 +80,6 @@ export const DATAS = [
         { title: 'Progra Web class (Code : fvodiijc) ', Url: 'https://classroom.google.com', icon: Computer },
         { title: 'Structure C class (Code : gkzgcc2p) ', Url: 'https://classroom.google.com', icon: Computer },
       ],
-
-    AcMails:
-      [
-        { Name: '', Module: 'UML', Mail: 's.mjahed@uca.ac.ma' },
-        { Name: '', Module: 'Proba Stats', Mail: 'm1.louriki@uca.ac.ma' },
-        { Name: '', Module: 'Structures de Données', Mail: 'h.elalaoui@uca.ac.ma' },
-        { Name: '', Module: 'ROO', Mail: 't.agouti@uca.ac.ma' },
-      ],
-    Schedules:
-      [
-        { title: 'Emploie Groupe 1', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237121&current_week=44&lar=300&hau=320" },
-        { title: 'Emploie Groupe 2', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-        { title: 'Emploie Groupe 3', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-        { title: 'Emploie Groupe 4', imgUrl: "https://emploi-fssm.uca.ma/vue_etudiant_verticale.php?current_year=2016&current_student=11237130&current_week=44&lar=300&hau=320" },
-      ],
-      exclusive: {title: 'S3 ?? Cliquer hna bash tstafd !' ,href : '/s3x'}
-
   },
   {
     semester: "Semestre 4",
@@ -125,8 +95,6 @@ export const DATAS = [
       ],
     youtube: null,
     extras: null,
-    AcMails: null,
-    Schedules: null
   },
 ];
 

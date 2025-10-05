@@ -62,17 +62,18 @@ function HeroSection({ libRef }) {
 
           {/* Buttons */}
           <div className="flex flex-col content-start items-center sm:flex-row gap-2 mt-2">
+            
             <ActionBtn
               label="Discover E-Library"
               icon="fa-solid fa-file-circle-plus"
               clickEvent={() => navigate("/elibrary")}
-              delay="0.3s"
+              delay="0.5s"
             />
             <ActionBtn
               label="Provide a suggestion"
               icon="fa-solid fa-lightbulb"
               clickEvent={() => navigate("/form/suggest")}
-              delay="0.9s"
+              delay="0.8s"
             />
           </div>
         </div>

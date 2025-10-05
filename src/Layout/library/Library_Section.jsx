@@ -52,19 +52,15 @@ const LibrarySection = forwardRef((props, ref) => {
 
       </div>
 
-      <div className="uppercase md:text-xl text-[#FF5678] font-code font-bold  w-fit mx-auto flex items-center gap-1 mt-24 mb-8">
-        <span>Keep learning hommmmie !</span>
-        <i class="fa-solid fa-heart"></i>
+      <div className="md:text-xl text-[#FF5678] font-hand font-bold flex-col w-fit mx-auto flex items-center gap-1 mt-24 mb-8">
+        <p>Keep learning hommie !</p>
       </div>
 
       {/* Extras Cards */}
-      <img src={clusmy} className="w-1/2 max-w-96 mx-auto " />
+      <img src={clusmy} className="w-full px-8 max-w-lg mx-auto " />
 
 
-      <div className="mx-auto text-text-soft max-w-4/5 justify-center pt-4 border-text-soft  flex items-center gap-2 border-t">
-        <h1>Student HelpUp</h1>
-        <HeartHandshake size={17} />
-      </div>
+
 
 
       <div className="grid max-w-7xl md:gap-6 gap-4 px-4 py-8 mx-auto grid-cols-1 md:grid-cols-3">
