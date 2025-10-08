@@ -13,12 +13,11 @@ const Footer = () => {
 
   const navigate = useNavigate();
   return (
-    <footer className="w-full py-10 relative overflow-hidden font-main select-none">
-      <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),      repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)    `, }} />
-
+    <footer
+      style={{ backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),      repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)`, }}
+      className="w-full py-10 relative overflow-hidden font-main select-none">
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-text">
-
 
         {/* Minimal Developer Cards */}
         <h1 className="text-center shadow-[2px_2px_0_gray] my-4 w-fit mx-auto px-2 border border-border-dark text-text-soft text-sm">Built By</h1>
@@ -34,7 +33,7 @@ const Footer = () => {
             <span
               className="text-[#009DE9] font-bold cursor-pointer hover:text-second transition-colors"
               onClick={() => navigate('/form/teamup')}
-            >Team up</span>
+            >team up</span>
           </div>
         </div>
 
@@ -46,7 +45,7 @@ const Footer = () => {
           </div>
 
           <div className="text-text-muted text-sm">
-            <p className="text-xs">© 2025 IAPLAB</p>
+            <p className="text-xs">© 2025 IAPLAB-team</p>
           </div>
         </div>
       </div>

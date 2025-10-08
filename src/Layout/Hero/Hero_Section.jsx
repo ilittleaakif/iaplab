@@ -23,9 +23,9 @@ function HeroSection({ libRef }) {
   }, []);
 
   return (
-    <section className="relative select-none flex items-center min-h-screen bg-bg overflow-hidden font-main">
-      <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),      repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)    `, }} />
-
+    <section
+      style={{ backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),      repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)`, }}
+      className="relative select-none flex items-center min-h-screen overflow-hidden font-main">
 
       {/* Content Grid */}
       <div className="relative z-10 grid w-full mx-auto px-6 md:mt-0 mt-28 md:px-10 md:gap-4 gap-6 md:grid-cols-2 items-center">
@@ -62,7 +62,7 @@ function HeroSection({ libRef }) {
 
           {/* Buttons */}
           <div className="flex flex-col content-start items-center sm:flex-row gap-2 mt-2">
-            
+
             <ActionBtn
               label="Discover E-Library"
               icon="fa-solid fa-file-circle-plus"

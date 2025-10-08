@@ -24,9 +24,6 @@ const Form = () => {
       namePlaceholder: "Your Name",
       messagePlaceholder: "Write your suggestion...",
       buttonText: "Send Suggestion",
-      sendingText: "Sending...",
-      successMessage: "Suggestion sent successfully!",
-      errorMessage: "An error occurred. Please try again later.",
       svg: svga
     }
     : {
@@ -35,9 +32,6 @@ const Form = () => {
       namePlaceholder: "Your Name",
       messagePlaceholder: "Write your message...",
       buttonText: "Send Message",
-      sendingText: "Sending...",
-      successMessage: "Message sent successfully!",
-      errorMessage: "An error occurred. Please try again later.",
       svg: svgb
     };
 
@@ -117,40 +111,12 @@ const Form = () => {
           className={`flex items-center justify-center gap-2 px-4 md:px-8 py-3 bg-eighth text-bg font-medium  shadow-md transition-transform hover:-translate-y-1 active:scale-95 ${loading ? "cursor-not-allowed opacity-70" : "cursor-pointer"}`}
         >
           <Send size={18} />
-          <span>{loading ? Strings.sendingText : Strings.buttonText}</span>
+          <span>{loading ? 'Sending ...' : 'Submit'}</span>
         </button>
 
-        {success && (
-          <SplitText
-            text={Strings.successMessage}
-            className="bg-green-500 text-xs text-bg px-2 py-1  text-center mt-2"
-            delay={40}
-            duration={0.6}
-            ease="power3.out"
-            splitType="words"
-            from={{ opacity: 0, y: 10 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            rootMargin="-100px"
-            textAlign="center"
-          />
-        )}
+        {success && (<p className="animate-fadein bg-green-500 text-xs text-bg px-2 py-1  text-center mt-2">Forum sent successfully!</p>)}
+        {error && (<p className="animate-fadein bg-red-500 text-xs text-bg px-2 py-1  text-center mt-2">An error occurred. Please try again later.</p>)}
 
-        {error && (
-          <SplitText
-            text={Strings.errorMessage}
-            className="bg-red-500 text-xs text-bg px-2 py-1  text-center mt-2"
-            delay={40}
-            duration={0.6}
-            ease="power3.out"
-            splitType="words"
-            from={{ opacity: 0, y: 10 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            rootMargin="-100px"
-            textAlign="center"
-          />
-        )}
       </form>
     </div>
   );

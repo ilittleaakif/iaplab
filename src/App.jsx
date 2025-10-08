@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Header from "./Layout/Header/Main_Header"
@@ -7,17 +7,26 @@ import LibararySection from "./Layout/library/Library_Section";
 import Footer from "./Layout/Footer/footer_section";
 
 import Form from "./Layout/Form/Form";
-
+import Loader from "./Components/Loader";
+import ErrorPage from "./Components/404Page";
 
 import SemsterContent from "./Layout/library/Semestre_Section";
 import ELibraySection from "./Layout/E-library/ELibrary_Container";
-import SemesterDashboard from "./Layout/library/Semestre_Dashboard";
 
 
 function App() {
   const libRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const HomePage = () => {
+    useEffect(() => {
+      const timer = setTimeout(() => { setIsLoading(false); }, 1000);
+      return () => clearTimeout(timer);
+    }, []);
+
+    if (isLoading)
+      return <Loader />;
+
     return (
       <>
         <Header />
@@ -25,22 +34,17 @@ function App() {
         <LibararySection ref={libRef} />
         <Footer />
       </>
-    )
+    );
   };
 
   return (
     <Routes>
-
       <Route path="/" element={<HomePage />} />
+      <Route path="*" element={<ErrorPage />} />
       <Route path="/semester/:name" element={<SemsterContent />} />
-      <Route path="/:semester/:section" element={<SemesterDashboard />} />
-
       <Route path="/Elibrary" element={<ELibraySection />} />
-
       <Route path="/form/:action" element={<Form />} />
-
     </Routes>
-
   );
 }
 

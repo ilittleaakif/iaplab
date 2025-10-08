@@ -9,7 +9,7 @@ export const LibraryCard = ({ title, icon: Icon, onClick, link, className = "" }
       className={cn(
         "flex md:flex-col gap-3 items-center justify-center text-center",
         "p-4 md:p-6 border-2 border-border-dark bg-bg-card",
-        "cursor-pointer transition-all duration-300 animate-fadein opacity-0",
+        "cursor-pointer transition-all duration-300",
         "hover:shadow-md hover:-translate-y-1 hover:border-text",
         "active:shadow-c",
         className
