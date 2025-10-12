@@ -3,11 +3,10 @@ import { Copy } from "lucide-react";
 
 const openLink = (url) => url && window.open(url, "_blank");
 
-// cards
 const InfoCard = ({ title, url, icon = "fa-solid fa-book" }) => (
   <div
     onClick={() => openLink(url)}
-    className="text-text-soft font-main border-2 border-border p-4 md:p-6 bg-bg-card 
+    className="text-text-soft rounded-sm  font-main border-2 border-border p-4 md:p-6 bg-bg-card 
       flex md:flex-col items-center md:justify-center justify-start cursor-pointer transition-all 
       hover:border-border-dark hover:shadow-md md:gap-4 gap-2 text-center"
   >
@@ -31,7 +30,7 @@ export const SemesterContainer = ({ semesterData, sectionRef }) => {
       })),
     },
     {
-      id: "youtubeTutorials",
+      id: "playlists",
       icon: "fa-brands fa-youtube",
       data: semesterData.youtubeTutorials?.map((y) => ({
         title: y.title,
@@ -40,7 +39,7 @@ export const SemesterContainer = ({ semesterData, sectionRef }) => {
       })),
     },
     {
-      id: "onlineResources",
+      id: "extras",
       icon: "fa-solid fa-globe",
       data: semesterData.onlineResources?.map((r) => ({
         title: r.title,
@@ -55,19 +54,23 @@ export const SemesterContainer = ({ semesterData, sectionRef }) => {
   return (
     <section ref={sectionRef} className="font-main text-text">
       {/* ---------- Tabs Navigation ---------- */}
-      <nav className="grid grid-cols-3 sm:grid-cols-3 w-full border-b border-border mb-6 gap-y-4 gap-x-2">
+      <nav className="flex w-full border-b border-border mb-6 gap-y-4 gap-x-2">
         {tabs.map((tab) => {
           const isActive = activeTab === tab.id;
           return (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`cursor-pointer flex items-center justify-center gap-2 px-4 py-2 rounded-t-md border-b-2 transition-all
+              className={`cursor-pointer text-xs sm:text-lg flex items-center justify-center gap-2 px-4 py-2 rounded-t-md border-b-2 transition-all
                 ${isActive
-                  ? "border-text text-text font-semibold"
-                  : "border-transparent text-text/60 hover:text-text hover:border-text/30"}`}
+                  ? "border-text text-text font-semibold flex-4"
+                  : "flex-1 border-transparent text-text/60 hover:text-text hover:border-text/30"}`}
             >
-              <i className={`${tab.icon} w-4 h-4 md:w-5 md:h-5`} />
+              <i className={`${tab.icon}`} />
+              {
+                isActive &&
+                <span>{tab.id}</span>
+              }
             </button>
           );
         })}

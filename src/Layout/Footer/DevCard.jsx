@@ -1,4 +1,4 @@
-import * as Wizard from "../Data/Wizard";
+import * as Wizard from "../../Data/Wizard";
 
 export const DevCard = ({ Name, Role, Logo, GitLink, InstaLink, WhaLink, svg }) => {
   return (

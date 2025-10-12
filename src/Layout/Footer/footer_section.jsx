@@ -7,15 +7,13 @@ import backend from '/Assets/backend.svg'
 import CodingGuy from '/Assets/GuyCoding.png'
 
 
-import { DevCard } from "../../Components/DevCard";
+import { DevCard } from "./DevCard";
 import { useNavigate } from "react-router-dom";
 const Footer = () => {
 
   const navigate = useNavigate();
   return (
-    <footer
-      style={{ backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),      repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)`, }}
-      className="w-full py-10 relative overflow-hidden font-main select-none">
+    <footer className="w-full py-10 relative overflow-hidden font-main select-none">
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-text">
 

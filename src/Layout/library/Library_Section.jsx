@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import { ExtraCard } from "../../Components/Extra_Card";
 import RandomAyah from "../../Components/Api/AyahApi";
-import { LibraryCard } from "../../Components/Library_Card";
+import { LibraryCard } from "./Library_Card";
 import { LibraryHeading } from "../../Components/Library_Heading";
 import clusmy from '/Assets/002.svg'
 
@@ -16,9 +16,7 @@ const LibrarySection = forwardRef((props, ref) => {
 
 
   return (
-    <div
-      style={{ backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),      repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)    `, }}
-      className="font-main relative text-text" ref={ref}>
+    <div className="font-main relative text-text" ref={ref}>
 
       {/* Sections Container */}
       <div className="md:space-y-12 space-y-8 max-w-7xl mx-auto px-4">
@@ -27,9 +25,9 @@ const LibrarySection = forwardRef((props, ref) => {
         <RandomAyah />
 
         {/* Semesters Cards */}
-        <div className="space-y-2 md:space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           <LibraryHeading title={'Semesters'} icon={BookText} />
-          <div className="grid grid-cols-1 md:grid-cols-4 md:gap-2 gap-1 mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 mx-auto">
             {DATAS.map((data, idx) => (
               <LibraryCard key={idx} title={data.semester} icon={BookOpen} onClick={() => navigate(`/semester/${data.semester}`)} />
             ))}
@@ -37,9 +35,9 @@ const LibrarySection = forwardRef((props, ref) => {
         </div>
 
         {/* other Labs */}
-        <div className="space-y-2 md:space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           <LibraryHeading title={'Other Labs'} icon={BookOpenText} />
-          <div className="grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-2 mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-2 mx-auto">
             {OTHER_LABS.map((data, idx) => (
               <LibraryCard accent='second' key={idx} title={data.libName} icon={BookAudioIcon} onClick={() => OpenLink(data.libUrl)} />
             ))}

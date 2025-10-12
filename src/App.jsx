@@ -15,12 +15,11 @@ import ELibraySection from "./Layout/E-library/ELibrary_Container";
 
 
 function App() {
-  const libRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
 
   const HomePage = () => {
     useEffect(() => {
-      const timer = setTimeout(() => { setIsLoading(false); }, 1000);
+      const timer = setTimeout(() => { setIsLoading(false); }, 1500);
       return () => clearTimeout(timer);
     }, []);
 
@@ -28,12 +27,12 @@ function App() {
       return <Loader />;
 
     return (
-      <>
+      <div style={{ backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(75, 85, 99, 0.06) 5px, rgba(75, 85, 99, 0.06) 6px, transparent 6px, transparent 15px),      repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px),      repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(107, 114, 128, 0.04) 10px, rgba(107, 114, 128, 0.04) 11px, transparent 11px, transparent 30px)`, }}>
         <Header />
-        <HeroSection libRef={libRef} />
-        <LibararySection ref={libRef} />
+        <HeroSection />
+        <LibararySection />
         <Footer />
-      </>
+      </div>
     );
   };
 
