@@ -37,7 +37,7 @@ const LibrarySection = forwardRef((props, ref) => {
         {/* other Labs */}
         <div className="space-y-2 sm:space-y-3">
           <LibraryHeading title={'Other Labs'} icon={BookOpenText} />
-          <div className="grid grid-cols-2 sm:grid-cols-2 gap-2 mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mx-auto">
             {OTHER_LABS.map((data, idx) => (
               <LibraryCard accent='second' key={idx} title={data.libName} icon={BookAudioIcon} onClick={() => OpenLink(data.libUrl)} />
             ))}

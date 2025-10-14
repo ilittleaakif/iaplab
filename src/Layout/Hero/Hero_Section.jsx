@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Typed from "typed.js";
 import SplitText from "../../Assets/SplitText";
@@ -9,6 +9,7 @@ function HeroSection() {
   const typedRef = useRef(null);
   const navigate = useNavigate();
   const scrollEvent = (target) => target?.current?.scrollIntoView({ behavior: "smooth" });
+  const [coverLoaded, setCoverLoaded] = useState(false);
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
@@ -20,6 +21,14 @@ function HeroSection() {
     });
     return () => typed.destroy();
   }, []);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = Collab;
+    img.onload = () => setCoverLoaded(true);
+  }, []);
+
+
 
   return (
     <section
@@ -77,11 +86,17 @@ function HeroSection() {
         </div>
 
         {/* Right Image */}
-        <div className="flex justify-center items-center">
-          <img
-            src={Collab}
-            className="animate-fadein  h-auto w-full max-w-lg object-cover"
-          />
+        <div className="flex justify-center items-center relative w-full">
+          {!coverLoaded && (
+            <div className="w-full max-w-lg h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl bg-gradient-to-r from-gray-300 to-gray-200 animate-pulse" />
+          )}
+          {coverLoaded && (
+            <img
+              src={Collab}
+              alt="Collaboration illustration"
+              className="animate-fadein w-full max-w-lg h-auto object-contain"
+            />
+          )}
         </div>
       </div>
     </section>

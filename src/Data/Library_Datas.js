@@ -95,7 +95,11 @@ export const DATAS = [
 ];
 
 
-export const OTHER_LABS = [{ libName: 'FPK', libUrl: 'https://fpk-biblio.netlify.app/' }, { libName: 'FSC', libUrl: 'https://drive.google.com/drive/folders/1o9M39ygX0rmkaGrLR4iuGxI47A70nYrE' }];
+export const OTHER_LABS = [
+  { libName: 'FPK', libUrl: 'https://fpk-biblio.netlify.app/' },
+  { libName: 'FSC', libUrl: 'https://drive.google.com/drive/folders/1o9M39ygX0rmkaGrLR4iuGxI47A70nYrE' },
+  { libName: 'FSF (s1)', libUrl: 'https://drive.google.com/drive/folders/1bglWM7-qWFtKqBGziixzk7pbpMOhVlY8' }
+];
 
 
 export const HeaderQuotes = [

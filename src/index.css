@@ -11,7 +11,7 @@
   --bg-dark: #596069;
 
   /* ===== Text ===== */
-  --text: #111111;
+  --text: #212121;
   --text-soft: #444444;
   --text-muted: #666666;
 
@@ -20,7 +20,7 @@
   --border-light: #f0f0f0;
   --border-dark: #818181;
 
-  --accent: #2563eb;
+  --accent: #1a73e8;
   --accent-light: #3b82f6;
 
   --second: #6d28d9;
@@ -46,9 +46,6 @@
   --font-hand: "Borel", cursive;
   --font-arabic: "Baloo Bhaijaan 2", sans-serif;
   --font-quran: "Amiri Quran", serif;
-
-
-  --shadow-action: 0 0 160px var(--local);
 
   --color-bg: var(--bg);
   --color-bg-dark: var(--bg-dark);
@@ -89,5 +86,4 @@
   --animate-m3leg: m3leg 1s ease alternate infinite;
   --animate-background: shine 5s ease-in infinite;
   --animate-wipe-y: wipe-y 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0s 1 normal both;
-
 }
