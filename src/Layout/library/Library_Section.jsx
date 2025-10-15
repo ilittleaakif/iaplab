@@ -4,11 +4,10 @@ import { BookOpen, GraduationCap, HeartHandshake, BookText, BookOpenText, BookAu
 import { useNavigate } from "react-router-dom";
 
 import { ExtraCard } from "../../Components/Extra_Card";
-import RandomAyah from "../../Components/Api/AyahApi";
 import { LibraryCard } from "./Library_Card";
 import { LibraryHeading } from "../../Components/Library_Heading";
 import clusmy from '/Assets/002.svg'
-
+import RandomQuery from "../../Components/Ayah_Quote";
 
 const LibrarySection = forwardRef((props, ref) => {
   const navigate = useNavigate();
@@ -19,10 +18,10 @@ const LibrarySection = forwardRef((props, ref) => {
     <div className="font-main relative text-text" ref={ref}>
 
       {/* Sections Container */}
-      <div className="md:space-y-12 space-y-8 max-w-7xl mx-auto px-4">
+      <div className="md:space-y-12 space-y-8 max-w-6xl mx-auto px-4">
 
         {/* Quran */}
-        <RandomAyah />
+        <RandomQuery isAyah={true} />
 
         {/* Semesters Cards */}
         <div className="space-y-2 sm:space-y-3">
@@ -33,6 +32,10 @@ const LibrarySection = forwardRef((props, ref) => {
             ))}
           </div>
         </div>
+
+
+        {/* quote */}
+        <RandomQuery isAyah={false} />
 
         {/* other Labs */}
         <div className="space-y-2 sm:space-y-3">
@@ -45,13 +48,12 @@ const LibrarySection = forwardRef((props, ref) => {
         </div>
       </div>
 
-      <div className="md:text-xl text-[#FF5678] font-hand font-bold flex-col w-fit mx-auto flex items-center gap-1 mt-24 mb-8">
-        <p>Keep learning hommie !</p>
-      </div>
+
 
       {/* Extras Cards */}
-      <img src={clusmy} className="w-full px-8 max-w-lg mx-auto " />
-
+      <div className="my-10 space-y-2">
+        <img src={clusmy} className="w-full max-w-lg drop-shadow-2xl drop-shadow-bg mx-auto" />
+      </div>
 
       <div className="grid max-w-7xl md:gap-6 gap-4 px-4 py-8 mx-auto grid-cols-1 md:grid-cols-3">
         <ExtraCard clickEvent={() => navigate('/Elibrary')} accent={'youtube'} icon={BookOpen} title={"E-Library"} des={"Découvre une e-librairie dédiée à l’informatique : apprends différents domaines IT, accède à des cours gratuits et trouve des ressources pour progresser dans ta carrière."} btn={"Cliquez ici"} />

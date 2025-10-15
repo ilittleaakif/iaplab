@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Borel&family=Funnel+Display:wght@300..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Borel&family=Funnel+Display:wght@300..800&family=Amiri+Quran&family=Righteous&display=swap');
 @import "tailwindcss";
-
+ 
+body::selection {
+  background-color: gold;
+  color: black;
+}
 
 :root {
   /* ===== Backgrounds ===== */
@@ -20,16 +23,20 @@
   --border-light: #f0f0f0;
   --border-dark: #818181;
 
-  --accent: #1a73e8;
-  --accent-light: #3b82f6;
+  --accent: #2563EB;
+  --accent-light: #60A5FA;
 
-  --second: #6d28d9;
-  --third: #fbbf24;
-  --fourth: #22c55e;
-  --fifth: #f97316;
-  --sixth: #00B3B3;
-  --seventh: #ec4899;
-  --eighth: #FF6B6B;
+  --second: #7C3AED;
+  --third: #FACC15;
+  --fourth: #16A34A;
+  --fifth: #FB923C;
+  --sixth: #06B6D4;
+  --seventh: #E11D48;
+  --eighth: #F43F5E;
+  --ninth: #0EA5E9;
+  --tenth: #9333EA;
+
+
 
   --youtube: #ff0000;
   --whatsapp: #25d366;
@@ -41,7 +48,6 @@
 @theme {
   /* Fonts */
   --font-logo: "Righteous", sans-serif;
-  --font-code: "JetBrains Mono", monospace;
   --font-main: "Funnel Display", sans-serif;
   --font-hand: "Borel", cursive;
   --font-arabic: "Baloo Bhaijaan 2", sans-serif;
@@ -65,6 +71,8 @@
   --color-sixth: var(--sixth);
   --color-seventh: var(--seventh);
   --color-eighth: var(--eighth);
+  --color-ninth: var(--ninth);
+  --color-tenth: var(--tenth);
 
 
   --color-youtube: var(--youtube);

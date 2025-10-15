@@ -10,7 +10,7 @@ export const ActionBtn = ({ icon, label, clickEvent, delay }) => (
       "border-2 border-border hover:border-border-dark text-text-soft text-sm md:text-base",
       "bg-bg/70 backdrop-blur-sm flex items-center justify-center gap-2",
       "font-main font-bold ",
-      "cursor-pointer transition-all duration-300 animate-fadein opacity-0",
+      "cursor-pointer transition-all duration-500 animate-fadein opacity-0",
       "hover:bg-bg hover:text-text hover:shadow-c hover:-translate-y-0.5",
       "active:shadow-c whitespace-nowrap"
     )}

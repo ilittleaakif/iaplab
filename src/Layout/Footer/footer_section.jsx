@@ -18,22 +18,22 @@ const Footer = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-text">
 
         {/* Minimal Developer Cards */}
-        <h1 className="text-center shadow-[2px_2px_0_gray] my-4 w-fit mx-auto px-2 border border-border-dark text-text-soft text-sm">Built By</h1>
+        {/* <h1 className="my-4 rounded-md w-fit mx-auto px-2 border border-text-soft text-text-soft text-sm">Built By</h1>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
-          <DevCard svg={frontend} Name={'ZakariaX'} Logo={pfp} Role={'FrontEnd'} Accent={'second'} WhaLink={'https://wa.me/212673999182'} GitLink={'https://github.com/Zakariaiouiri'} />
-          <DevCard svg={backend} Name={'Adaam'} Logo={pfp2} Role={'BackEnd'} Accent={'accent'} WhaLink={'https://wa.me/212656105609'} />
+          <DevCard svg={frontend} Name={'Zakaria'} Logo={pfp} Role={'FrontEnd'} WhaLink={'https://wa.me/212673999182'} GitLink={'https://github.com/Zakariaiouiri'} />
+          <DevCard svg={backend} Name={'Adaam'} Logo={pfp2} Role={'BackEnd'} WhaLink={'https://wa.me/212656105609'} />
         </div>
 
         <div className="my-8">
           <img src={CodingGuy} className="mx-auto md:max-w-[260px] w-full" />
-          <div className="w-fit font-code tracking-tighter text-sm md:text-lg mx-auto flex items-center justify-center gap-2 flex-wrap">
+          <div className="w-fit text-sm sm:text-lg mx-auto flex items-center justify-center gap-2 flex-wrap">
             <span>Are you a web developer?</span>
             <span
-              className="text-[#009DE9] font-bold cursor-pointer hover:text-second transition-colors"
+              className="text-accent font-bold cursor-pointer hover:text-accent-light transition-colors"
               onClick={() => navigate('/form/teamup')}
             >team up</span>
           </div>
-        </div>
+        </div> */}
 
         {/* Bottom section */}
         <div className="text-center border-t border-border-dark pt-6">
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
 
           <div className="text-text-muted text-sm">
-            <p className="text-xs">© 2025 IAPLAB-team</p>
+            <p>© 2025 IAPTeam</p>
           </div>
         </div>
       </div>

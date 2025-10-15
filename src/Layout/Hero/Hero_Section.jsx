@@ -8,7 +8,6 @@ import Collab from "/Assets/001.svg";
 function HeroSection() {
   const typedRef = useRef(null);
   const navigate = useNavigate();
-  const scrollEvent = (target) => target?.current?.scrollIntoView({ behavior: "smooth" });
   const [coverLoaded, setCoverLoaded] = useState(false);
 
   useEffect(() => {
@@ -18,6 +17,7 @@ function HeroSection() {
       backSpeed: 30,
       backDelay: 3000,
       loop: true,
+      cursorChar: '_'
     });
     return () => typed.destroy();
   }, []);
@@ -38,10 +38,10 @@ function HeroSection() {
       <div className="relative z-10 grid w-full mx-auto px-6 sm:mt-0 mt-28 sm:px-10 sm:gap-4 gap-6 sm:grid-cols-2 items-center">
 
         {/* Left Content */}
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col ">
 
           {/* Typing text */}
-          <h1 className="text-[40px] border-b-2 border-border-dark lg:text-7xl md:text-4xl font-bold text-text-soft ">
+          <h1 className="text-[40px] lg:text-7xl md:text-4xl font-bold text-text-soft ">
             <span>to{" "}</span>
             <span
               className="inline-block text-transparent bg-gradient-to-r from-text to-text-soft bg-clip-text"
@@ -49,14 +49,14 @@ function HeroSection() {
             />
           </h1>
 
+          <div className="w-full bg-gradient-to-r from-text via-text-muted to-transparent h-1 sm:my-4 mb-1 rounded-full "></div>
+
           {/* Greeting text */}
-          <div className="pt-2 sm:pt-6 max-w-2xl text-text-soft">
-            <p className="sm:text-xl font-semibold text-text animate-fadein ">
-              Hello my friend! 👋
-            </p>
+          <div className="w-fit text-text-soft">
+            <p className="sm:text-xl font-semibold text-text  ">What's up hommie! 👋</p>
             <SplitText
               text="Welcome to the most comprehensive IAP library. Embark on your learning adventure with innovative resources and interactive experiences."
-              className="sm:text-lg text-xs text-text-soft"
+              className="sm:text-[16px] text-xs text-text-muted"
               delay={200}
               duration={1}
               ease="power3.out"
@@ -94,7 +94,7 @@ function HeroSection() {
             <img
               src={Collab}
               alt="Collaboration illustration"
-              className="animate-fadein w-full max-w-lg h-auto object-contain"
+              className="animate-fadein drop-shadow-2xl drop-shadow-white w-full max-w-lg h-auto object-contain"
             />
           )}
         </div>

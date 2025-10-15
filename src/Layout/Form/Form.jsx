@@ -65,7 +65,7 @@ const Form = () => {
         radial-gradient(circle at 20% 80%, rgba(120,119,198,0.3) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(255,255,255,0.5) 0%, transparent 50%),
         radial-gradient(circle at 40% 40%, rgba(120,119,198,0.1) 0%, transparent 50%)`,
-      }} className="font-main min-h-screen text-text bg-bg-soft relative">
+      }} className="font-main min-h-screen text-text bg-bg-soft relative pb-20 sm:pb-0">
 
 
       <SubHeader title={action === "teamup" ? "Team Up With Us" : "Provide a Suggestion"} />
@@ -93,7 +93,7 @@ const Form = () => {
           placeholder={Strings.namePlaceholder}
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full border border-border bg-bg/60 px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-accent transition"
+          className="w-full rounded-sm text-sm border border-border bg-bg/60 px-4 py-3  focus:outline-none focus:ring-2 focus:ring-accent transition"
         />
 
         <textarea
@@ -102,20 +102,20 @@ const Form = () => {
           rows={5}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full border border-border bg-bg/60 px-4 py-3 text-base resize-none focus:outline-none focus:ring-2 focus:ring-accent transition"
+          className="w-full rounded-sm text-sm border border-border bg-bg/60 px-4 py-3  resize-none focus:outline-none focus:ring-2 focus:ring-accent transition"
         />
 
         <button
           type="submit"
           disabled={loading}
-          className={`flex items-center justify-center gap-2 px-4 md:px-8 py-3 bg-eighth text-bg font-medium  shadow-md transition-transform hover:-translate-y-1 active:scale-95 ${loading ? "cursor-not-allowed opacity-70" : "cursor-pointer"}`}
+          className={`flex rounded-md w-fit mx-auto duration-300 items-center justify-center gap-2 px-4 md:px-8 py-2 bg-eighth text-bg font-medium shadow-c transition-transform  ${loading ? "cursor-not-allowed opacity-70" : "cursor-pointer hover:-translate-y-1"}`}
         >
-          <Send size={18} />
+          <i className="fa-solid fa-paper-plane"></i>
           <span>{loading ? 'Sending ...' : 'Submit'}</span>
         </button>
 
-        {success && (<p className="animate-fadein bg-green-500 text-xs text-bg px-2 py-1  text-center mt-2">Forum sent successfully!</p>)}
-        {error && (<p className="animate-fadein bg-red-500 text-xs text-bg px-2 py-1  text-center mt-2">An error occurred. Please try again later.</p>)}
+        {success && (<p className="animate-fadein bg-green-500 text-sm text-bg px-2 py-1  text-center mt-2">Forum sent successfully!</p>)}
+        {error && (<p className="animate-fadein bg-red-500 text-sm text-bg px-2 py-1  text-center mt-2">An error occurred. Please try again later.</p>)}
 
       </form>
     </div>
