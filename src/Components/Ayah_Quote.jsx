@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { PuffLoader } from "react-spinners";
+import { DotLoader, PuffLoader } from "react-spinners";
 
 const RandomQuery = ({ isAyah }) => {
   const API_URL = (isAyah)
@@ -45,41 +45,41 @@ const RandomQuery = ({ isAyah }) => {
 
   return (
     query &&
-    <div className="py-6 px-5 w-full flex flex-col items-center justify-center text-center animate-fadein min-h-[140px] md:min-h-[180px] transition-all duration-300 ease-in-out">
+    <div className="py-6 px-5 w-full flex flex-col items-center justify-center text-center *:animate-fadein min-h-[140px] md:min-h-[180px] transition-all duration-300 ease-in-out">
       {loading ? (
         <div className="flex justify-center items-center min-h-[100px]">
-          <PuffLoader color="gray" />
+          <DotLoader color="#FECB4A" />
         </div>
       ) : (
         <>
-          <p className="font-quran text-text md:text-lg leading-relaxed">
+          <p className={` text-text-soft text-lg md:text-xl ${isAyah ? 'font-quran' : 'font-main'}`}>
             “{query.txt}”
           </p>
 
-          <p className="mt-3 text-xs text-text-muted font-arabic">
+          <p className={`mt-3 text-xs text-text-muted ${isAyah ? 'font-arabic' : 'font-main'}`}>
             {query.subtxt}
           </p>
 
           <div className="flex items-center justify-center gap-2 mt-4">
             <button
               onClick={fetchRandom}
-              className="cursor-pointer text-xs md:text-sm px-3 py-1.5
-                         border border-text-soft rounded-md font-main text-text-soft
+              className="cursor-pointer duration-300 text-xs md:text-sm px-3 py-1
+                         border border-text-soft rounded-full font-main text-text-soft
                          hover:bg-fourth hover:text-bg hover:border-fourth
                          transition-colors"
             >
-              {isAyah ? "New Ayah" : "New Quote"}
+              {isAyah ? "new Ayah" : "new Quote"}
             </button>
 
             <button
               onClick={handleCopy}
-              className={`cursor-pointer text-xs md:text-sm px-3 py-1.5 border rounded-md font-main transition-colors
+              className={`cursor-pointer duration-300 text-xs md:text-sm px-3 py-1 border rounded-full font-main transition-all
                 ${copied
                   ? "bg-accent-light text-bg border-accent-light"
                   : "border-text-soft text-text-soft hover:bg-accent hover:text-bg hover:border-accent-light"
                 }`}
             >
-              {copied ? "Copied ✓" : "Copy"}
+              {copied ? "Copied" : "Copy"}
             </button>
           </div>
         </>

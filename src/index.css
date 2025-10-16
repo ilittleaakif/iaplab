@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Borel&family=Funnel+Display:wght@300..800&family=Amiri+Quran&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cal+Sans&family=Noto+Kufi+Arabic:wght@100..900&family=Righteous&family=Funnel+Display:wght@300..700&display=swap');
 @import "tailwindcss";
- 
+
 body::selection {
-  background-color: gold;
-  color: black;
+  background-color: #FF5678;
+  color: white;
 }
 
 :root {
@@ -31,7 +31,7 @@ body::selection {
   --fourth: #16A34A;
   --fifth: #FB923C;
   --sixth: #06B6D4;
-  --seventh: #E11D48;
+  --seventh: #FECB4A;
   --eighth: #F43F5E;
   --ninth: #0EA5E9;
   --tenth: #9333EA;
@@ -50,8 +50,9 @@ body::selection {
   --font-logo: "Righteous", sans-serif;
   --font-main: "Funnel Display", sans-serif;
   --font-hand: "Borel", cursive;
-  --font-arabic: "Baloo Bhaijaan 2", sans-serif;
-  --font-quran: "Amiri Quran", serif;
+  --font-arabic: "Noto Kufi Arabic", sans-serif;
+  --font-quran: "Amiri", serif;
+  --font-class: "Cal Sans", sans-serif;
 
   --color-bg: var(--bg);
   --color-bg-dark: var(--bg-dark);

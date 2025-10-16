@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Typed from "typed.js";
 import SplitText from "../../Assets/SplitText";
 import { ActionBtn } from "../../Components/Action_Button";
-import Collab from "/Assets/001.svg";
+import Collab from "/Assets/001.png";
 
 function HeroSection() {
   const typedRef = useRef(null);
@@ -41,7 +41,7 @@ function HeroSection() {
         <div className="flex flex-col ">
 
           {/* Typing text */}
-          <h1 className="text-[40px] lg:text-7xl md:text-4xl font-bold text-text-soft ">
+          <h1 className="text-[44px] md:text-4xl lg:text-7xl font-bold text-text ">
             <span>to{" "}</span>
             <span
               className="inline-block text-transparent bg-gradient-to-r from-text to-text-soft bg-clip-text"
@@ -49,11 +49,11 @@ function HeroSection() {
             />
           </h1>
 
-          <div className="w-full bg-gradient-to-r from-text via-text-muted to-transparent h-1 sm:my-4 mb-1 rounded-full "></div>
+          <div className="w-full bg-gradient-to-r from-text via-text-muted to-transparent h-1 sm:my-2 mb-1 rounded-full "></div>
 
           {/* Greeting text */}
           <div className="w-fit text-text-soft">
-            <p className="sm:text-xl font-semibold text-text  ">What's up hommie! 👋</p>
+            <p className="sm:text-xl font-semibold text-text text-lg">What's up Mate! 👋</p>
             <SplitText
               text="Welcome to the most comprehensive IAP library. Embark on your learning adventure with innovative resources and interactive experiences."
               className="sm:text-[16px] text-xs text-text-muted"
@@ -88,7 +88,7 @@ function HeroSection() {
         {/* Right Image */}
         <div className="flex justify-center items-center relative w-full">
           {!coverLoaded && (
-            <div className="w-full max-w-lg h-[300px] sm:h-[400px] lg:h-[500px] rounded-2xl bg-gradient-to-r from-gray-300 to-gray-200 animate-pulse" />
+            <div className="w-full max-w-lg h-[250px] sm:h-[350px] lg:h-[450px] rounded-2xl bg-gradient-to-r from-gray-300 to-gray-200 animate-pulse" />
           )}
           {coverLoaded && (
             <img

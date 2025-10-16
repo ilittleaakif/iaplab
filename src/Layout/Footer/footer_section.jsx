@@ -38,9 +38,10 @@ const Footer = () => {
         {/* Bottom section */}
         <div className="text-center border-t border-border-dark pt-6">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="text-text  text-lg">Thank you for visiting</span>
+            <span className="text-text  text-lg">Thanks for your visit Mate!</span>
             <Heart size={20} fill="red" className="text-youtube animate-pulse" />
           </div>
+          
 
           <div className="text-text-muted text-sm">
             <p>© 2025 IAPTeam</p>

@@ -26,7 +26,7 @@ const LibrarySection = forwardRef((props, ref) => {
         {/* Semesters Cards */}
         <div className="space-y-2 sm:space-y-3">
           <LibraryHeading title={'Semesters'} icon={BookText} />
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mx-auto">
             {DATAS.map((data, idx) => (
               <LibraryCard key={idx} title={data.semester} icon={BookOpen} onClick={() => navigate(`/semester/${data.semester}`)} />
             ))}
@@ -49,11 +49,22 @@ const LibrarySection = forwardRef((props, ref) => {
       </div>
 
 
-
       {/* Extras Cards */}
       <div className="my-10 space-y-2">
         <img src={clusmy} className="w-full max-w-lg drop-shadow-2xl drop-shadow-bg mx-auto" />
       </div>
+      <div className="w-fit flex items-center mx-auto font-class font-bold uppercase lg:text-7xl md:text-4xl text-4xl flex-col md:flex-row text-text-soft">
+        <span>SORRY MATE!</span>
+        <div className="relative mx-4 px-2">
+          <span className="relative z-10 text-bg">CAN'T</span>
+          <span
+            className="absolute inset-0 bg-[#FF5678] -skew-x-12"
+            aria-hidden="true"
+          ></span>
+        </div>
+        <span>STOP LEARNING !</span>
+      </div>
+
 
       <div className="grid max-w-7xl md:gap-6 gap-4 px-4 py-8 mx-auto grid-cols-1 md:grid-cols-3">
         <ExtraCard clickEvent={() => navigate('/Elibrary')} accent={'youtube'} icon={BookOpen} title={"E-Library"} des={"Découvre une e-librairie dédiée à l’informatique : apprends différents domaines IT, accède à des cours gratuits et trouve des ressources pour progresser dans ta carrière."} btn={"Cliquez ici"} />

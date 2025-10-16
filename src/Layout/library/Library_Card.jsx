@@ -1,21 +1,20 @@
 import { cn } from "@sglara/cn";
 
-export const LibraryCard = ({ title, icon: Icon, onClick, link, className = "" }) => {
+export const LibraryCard = ({ title, onClick, link, className = "" }) => {
   const handleClick = () => (onClick ? onClick() : window.open(link, "_blank"));
 
   return (
     <div
       onClick={handleClick}
       className={cn(
-        "flex sm:flex-col gap-3 items-center justify-center text-center rounded-xl",
-        "p-4 sm:p-6 border-2 border-border-dark bg-bg-card",
-        "cursor-pointer transition-all duration-300",
-        "hover:shadow-sm hover:-translate-y-1 hover:border-text",
-        "active:shadow-c", className,
+        "flex sm:flex-col gap-3 items-center justify-center text-center rounded-sm",
+        "p-4 sm:p-6 border-2 border-border bg-bg-card shadow-a",
+        "cursor-pointer transition-all duration-500",
+        "hover:shadow-c hover:-translate-y-0.5 hover:rounded-br-2xl hover:rounded-tl-2xl hover:border-border-dark active:shadow-c", className,
       )}
     >
       <i className="fa-solid fa-graduation-cap text-accent"></i>
-      <h3 className="text-sm sm:text-lg font-semibold text-text-soft">{title}</h3>
+      <p className="text-sm sm:text-lg font-semibold text-text-soft">{title}</p>
     </div>
   );
 };
