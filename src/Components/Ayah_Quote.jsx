@@ -52,11 +52,11 @@ const RandomQuery = ({ isAyah }) => {
         </div>
       ) : (
         <>
-          <p className={` text-text-soft text-lg md:text-xl ${isAyah ? 'font-quran' : 'font-main'}`}>
+          <p className={`text-text-soft ${isAyah ? 'font-quran' : 'font-main'}`}>
             “{query.txt}”
           </p>
 
-          <p className={`mt-3 text-xs text-text-muted ${isAyah ? 'font-arabic' : 'font-main'}`}>
+          <p className={`mt-3 text-xs font-bold text-text-muted ${isAyah ? 'font-arabic' : 'font-main'}`}>
             {query.subtxt}
           </p>
 

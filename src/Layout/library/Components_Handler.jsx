@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Copy } from "lucide-react";
 
 const openLink = (url) => url && window.open(url, "_blank");
 
@@ -7,7 +6,7 @@ const InfoCard = ({ title, url, icon = "fa-solid fa-book" }) => (
   <div
     onClick={() => openLink(url)}
     className="text-text-soft rounded-sm  font-main border-2 border-border p-4 sm:p-6 bg-bg-card 
-      flex md:flex-col items-center md:justify-center justify-start cursor-pointer transition-all 
+      flex flex-col items-center md:justify-center justify-start cursor-pointer transition-all 
       hover:border-border-dark hover:shadow-md md:gap-4 gap-2 text-center"
   >
     <i className={`${icon} text-lg md:text-3xl`} />

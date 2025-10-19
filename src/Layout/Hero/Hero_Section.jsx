@@ -1,9 +1,8 @@
 import { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Typed from "typed.js";
-import SplitText from "../../Assets/SplitText";
 import { ActionBtn } from "../../Components/Action_Button";
-import Collab from "/Assets/001.png";
+import Collab from "/Assets/001.svg";
 
 function HeroSection() {
   const typedRef = useRef(null);
@@ -17,7 +16,6 @@ function HeroSection() {
       backSpeed: 30,
       backDelay: 3000,
       loop: true,
-      cursorChar: '_'
     });
     return () => typed.destroy();
   }, []);
@@ -32,10 +30,10 @@ function HeroSection() {
 
   return (
     <section
-      className="relative select-none flex items-center min-h-screen overflow-hidden font-main">
+      className="relative select-none flex items-center justify-center min-h-screen overflow-hidden font-main">
 
       {/* Content Grid */}
-      <div className="relative z-10 grid w-full mx-auto px-6 sm:mt-0 mt-28 sm:px-10 sm:gap-4 gap-6 sm:grid-cols-2 items-center">
+      <div className="relative grid w-full px-6 sm:mt-0 mt-28 sm:px-10 sm:gap-4 gap-6 sm:grid-cols-2 items-center">
 
         {/* Left Content */}
         <div className="flex flex-col ">
@@ -53,18 +51,11 @@ function HeroSection() {
 
           {/* Greeting text */}
           <div className="w-fit text-text-soft">
-            <p className="sm:text-xl font-semibold text-text text-lg">What's up Mate! 👋</p>
-            <SplitText
-              text="Welcome to the most comprehensive IAP library. Embark on your learning adventure with innovative resources and interactive experiences."
-              className="sm:text-[16px] text-xs text-text-muted"
-              delay={200}
-              duration={1}
-              ease="power3.out"
-              splitType="words"
-              from={{ opacity: 0, y: 10 }}
-              to={{ opacity: 1, y: 0 }}
-              textAlign="left"
-            />
+            <p className="sm:text-xl space-x-1 font-semibold text-text text-lg">
+              <span>What's up Mate!</span>
+              <i className="fas fa-heart text-rose-500"></i>
+            </p>
+            <p className="sm:text-[16px] text-xs text-text-muted animate-fadein">Welcome to the most comprehensive IAP library. Embark on your learning adventure with innovative resources and interactive experiences.</p>
           </div>
 
           {/* Buttons */}
@@ -72,13 +63,14 @@ function HeroSection() {
 
             <ActionBtn
               label="Discover E-Library"
-              icon="fa-solid fa-file-circle-plus"
+              icon="fas fa-laptop-code"
               clickEvent={() => navigate("/elibrary")}
               delay="0.5s"
             />
             <ActionBtn
               label="Provide a suggestion"
-              icon="fa-solid fa-lightbulb"
+              icon="fas fa-heart"
+              Accent={'eighth'}
               clickEvent={() => navigate("/form/suggest")}
               delay="0.8s"
             />
@@ -94,7 +86,7 @@ function HeroSection() {
             <img
               src={Collab}
               alt="Collaboration illustration"
-              className="animate-fadein drop-shadow-2xl drop-shadow-white w-full max-w-lg h-auto object-contain"
+              className="animate-fadein  w-full max-w-lg h-auto object-contain"
             />
           )}
         </div>

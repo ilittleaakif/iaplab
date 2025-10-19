@@ -49,7 +49,7 @@ export const DATAS = [
     semester: "Semestre 3",
     modules: [
       { title: "Probabilités et Statistiques", Url: "https://drive.google.com/drive/folders/1jJgb2tr9ibbJ0IDL6iIHSrZzMVtd2IVa", ClassIcon: "fa-solid fa-chart-bar" },
-      { title: "Structures de Données en C", Url: "https://drive.google.com/drive/folders/1pmW91q8Id2cy-1ZDrjHefTaHMUBO3uSo", ClassIcon: "fa-solid fa-layer-group" },
+      { title: "Structures de Données en C", Url: "https://drive.google.com/drive/folders/1pmW91q8Id2cy-1ZDrjHefTaHMUBO3uSo", ClassIcon: "fas fa-c" },
       { title: "Programmation Web 2", Url: "https://drive.google.com/drive/folders/1OXbQyBTAsaXeJF3INN6YdpaVzJD1qyAU", ClassIcon: "fa-solid fa-globe" },
       { title: "Modélisation Objet UML", Url: "https://drive.google.com/drive/folders/13cS0eHv8AeE4U3UeQdLHxwihAmGCdhad", ClassIcon: "fa-solid fa-desktop" },
       { title: "Système d'exploitation 1", Url: "https://drive.google.com/drive/folders/1voDDFL-hkyyMJK3tcdItsl48CChlxm2g", ClassIcon: "fa-solid fa-terminal" },
