@@ -24,8 +24,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
 
 .cache
 .next
 out
 coverage
+=======
+.env
+>>>>>>> c26afb068bfbb3b66ed840342c7acd7ca4483a1d
