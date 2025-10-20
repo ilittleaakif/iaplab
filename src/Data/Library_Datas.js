@@ -102,28 +102,23 @@ export const OTHER_LABS = [
 ];
 
 
-export const HeaderQuotes = [
-  'No pain No V?',
-  'coming Back?',
-  'Mmmmm?',
-  "Shhh!",
-  "Booked!",
-  "No late fees?",
-  "Read it",
-  "Plot twist?",
-  "Quiet zone.",
-  "Page flip!",
-  "Brain time??",
-  "Study much?",
-  "Shelf check!",
-  "Overdue?!",
-  "Bookmark it!",
-  "Lost in books?",
-  "Wi-Fi pls?",
-  "Nerd alert!",
-  "More coffee?",
-  "Just one more!",
-  "Ctrl+book",
-  "Return soon?",
-  "Story mode!"
+export const Extra_cards_data = [
+  {
+    title: 'E-Library',
+    des: 'Découvre une e-librairie dédiée à l’informatique : apprends différents domaines IT, accède à des cours gratuits et trouve des ressources pour progresser dans ta carrière.',
+    icon: 'fa-solid fa-book-open',
+    link: '/Elibrary',
+  },
+  {
+    title: "Cycle d'ingénieur",
+    des: "Vous souhaitez vous préparer au Cycle d'ingénieur ?",
+    icon: 'fa-solid fa-graduation-cap',
+    link: 'https://drive.google.com/drive/folders/16Hykdvbrpv7yPeTWSG493T6JkP8fdgeS',
+  },
+  {
+    title: 'Orientation',
+    des: "Tu as un DUEG ou une licence en informatique ? Tu veux connaître tous les masters et cycles d'ingénieur en informatique au Maroc ?",
+    icon: 'fa-solid fa-compass',
+    link: 'https://guideinfo.netlify.app/',
+  },
 ]

@@ -7,10 +7,14 @@ import clusmy from "/Assets/002.svg";
 import RandomQuery from "../../Components/Ayah_Quote";
 import { motion } from "motion/react";
 import LibraryHeading from "./Library_Heading";
+import { Extra_cards_data } from "../../Data/Library_Datas";
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 80 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 60 },
+  visible: {
+    opacity: 1, y: 0,
+    transition: { duration: 1, ease: "easeOut" }
+  },
 };
 
 const fadeIn = {
@@ -120,44 +124,19 @@ const LibrarySection = forwardRef((props, ref) => {
 
 
       {/* Extra Cards Grid */}
-      <motion.div
-        variants={fadeIn}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        className="grid max-w-7xl md:gap-6 gap-4 px-4 py-8 mx-auto grid-cols-1 md:grid-cols-3"
-      >
-        <ExtraCard
-          clickEvent={() => navigate("/Elibrary")}
-          accent={"youtube"}
-          iconClass="fa-solid fa-book-open"
-          title={"E-Library"}
-          des={
-            "Découvre une e-librairie dédiée à l’informatique : apprends différents domaines IT, accède à des cours gratuits et trouve des ressources pour progresser dans ta carrière."
-          }
-          btn={"Cliquez ici"}
-        />
-        <ExtraCard
-          Link={
-            "https://drive.google.com/drive/folders/16Hykdvbrpv7yPeTWSG493T6JkP8fdgeS"
-          }
-          accent={"second"}
-          iconClass="fa-solid fa-graduation-cap"
-          title={"Cycle d'ingénieur"}
-          des={"Vous souhaitez vous préparer au Cycle d'ingénieur ?"}
-          btn={"Cliquez ici"}
-        />
-        <ExtraCard
-          Link={"https://guideinfo.netlify.app/"}
-          accent={"second"}
-          iconClass="fa-solid fa-compass"
-          title={"Orientation"}
-          des={
-            "Tu as un DUEG ou une licence en informatique ? Tu veux connaître tous les masters et cycles d'ingénieur en informatique au Maroc ?"
-          }
-          btn={"Cliquez ici"}
-        />
-      </motion.div>
+      <div className="grid mx-auto grid-cols-1 md:grid-cols-3 gap-2 items-start max-w-7xl px-4">
+        {Extra_cards_data.map((data, idx) => (
+          <motion.div
+            key={idx}
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <ExtraCard title={data.title} des={data.des} icon={data.icon} />
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 });

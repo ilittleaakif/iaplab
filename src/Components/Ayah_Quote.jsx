@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { DotLoader, PuffLoader } from "react-spinners";
+import { DotLoader } from "react-spinners";
 
 const RandomQuery = ({ isAyah }) => {
   const API_URL = (isAyah)

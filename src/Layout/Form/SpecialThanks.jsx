@@ -31,7 +31,7 @@ const SpecialThanksSection = () => {
         <p className="text-text-muted text-center max-w-lg">
           Your support mean the world to us.
         </p>
-        <i className="fas text-3xl fa-heart text-red-500 animate-bounce"></i>
+        <i clasName="fas text-3xl fa-heart text-red-500 animate-bounce"></i>
       </div>
 
       {/* Comments Grid */}
