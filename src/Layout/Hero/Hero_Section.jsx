@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Typed from "typed.js";
 import { ActionBtn } from "../../Components/Action_Button";
 import Collab from "/Assets/001.svg";
+import * as utils from '../../Data/utils'
 
 function HeroSection() {
   const typedRef = useRef(null);
@@ -59,13 +60,14 @@ function HeroSection() {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col content-start items-center sm:flex-row gap-2 mt-2">
+          <div className="flex flex-col flex-wrap content-start items-center sm:flex-row gap-2 mt-2">
 
             <ActionBtn
               label="Discover E-Library"
               icon="fas fa-laptop-code"
               clickEvent={() => navigate("/elibrary")}
               delay="0.5s"
+              Accent={'ninth'}
             />
             <ActionBtn
               label="Provide a suggestion"
@@ -73,6 +75,13 @@ function HeroSection() {
               Accent={'eighth'}
               clickEvent={() => navigate("/form/suggest")}
               delay="0.8s"
+            />
+             <ActionBtn
+              label="Gemini pro"
+              icon="fab fa-google"
+              Accent={'third'}
+            clickEvent={() => utils.OpenLink('https://one.google.com/join/ai-student?utm_source=gemini&utm_medium=bts-campus-qrcode&utm_id=a7721bf9-2a0c-43e2-b4ab-0be4dd31d0df&g1_landing_page=5')}
+              delay="1.1s"
             />
           </div>
         </div>
