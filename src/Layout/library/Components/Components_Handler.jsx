@@ -1,27 +1,27 @@
 import { useState } from "react";
-
-const openLink = (url) => url && window.open(url, "_blank");
+import * as utils from '../../../Data/utils'
 
 const InfoCard = ({ title, url, icon = "fa-solid fa-book" }) => (
   <div
-    onClick={() => openLink(url)}
-    className="text-text-soft rounded-sm  font-main border-2 border-border p-4 sm:p-6 bg-bg-card 
+    onClick={() => utils.OpenLink(url)}
+    className="text-text-soft font-main border-2 border-border p-4 sm:p-6 bg-bg-card 
       flex flex-col items-center md:justify-center justify-start cursor-pointer transition-all 
-      hover:border-border-dark hover:shadow-md md:gap-4 gap-2 text-center"
+      hover:border-border-dark hover:shadow-c gap-4 duration-300"
   >
-    <i className={`${icon} text-lg md:text-3xl`} />
+    <i className={`${icon} text-xl md:text-3xl `} />
     <div className="font-semibold text-sm md:text-base">{title}</div>
   </div>
 );
 
 /* ---------- Main Container ---------- */
 export const SemesterContainer = ({ semesterData, sectionRef }) => {
-  const [activeTab, setActiveTab] = useState("modules");
+  const [activeTab, setActiveTab] = useState(1);
 
   const tabs = [
     {
-      id: "modules",
-      icon: "fa-solid fa-book ",
+      id: 1,
+      title: "Modules",
+      icon: "fa-solid fa-book",
       data: semesterData.modules?.map((m) => ({
         title: m.title,
         url: m.Url,
@@ -29,7 +29,8 @@ export const SemesterContainer = ({ semesterData, sectionRef }) => {
       })),
     },
     {
-      id: "playlists",
+      title: "Playlists",
+      id: 2,
       icon: "fa-brands fa-youtube",
       data: semesterData.youtubeTutorials?.map((y) => ({
         title: y.title,
@@ -38,7 +39,8 @@ export const SemesterContainer = ({ semesterData, sectionRef }) => {
       })),
     },
     {
-      id: "extras",
+      title: "Extras",
+      id: 3,
       icon: "fa-solid fa-globe",
       data: semesterData.onlineResources?.map((r) => ({
         title: r.title,
@@ -51,25 +53,21 @@ export const SemesterContainer = ({ semesterData, sectionRef }) => {
   const currentTab = tabs.find((t) => t.id === activeTab) || tabs[0];
 
   return (
-    <section ref={sectionRef} className="font-main text-text">
+    <section ref={sectionRef} className="font-main text-text w-full max-w-7xl mx-auto">
       {/* ---------- Tabs Navigation ---------- */}
-      <nav className="flex w-full border-b border-border mb-6 gap-y-4 gap-x-2">
+      <nav className="flex w-full items-center justify-center border-b border-border mb-6 gap-x-2">
         {tabs.map((tab) => {
           const isActive = activeTab === tab.id;
           return (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`cursor-pointer text-xs sm:text-lg flex items-center justify-center gap-2 px-4 py-2 rounded-t-md border-b-2 transition-all
-                ${isActive
-                  ? "border-text text-text font-semibold flex-4"
-                  : "flex-1 border-transparent text-text/60 hover:text-text hover:border-text/30"}`}
+              className={`cursor-pointer border-b-2 flex-1 text-sm sm:text-lg flex items-center justify-center gap-2 px-4 py-2  transition-all
+                ${isActive ? 'border-border-dark' : 'border-border-light text-text-muted'}
+                `}
             >
               <i className={`${tab.icon}`} />
-              {
-                isActive &&
-                <span>{tab.id}</span>
-              }
+              <span className="">{tab.title}</span>
             </button>
           );
         })}
@@ -77,7 +75,7 @@ export const SemesterContainer = ({ semesterData, sectionRef }) => {
 
       {/* ---------- Cards Grid ---------- */}
       {currentTab?.data?.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
           {currentTab.data.map((item, idx) => (
             <InfoCard key={idx} title={item.title} url={item.url} icon={item.icon} />
           ))}

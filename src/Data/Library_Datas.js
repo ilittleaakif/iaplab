@@ -1,4 +1,4 @@
-export const DATAS = [
+export const GlobalLibraryDatas = [
   {
     semester: "Semestre 1",
     modules: [
@@ -59,7 +59,7 @@ export const DATAS = [
     youtubeTutorials: [
       { title: "Structures de Données en C", Url: "https://www.youtube.com/watch?v=WyYHahUwEZc&list=PLbwarkNdAQxCiuRfnrN-wg1XCb0mnQeEG&index=2" },
       { title: "Programmation Web 1", Url: "https://youtube.com/playlist?list=PLknwEmKsW8OuN04Odt2sJqt4aAnkp-iYA&si=2IPt8VBuCnToYxuS" },
-      { title: "Modélisation Objet UML", Url: "https://www.youtube.com/watch?v=wWnDP5YXyxk&list=PLjXcpCBIph8w3fNehQwxSdwzb3zbauv4Q" }
+      { title: "Modélisation Objet UML", Url: "https://youtube.com/playlist?list=PL1Ja02KX5ttNJFgafflcj9AnxfweXBS9g&si=tIckFYpWna383mkC" }
     ],
 
     onlineResources: [
@@ -95,7 +95,7 @@ export const DATAS = [
 ];
 
 
-export const OTHER_LABS = [
+export const OtherLabsDatas = [
   { libName: 'FPK', libUrl: 'https://fpk-biblio.netlify.app/' },
   { libName: 'FSC', libUrl: 'https://drive.google.com/drive/folders/1o9M39ygX0rmkaGrLR4iuGxI47A70nYrE' },
   { libName: 'FSF (s1)', libUrl: 'https://drive.google.com/drive/folders/1bglWM7-qWFtKqBGziixzk7pbpMOhVlY8' }
@@ -103,12 +103,6 @@ export const OTHER_LABS = [
 
 
 export const Extra_cards_data = [
-  {
-    title: 'E-Library',
-    des: 'Découvre une e-librairie dédiée à l’informatique : apprends différents domaines IT, accède à des cours gratuits et trouve des ressources pour progresser dans ta carrière.',
-    icon: 'fa-solid fa-book-open',
-    link: '/Elibrary',
-  },
   {
     title: "Cycle d'ingénieur",
     des: "Vous souhaitez vous préparer au Cycle d'ingénieur ?",

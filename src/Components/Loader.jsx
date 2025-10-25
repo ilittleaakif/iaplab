@@ -1,9 +1,9 @@
-import { HashLoader } from "react-spinners";
+import { ClimbingBoxLoader } from "react-spinners";
+
 export default function Loader() {
   return (
-    <div className="fixed inset-0 bg-white flex flex-col gap-8 items-center justify-center z-50">
-      <HashLoader color="black" />
-      <p className="font-main text-center">a miliSecond...</p>
+    <div className="fixed inset-0 bg-bg flex flex-col gap-14 items-center justify-center z-50">
+      <ClimbingBoxLoader color="#111" />
     </div>
   );
 };

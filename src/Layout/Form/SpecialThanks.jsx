@@ -8,7 +8,7 @@ const CommentCard = ({ text }) => {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
       className="w-full rounded-tl-none bg-gradient-to-br from-bg-card to-bg-card/5
-                 rounded-3xl shadow-b border border-border max-w-sm p-4">
+                 rounded-4xl shadow-b border border-border max-w-sm p-4">
       <p className="text-text-soft text-sm font-main leading-relaxed">{text}</p>
     </motion.div>
   );
@@ -16,15 +16,16 @@ const CommentCard = ({ text }) => {
 
 const SpecialThanksSection = () => {
   const CommentsData = [
-    "I really enjoyed using this app, it's easy and comfortable Glad to see you're from my class, great work, keep going 🤍",
     "I just want to say that you’re doing a great job, guys! I really love what you’re doing. I want to join your team someday — I’m still a beginner for now, but one day, inshallah, I will, and we’ll create something amazing together 😊 Keep going, guys! 💪",
+    "I really enjoyed using this app, it's easy and comfortable Glad to see you're from my class, great work, keep going 🤍",
     "You guys are doing amazing, man. I really love seeing what you’re building.",
+    "thank you for this website!!"
   ];
 
   return (
     <section className="my-14 max-w-7xl px-8">
       {/* Header */}
-      <div className="flex text-center flex-col items-center justify-center mb-8 space-y-2">
+      <div className="flex text-center flex-col items-center justify-center mb-4 space-y-2">
         <h1 className="text-3xl font-main font-semibold text-text-soft">
           Thank You
         </h1>
@@ -36,7 +37,7 @@ const SpecialThanksSection = () => {
 
       {/* Comments Grid */}
       <div
-        className="flex items-start flex-wrap justify-center gap-4 place-items-center"
+        className="flex  flex-wrap gap-4 "
       >
         {CommentsData.map((data, idx) => (
           <CommentCard key={idx} text={data} />

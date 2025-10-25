@@ -1,39 +1,17 @@
 import { useState } from "react";
 import { db } from "../../Data/FirebaseConfig";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { useParams } from "react-router-dom";
 import SubHeader from "../../Components/SubHeader";
 
-import svga from "/Assets/003.svg";
-import svgb from "/Assets/004.svg";
+import svga from "/Assets/mid/003.svg";
 import SpecialThanksSection from "./SpecialThanks";
 
 const Form = () => {
-  const { action } = useParams();
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
-
-  const Strings =
-    action === "suggest"
-      ? {
-        head: "Share Your Idea ✨",
-        p: "Give us your suggestions, feedback, or thoughts.",
-        namePlaceholder: "Your Name",
-        messagePlaceholder: "Write your suggestion...",
-        buttonText: "Send Suggestion",
-        svg: svga,
-      }
-      : {
-        head: "Wanna Team Up?",
-        p: "Drop your details below and let’s create something amazing together!",
-        namePlaceholder: "Your Name",
-        messagePlaceholder: "Write your message...",
-        buttonText: "Send Message",
-        svg: svgb,
-      };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,51 +38,39 @@ const Form = () => {
 
   return (
     <>
-      <SubHeader
-        title={action === "teamup" ? "Team Up With Us" : "Provide a Suggestion"}
-      />
-      <div
-        style={{
-          backgroundImage: `
-        radial-gradient(circle at 20% 80%, rgba(120,119,198,0.3) 0%, transparent 50%),
-          radial-gradient(circle at 80% 20%, rgba(255,255,255,0.5) 0%, transparent 50%),
-          radial-gradient(circle at 40% 40%, rgba(120,119,198,0.1) 0%, transparent 50%)`,
-        }}
-        className="font-main min-h-screen text-text bg-bg-soft relative pb-20 flex flex-col items-center justify-center"
+      <SubHeader title={"Provide a Suggestion"} />
+      <div style={{ backgroundImage: `radial-gradient(circle at 20% 80%, rgba(120,119,198,0.3) 0%, transparent 50%),radial-gradient(circle at 80% 20%, rgba(255,255,255,0.5) 0%, transparent 50%),radial-gradient(circle at 40% 40%, rgba(120,119,198,0.1) 0%, transparent 50%)`, }}
+        className="font-main min-h-screen text-text bg-bg-soft
+        relative pb-20 flex flex-col items-center justify-center"
       >
 
         {/* Heading */}
-        <div className="w-full max-w-xl mx-auto font-main mb-12 px-4 text-center">
+        <div className="w-full max-w-xl mx-auto font-main my-8 space-y-2 px-4 text-center">
           <img
-            src={Strings.svg}
-            className="animate-m3leg mx-auto object-cover h-auto w-fit max-w-[14rem] px-5 md:mx-auto"
+            src={svga}
+            className="animate-float mx-auto object-cover h-auto w-full max-w-xs"
           />
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3">
-            {Strings.head}
+          <h1 className="text-2xl sm:text-4xl font-semibold">
+            Share Your Idea ✨
           </h1>
-          <p className="text-text-soft text-sm sm:text-base md:text-lg">
-            {Strings.p}
+          <p className="text-text-soft text-sm sm:text-lg">
+            Give us your suggestions, feedback, or thoughts.
           </p>
         </div>
 
-
-
         {/* Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-4 w-full max-w-lg mx-auto px-4"
-        >
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full max-w-lg mx-auto px-4" >
           <input
             type="text"
             required
-            placeholder={Strings.namePlaceholder}
+            placeholder={'Your Name'}
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="w-full rounded-sm text-sm border border-border bg-bg/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent transition"
           />
 
           <textarea
-            placeholder={Strings.messagePlaceholder}
+            placeholder={"Write your suggestion..."}
             required
             rows={5}
             value={message}
@@ -126,7 +92,7 @@ const Form = () => {
 
           {success && (
             <p className="animate-fadein bg-green-500 text-sm text-bg px-2 py-1 text-center mt-2">
-              Form sent successfully!
+              Data sent successfully!
             </p>
           )}
           {error && (
@@ -136,9 +102,8 @@ const Form = () => {
           )}
         </form>
 
-
-                {/* specialthanks */}
-        {(action === 'suggest') && <SpecialThanksSection />}
+        {/* specialthanks */}
+        <SpecialThanksSection />
       </div>
     </>
   );

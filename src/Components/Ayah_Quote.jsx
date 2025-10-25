@@ -52,18 +52,18 @@ const RandomQuery = ({ isAyah }) => {
         </div>
       ) : (
         <>
-          <p className={`text-text-soft ${isAyah ? 'font-quran' : 'font-main'}`}>
+          <p className={`text-text-soft text-lg ${isAyah ? 'font-quran' : 'font-main'}`}>
             “{query.txt}”
           </p>
 
-          <p className={`mt-3 text-xs font-bold text-text-muted ${isAyah ? 'font-arabic' : 'font-main'}`}>
+          <p className={`mt-3 text-xs text-text-muted ${isAyah ? 'font-arabic' : 'font-main'}`}>
             {query.subtxt}
           </p>
 
           <div className="flex items-center justify-center gap-2 mt-4">
             <button
               onClick={fetchRandom}
-              className="cursor-pointer duration-300 text-xs md:text-sm px-3 py-1
+              className="cursor-pointer duration-300 text-xs md:text-sm px-3 py-0.5
                          border border-text-soft rounded-full font-main text-text-soft
                          hover:bg-fourth hover:text-bg hover:border-fourth
                          transition-colors"
@@ -73,7 +73,7 @@ const RandomQuery = ({ isAyah }) => {
 
             <button
               onClick={handleCopy}
-              className={`cursor-pointer duration-300 text-xs md:text-sm px-3 py-1 border rounded-full font-main transition-all
+              className={`cursor-pointer duration-300 text-xs md:text-sm px-3 py-0.5 border rounded-full font-main transition-all
                 ${copied
                   ? "bg-accent-light text-bg border-accent-light"
                   : "border-text-soft text-text-soft hover:bg-accent hover:text-bg hover:border-accent-light"

@@ -6,11 +6,10 @@ import Footer from "./Layout/Footer/footer_section";
 import LibrarySection from "./Layout/library/Library_Section";
 
 const HomePage = () => {
-
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => { setIsLoading(false); }, 1500);
+    const timer = setTimeout(() => { setIsLoading(false); }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -30,7 +29,6 @@ const HomePage = () => {
     >
       <Header />
       <HeroSection />
-      <div className="w-11/12 mx-auto bg-border/80 h-1 rounded-full"></div>
       <LibrarySection />
       <Footer />
     </div>

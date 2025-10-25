@@ -1,17 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cal+Sans&family=Noto+Kufi+Arabic:wght@100..900&family=Righteous&family=Funnel+Display:wght@300..700&display=swap');
 @import "tailwindcss";
 
-body::selection {
-  background-color: #FF5678;
-  color: white;
-}
-
 :root {
   /* ===== Backgrounds ===== */
   --bg: #ffffff;
   --bg-soft: #f5f6fa;
   --bg-card: #fdfdfd;
-  --bg-dark: #596069;
+  --bg-dark: #212428;
+  --bg-dark-soft: #454a50;
 
   /* ===== Text ===== */
   --text: #212121;
@@ -33,10 +29,8 @@ body::selection {
   --sixth: #06B6D4;
   --seventh: #FECB4A;
   --eighth: #F43F5E;
-  --ninth: #0EA5E9;
+  --ninth: #0e6de9;
   --tenth: #9333EA;
-
-
 
   --youtube: #ff0000;
   --whatsapp: #25d366;
@@ -56,6 +50,7 @@ body::selection {
 
   --color-bg: var(--bg);
   --color-bg-dark: var(--bg-dark);
+  --color-bg-dark-soft: var(--bg-dark-soft);
   --color-bg-soft: var(--bg-soft);
   --color-bg-card: var(--bg-card);
 
@@ -87,13 +82,55 @@ body::selection {
 
   --shadow-a: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-b: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-c: 0 10px 15px rgba(0, 0, 0, 0.15);
+  --shadow-c: 0 10px 18px rgba(0, 0, 0, 0.15);
 
-
-  --animate-pulse-grow: pulseGlow 3.5s linear infinite;
   --animate-fadein: fade-in 1s ease forwards;
+  --animate-scale-in: scale-in 1s ease forwards;
   --animate-float: float 2s ease alternate infinite;
-  --animate-m3leg: m3leg 1s ease alternate infinite;
-  --animate-background: shine 5s ease-in infinite;
   --animate-wipe-y: wipe-y 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0s 1 normal both;
+}
+
+@keyframes wipe-y {
+  0% {
+    transform: scaleY(0.4);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
