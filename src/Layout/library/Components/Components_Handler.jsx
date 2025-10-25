@@ -55,22 +55,29 @@ export const SemesterContainer = ({ semesterData, sectionRef }) => {
   return (
     <section ref={sectionRef} className="font-main text-text w-full max-w-7xl mx-auto">
       {/* ---------- Tabs Navigation ---------- */}
-      <nav className="flex w-full items-center justify-center border-b border-border mb-6 gap-x-2">
+      <nav className="flex w-full items-center justify-center border-b border-border mb-6 gap-x-2 relative">
         {tabs.map((tab) => {
           const isActive = activeTab === tab.id;
           return (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`cursor-pointer border-b-2 flex-1 text-sm sm:text-lg flex items-center justify-center gap-2 px-4 py-2  transition-all
-                ${isActive ? 'border-border-dark' : 'border-border-light text-text-muted'}
+              className={`cursor-pointer flex-1 text-sm sm:text-lg flex items-center justify-center gap-2 px-4 py-2 transition-all relative z-10
+                ${isActive ? 'text-accent' : 'text-text-muted hover:text-accent/70'}
                 `}
             >
               <i className={`${tab.icon}`} />
-              <span className="">{tab.title}</span>
+              <span>{tab.title}</span>
             </button>
           );
         })}
+        <div
+          className="absolute bottom-0 h-0.5 bg-accent/50 transition-all duration-300 ease-out"
+          style={{
+            width: `${100 / tabs.length}%`,
+            left: `${(tabs.findIndex(tab => tab.id === activeTab) * 100) / tabs.length}%`
+          }}
+        />
       </nav>
 
       {/* ---------- Cards Grid ---------- */}
