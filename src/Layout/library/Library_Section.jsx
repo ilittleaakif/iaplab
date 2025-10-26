@@ -124,7 +124,7 @@ const LibrarySection = forwardRef((props, ref) => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <ExtraCard title={data.title} des={data.des} icon={data.icon} />
+            <ExtraCard Link={data.link} title={data.title} des={data.des} icon={data.icon} />
           </motion.div>
         ))}
       </nav>
