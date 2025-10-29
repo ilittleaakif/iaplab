@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const CommentCard = ({ text }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
@@ -15,6 +16,8 @@ const CommentCard = ({ text }) => {
 };
 
 const SpecialThanksSection = () => {
+  useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); }, []);
+
   const CommentsData = [
     "I just want to say that you’re doing a great job, guys! I really love what you’re doing. I want to join your team someday — I’m still a beginner for now, but one day, inshallah, I will, and we’ll create something amazing together 😊 Keep going, guys! 💪",
     "I really enjoyed using this app, it's easy and comfortable Glad to see you're from my class, great work, keep going 🤍",
@@ -32,13 +35,11 @@ const SpecialThanksSection = () => {
         <p className="text-text-muted text-center max-w-lg">
           Your support mean the world to us.
         </p>
-        <i clasName="fas text-3xl fa-heart text-red-500 animate-bounce"></i>
+        <i className="fas text-3xl fa-heart text-red-500 animate-bounce"></i>
       </div>
 
       {/* Comments Grid */}
-      <div
-        className="flex  flex-wrap gap-4 "
-      >
+      <div className="flex  flex-wrap gap-4 ">
         {CommentsData.map((data, idx) => (
           <CommentCard key={idx} text={data} />
         ))}
@@ -49,5 +50,4 @@ const SpecialThanksSection = () => {
     </section>
   );
 };
-
 export default SpecialThanksSection;

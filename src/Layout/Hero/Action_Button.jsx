@@ -22,7 +22,7 @@ export const ActionBtn = ({ icon, label, clickEvent, delay, Accent }) => (
     style={{ '--local': `var(--${Accent})` }}
     className={`w-full sm:w-fit mx-auto sm:mx-0  px-6 py-2.5 
         flex items-center justify-center rounded-full
-        gap-2 font-bold cursor-pointer transition-all duration-500
+        gap-2.5 font-bold cursor-pointer transition-all duration-500
         hover:shadow-c  whitespace-nowrap  hover:-translate-y-0.5
         ${Accent ? 'bg-[var(--local)] text-white' : 'bg-bg-card text-text-soft'}`}
   >

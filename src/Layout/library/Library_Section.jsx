@@ -119,7 +119,7 @@ const LibrarySection = forwardRef((props, ref) => {
         {Extra_cards_data.map((data, idx) => (
           <motion.div
             key={idx}
-            variants={fadeInUp(idx / 3)}
+            variants={fadeInUp(idx / 2)}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
