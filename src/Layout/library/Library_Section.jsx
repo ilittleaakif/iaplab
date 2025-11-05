@@ -115,7 +115,7 @@ const LibrarySection = forwardRef((props, ref) => {
       </motion.div>
 
       {/* Extra Cards Grid */}
-      <nav className="grid mx-auto grid-cols-1 gap-4 max-w-7xl px-4">
+      <nav className="flex mx-auto flex-col gap-4 max-w-4xl px-4">
         {Extra_cards_data.map((data, idx) => (
           <motion.div
             key={idx}

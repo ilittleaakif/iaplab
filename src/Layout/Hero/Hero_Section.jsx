@@ -66,7 +66,7 @@ function HeroSection() {
             <ActionBtn
               label="Get Gemini pro"
               icon="fab fa-google"
-              Accent={'fourth'}
+              Accent={'accent'}
               clickEvent={() => utils.OpenLink('https://one.google.com/join/ai-student?utm_source=gemini&utm_medium=bts-campus-qrcode&utm_id=a7721bf9-2a0c-43e2-b4ab-0be4dd31d0df&g1_landing_page=5')}
               delay="1"
             />

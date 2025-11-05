@@ -7,7 +7,8 @@ const Footer = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-text text-center border-t border-border-dark pt-6">
         <img src={heart} className='h-auto max-w-30 w-full mx-auto' />
 
-        <div onClick={() => utils.OpenLink('https://github.com/ilittleaakif/iaplab')}
+        <div 
+        onClick={() => utils.OpenLink('https://github.com/ilittleaakif/iaplab')}
           className='flex items-center gap-8 mx-auto w-fit bg-text-soft text-white cursor-pointer px-4 py-1 rounded-md shadow-[3px_3px_0_black] my-4 transition-all hover:bg-black duration-300 hover:translate-[3px] hover:shadow-none active:translate-[3px] active:bg-black active:shadow-none'>
           <div className='space-x-1'>
             <i className='fab fa-github'></i>
