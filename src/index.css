@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cal+Sans&family=Noto+Kufi+Arabic:wght@100..900&family=Righteous&family=Funnel+Display:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Beiruti:wght@200..900&family=Space+Grotesk:wght@300..700&family=Yatra+One&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -27,7 +27,7 @@
   --fourth: #16A34A;
   --fifth: #FB923C;
   --sixth: #06B6D4;
-  --seventh: #FECB4A;
+  --seventh: #8683FF;
   --eighth: #F43F5E;
   --ninth: #0e6de9;
   --tenth: #9333EA;
@@ -41,12 +41,10 @@
 
 @theme {
   /* Fonts */
-  --font-logo: "Righteous", sans-serif;
-  --font-main: "Funnel Display", sans-serif;
-  --font-hand: "Borel", cursive;
-  --font-arabic: "Noto Kufi Arabic", sans-serif;
+  --font-logo: "Yatra One", system-ui;
+  --font-main: "Space Grotesk", sans-serif;
   --font-quran: "Amiri", serif;
-  --font-class: "Cal Sans", sans-serif;
+  --font-arabic: "Beiruti", sans-serif;
 
   --color-bg: var(--bg);
   --color-bg-dark: var(--bg-dark);

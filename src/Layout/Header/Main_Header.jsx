@@ -17,7 +17,7 @@ function Header() {
 
   return (
     <header ref={headerRef} className={`fixed w-full z-50 flex top-0 flex-col items-center justify-center p-4 sm:p-8 transition-all select-none  ${scrolled ? 'bg-bg py-2 sm:py-4' : 'bg-transparent'}`} >
-      <h1 className="font-bold animate-fadein sm:text-4xl tracking-tighter px-4 text-3xl relative font-logo transition bg-gradient-to-r from-text via-text-soft to-text-muted  bg-clip-text text-transparent">IAPLAB</h1>
+      <h1 className="font-bold animate-fadein sm:text-4xl tracking-tighter px-4 text-3xl relative font-logo transition  text-text">IAPLAB</h1>
     </header >
   );
 }
