@@ -22,7 +22,9 @@ const SpecialThanksSection = () => {
     "I just want to say that you’re doing a great job, guys! I really love what you’re doing. I want to join your team someday — I’m still a beginner for now, but one day, inshallah, I will, and we’ll create something amazing together 😊 Keep going, guys! 💪",
     "I really enjoyed using this app, it's easy and comfortable Glad to see you're from my class, great work, keep going 🤍",
     "You guys are doing amazing, man. I really love seeing what you’re building.",
-    "thank you for this website!!"
+    "thank you for this website!!",
+    "you are truly creative.Thank you for this website!❤️",
+    
   ];
 
   return (

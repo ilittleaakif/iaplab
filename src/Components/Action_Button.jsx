@@ -20,11 +20,11 @@ export const ActionBtn = ({ icon, label, clickEvent, delay, Accent }) => (
     viewport={{ once: true, amount: 0.3 }}
     onClick={() => clickEvent && clickEvent()}
     style={{ '--local': `var(--${Accent})` }}
-    className={`w-full sm:w-fit mx-auto sm:mx-0  px-6 py-2.5 
-        flex items-center justify-center rounded-sm
-        gap-2.5 font-bold cursor-pointer transition-all duration-500
-        hover:shadow-c  whitespace-nowrap  hover:-translate-y-0.5
-        ${Accent ? 'bg-[var(--local)] text-white' : 'bg-bg-card text-text-soft'}`}
+    className={`ActnBtnHover relative w-full sm:w-fit mx-auto sm:mx-0  px-4 py-2
+        flex items-center justify-center rounded-sm 
+        gap-2.5 font-extrabold cursor-pointer transition-all duration-500
+        whitespace-nowrap
+        ${Accent && 'border-2 border-border-dark hover:border-[var(--local)] text-text-soft hover:text-[var(--local)]'}`}
   >
     <span>{label}</span>
     <i className={icon}></i>
