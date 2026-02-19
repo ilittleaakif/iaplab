@@ -69,16 +69,16 @@ const MainPage = () => {
         <img
           src={pic}
           alt="Library illustration"
-          className="w-full max-w-sm pointer-events-none"
+          className="w-full max-w-sm pointer-events-none animate-float"
           loading="eager"
         />
 
-        <p className="mt-2 text-xl sm:text-2xl font-cute text-[#FBA329] text-center">
-          keep the things simple {"<"}3
+        <p className="mt-2 mb-2 text-4xl sm:text-5xl font-curs text-shadow-[0_0_30px_#FBA329] text-[#FBA329] text-center">
+          رَمَضَــــــانٌ كَــــرِيمٌ 
         </p>
 
-        <span className="block text-sm text-center font-main text-white/90">
-          Keep reading hommie!
+        <span className="block font-arabic text-center text-shadow-[0_0_8px_white] text-white/90">
+          إِيـآبْتِيمْ يَتَمَنَّى لَكُمْ <span className="text-[#FBA329]">رَمَضَــــانًا</span> كَــــرِيمًا
         </span>
 
         {/* SEMESTERS */}

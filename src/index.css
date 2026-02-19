@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Righteous&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Reem+Kufi:wght@400..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 html {
@@ -50,8 +50,9 @@ html {
 @theme {
   /* Fonts */
   --font-main: "Bricolage Grotesque", sans-serif;
-  --font-arabic:"Amiri", serif;
-  --font-cute : "Sour Gummy", sans-serif;
+  --font-arabic: "Amiri", serif;
+  --font-curs: "Reem Kufi", sans-serif;
+  --font-cute: "Sour Gummy", sans-serif;
 
 
   --color-bg: var(--bg);
@@ -91,9 +92,17 @@ html {
   --shadow-c: 0 8px 12px rgba(0, 0, 0, 0.3);
   --shadow-d: 0 10px 18px rgba(0, 0, 0, 0.4);
 
-  --animate-fadein: fade-in 1s ease forwards;
-  --animate-scale-in: scale-in 1s ease forwards;
-  --animate-float: float 2s ease alternate infinite;
-  --animate-wipe-y: wipe-y 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0s 1 normal both;
+  --animate-float: float 3s ease-in-out alternate infinite;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* move up */
+  }
+  100% {
+    transform: translateY(0); /* back to start */
+  }
+}
