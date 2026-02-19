@@ -3,9 +3,6 @@ import error from '/Assets/mid/lost.svg';
 
 const ErrorPage = () => {
   const navigate = useNavigate();
-
-
-
   return (
     <section className='flex flex-col items-center justify-center min-h-screen'
       style={{

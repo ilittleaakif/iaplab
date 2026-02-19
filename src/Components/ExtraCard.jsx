@@ -1,4 +1,4 @@
-import * as utils from "../../Data/utils";
+import * as utils from "../Data/utils";
 
 const ExtraCard = ({ icon, title, des, Link }) => {
   return (
