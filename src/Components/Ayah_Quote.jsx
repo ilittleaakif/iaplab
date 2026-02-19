@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { DotLoader } from "react-spinners";
+import {  SkewLoader } from "react-spinners";
 import { motion, AnimatePresence } from "motion/react";
 
 const RandomQuery = ({ isAyah }) => {
@@ -50,17 +50,13 @@ const RandomQuery = ({ isAyah }) => {
   }, []);
 
 
+
   return (
     <motion.div
       layout
       className="relative flex flex-col w-full max-w-5xl mx-auto overflow-hidden text-center rounded-lg shadow-xl min-h-[220px] bg-[#fdfbf7] border border-stone-200"
       style={{
-        backgroundImage: `
-        repeating-linear-gradient(0deg, rgba(75, 85, 99, 0.08), rgba(75, 85, 99, 0.08) 2px, transparent 2px, transparent 6px),
-        repeating-linear-gradient(90deg, rgba(107, 114, 128, 0.06), rgba(107, 114, 128, 0.06) 2px, transparent 2px, transparent 6px),
-        repeating-linear-gradient(0deg, rgba(55, 65, 81, 0.04), rgba(55, 65, 81, 0.04) 1px, transparent 1px, transparent 12px),
-        repeating-linear-gradient(90deg, rgba(55, 65, 81, 0.04), rgba(55, 65, 81, 0.04) 1px, transparent 1px, transparent 12px)
-      `,
+        background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 232, 240, 0.15), transparent 70%), TRANSPARENT",
       }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -70,9 +66,7 @@ const RandomQuery = ({ isAyah }) => {
       <div className="flex-1 p-8 md:p-10 flex flex-col justify-center items-center relative z-10">
         <AnimatePresence mode="wait">
           {loading ? (
-
-            <DotLoader color="#1116" size={30} />
-
+            <SkewLoader color="#ABC" size={30} />
           ) : (
             <motion.div
               key="content"

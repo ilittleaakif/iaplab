@@ -2,8 +2,8 @@ import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 const NAV_LINKS = [
-  { name: "Docs", href: "#" },
-  { name: "Tools", href: "#" },
+  { name: "About", href: "#" },
+  { name: "IAPhub", href: "#" },
   { name: "Extras", href: "#" },
 ];
 

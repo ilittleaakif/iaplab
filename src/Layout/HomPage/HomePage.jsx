@@ -17,14 +17,14 @@ const HomePage = () => {
     return <Loader />;
 
   return (
-    
+
     <div
-      style={{
-            background: "radial-gradient(125% 125% at 50% 100%, #fff 40%, #61BA89 100%)",
-          }}
-
-
+     style={{
+      background:
+        "radial-gradient(circle at top, #1c1c1c, #000000)",
+    }}
     >
+
       <Header />
       <HeroSection />
       <LibrarySection />
@@ -32,5 +32,4 @@ const HomePage = () => {
     </div>
   );
 };
-
 export default HomePage;

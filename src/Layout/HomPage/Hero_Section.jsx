@@ -14,9 +14,9 @@ function HeroSection() {
     <section className="relative select-none px-4 flex flex-col items-center justify-center pt-40 overflow-hidden font-main">
 
       <div className="w-fit max-w-2xl text-center font-cute text-text-soft">
-        <p className="sm:text-6xl text-4xl space-x-1 font-bold text-text-soft">
+        <p className="sm:text-8xl font-main text-4xl space-x-1 font-bold text-text-soft">
           <span >Hello Mate!</span>
-          <i className="fas fa-heart text-[#E86F7B]"></i>
+          <i className="fas fa-heart text-accent"></i>
         </p>
         <p className="sm:text-xl text-text-soft animate-fadein">
           Step into the <span className="relative px-1 marker markera">IAP</span> library—whe

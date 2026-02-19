@@ -7,7 +7,7 @@ html {
 
 :root {
   /* ===== Backgrounds (Dark) ===== */
-  --bg: #0F1115;
+  --bg: #080a0d;
   --bg-soft: #161A22;
   --bg-card: #1C212B;
 
@@ -16,7 +16,7 @@ html {
   --bg-light-soft: #F4F6FA;
 
   /* ===== Text (for dark bg) ===== */
-  --text: #E8EAF0;
+  --text: #ffffff;
   --text-soft: #C7CBD6;
   --text-muted: #9AA0AE;
 
