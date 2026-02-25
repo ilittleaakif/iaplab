@@ -23,7 +23,7 @@ const scaleIn = {
 };
 
 /* ================= SEMESTER BUTTON ================= */
-const SemCard = memo(({ txt, onClick }) => (
+const SemCard = memo(({ txt, onClick, active }) => (
   <button
     onClick={onClick}
     className="
@@ -36,7 +36,7 @@ const SemCard = memo(({ txt, onClick }) => (
       tap-highlight-transparent w-full
     "
   >
-    <span className="font-main text-6xl sm:text-7xl font-extrabold">
+    <span className={`font-main text-6xl sm:text-7xl font-extrabold ${active && 'text-accent text-shadow-[0_0_40px_var(--accent-soft)]'}`}>
       {txt}
     </span>
   </button>
@@ -94,6 +94,7 @@ const MainPage = () => {
               <m.div key={data.semester} variants={scaleIn}>
                 <SemCard
                   txt={data.abbr}
+                  active={data.active}
                   onClick={() => goToSemester(data.semester)}
                 />
               </m.div>

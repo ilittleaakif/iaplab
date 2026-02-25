@@ -2,6 +2,7 @@ export const GlobalLibraryDatas = [
   {
     semester: "Semestre 1",
     abbr: "S1",
+    active : false,
     modules: [
       { title: "Algèbre 1", Url: "https://drive.google.com/drive/folders/18et-Wtf3lySIsDWh6Vx1WlBvDMdDfEs1", ClassIcon: "fa-solid fa-square-root-variable" },
       { title: "Analyse 1", Url: "https://drive.google.com/drive/folders/1GsRaJMtZ_S5gHW91kS64YpdYfLzdQcY2", ClassIcon: "fa-solid fa-calculator" },
@@ -15,6 +16,7 @@ export const GlobalLibraryDatas = [
   {
     semester: "Semestre 2",
     abbr: "S2",
+    active : true,
     modules: [
       { title: "Algèbre 2", Url: "https://drive.google.com/drive/folders/1Bpsv6prigV80T0tTXks9SYinlo1W6BNL", ClassIcon: "fa-solid fa-square-root-variable" },
       { title: "Analyse 2", Url: "https://drive.google.com/drive/folders/1ADo1ArYmpRjUBUE0w6khMYpB6SsLLVJl", ClassIcon: "fa-solid fa-calculator" },
@@ -28,6 +30,7 @@ export const GlobalLibraryDatas = [
   {
     semester: "Semestre 3",
     abbr: "S3",
+    active : false,
     modules: [
       { title: "Probabilités et Statistiques", Url: "https://drive.google.com/drive/folders/1jJgb2tr9ibbJ0IDL6iIHSrZzMVtd2IVa", ClassIcon: "fa-solid fa-chart-bar" },
       { title: "Structures de Données en C", Url: "https://drive.google.com/drive/folders/1pmW91q8Id2cy-1ZDrjHefTaHMUBO3uSo", ClassIcon: "fas fa-c" },
@@ -41,6 +44,7 @@ export const GlobalLibraryDatas = [
   {
     semester: "Semestre 4",
     abbr: "S4",
+    active : true,
     modules: [
       { title: "Réseaux", Url: "https://drive.google.com/drive/folders/1S9j3tajkZE22FzteArcNJmdyUfoBh2qv", ClassIcon: "fa-solid fa-network-wired" },
       { title: "Analyse Numérique", Url: "https://drive.google.com/drive/folders/1izEbcRq1hhsshtW6636IrISiMsngq7pj", ClassIcon: "fa-solid fa-route" },

@@ -26,8 +26,8 @@ html {
   --border-light: #E5E7EB;
 
   /* ===== Accents ===== */
-  --accent: #FF5C5C;
-  --accent-light: #FF8A8A;
+  --accent: #FBA329;
+  --accent-soft: #fba32995;
 
   --second: #7C5CFF;
   --third: #FACC15;
@@ -66,7 +66,6 @@ html {
   --color-text-muted: var(--text-muted);
 
   --color-accent: var(--accent);
-  --color-accent-light: var(--accent-light);
   --color-second: var(--second);
   --color-third: var(--third);
   --color-fourth: var(--fourth);
