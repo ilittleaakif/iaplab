@@ -73,12 +73,12 @@ const MainPage = () => {
           loading="eager"
         />
 
-        <p className="mt-2 mb-2 text-4xl sm:text-5xl font-curs text-shadow-[0_0_30px_#FBA329] text-[#FBA329] text-center">
-          رَمَضَــــــانٌ كَــــرِيمٌ 
+        <p className="mt-2 mb-2 text-4xl sm:text-5xl font-main text-shadow-[0_0_30px_#FBA329] text-[#FBA329] text-center">
+          The LAB is yours
         </p>
 
-        <span className="block font-arabic text-center text-shadow-[0_0_8px_white] text-white/90">
-          إِيـآبْتِيمْ يَتَمَنَّى لَكُمْ <span className="text-[#FBA329]">رَمَضَــــانًا</span> كَــــرِيمًا
+        <span className="block font-main text-center text-shadow-[0_0_8px_white] text-white/90">
+          Read, discover, and keep going!
         </span>
 
         {/* SEMESTERS */}
